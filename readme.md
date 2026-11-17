@@ -8,7 +8,7 @@ The approach follows the Pareto principle: prioritize the concepts and workflows
 
 1. Read the [six-week learning plan](learning-plan.md).
 2. Open the [Week 1 chapter as a PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf), or [read it on GitHub](chapters/week-01/chapter.md).
-3. Complete the company-mapping exercise and discuss a recent workflow with a practitioner.
+3. Complete the company-mapping exercise and discuss a recent workflow with a practitioner. Continue with Weeks 2–6 in the roadmap below.
 
 The Week 1 PDF has 28 pages, a clickable chapter map, bookmarks, an English-Hungarian glossary, worked examples, exercises, explained answers, and linked original readings.
 
@@ -30,14 +30,14 @@ Plan for five hours per week, for approximately 30 hours total. Material availab
 
 | Week | Focus | Material status |
 | --- | --- | --- |
-| 1 | The organization, core terminology, roles, and compliance programs | [Chapter ready](chapters/week-01/chapter.md) |
-| 2 | Controls, evidence, testing, and assurance | Planned |
-| 3 | Ethics, conduct, third parties, and financial crime | Planned |
-| 4 | Privacy, cybersecurity, and operational resilience | Planned |
-| 5 | Applicability, regulatory change, AI, and sector specialties | Planned |
-| 6 | Customer discovery, workflow selection, and a product hypothesis | Planned |
+| 1 | The organization, core terminology, roles, and compliance programs | [Markdown](chapters/week-01/chapter.md) · [PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf) |
+| 2 | Controls, evidence, testing, and assurance | [Markdown](chapters/week-02/chapter.md) · [PDF](chapters/week-02/Week_2_Controls_and_Evidence_EN_HU.pdf) |
+| 3 | Ethics, conduct, third parties, and financial crime | [Markdown](chapters/week-03/chapter.md) · [PDF](chapters/week-03/Week_3_Conduct_and_Third_Parties_EN_HU.pdf) |
+| 4 | Privacy, cybersecurity, and operational resilience | [Markdown](chapters/week-04/chapter.md) · [PDF](chapters/week-04/Week_4_Privacy_Security_and_Resilience_EN_HU.pdf) |
+| 5 | Applicability, regulatory change, AI, and sector specialties | [Markdown](chapters/week-05/chapter.md) · [PDF](chapters/week-05/Week_5_Applicability_and_Regulatory_Change_EN_HU.pdf) |
+| 6 | Customer discovery, workflow selection, and a product hypothesis | [Markdown](chapters/week-06/chapter.md) · [PDF](chapters/week-06/Week_6_Discovery_and_Pilot_Design_EN_HU.pdf) |
 
-The full [learning plan](learning-plan.md) contains the readings, exercises, and completion criteria for all six weeks. The chapter may adapt the weekly allocation to suit its material.
+The full [learning plan](learning-plan.md) contains the readings, exercises, and completion criteria for all six weeks. Each chapter may adapt the weekly allocation to suit its material.
 
 ## Repository contents
 
@@ -51,7 +51,7 @@ The full [learning plan](learning-plan.md) contains the readings, exercises, and
 
 The Markdown chapter and PDF are companion editions. Printed-page references in the Markdown text refer to the PDF.
 
-## Working on future chapters
+## Maintaining the chapters
 
 Read [agents.md](agents.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
 
