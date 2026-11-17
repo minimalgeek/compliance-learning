@@ -39,6 +39,10 @@ Plan for five hours per week, for approximately 30 hours total. Material availab
 
 The full [learning plan](learning-plan.md) contains the readings, exercises, and completion criteria for all six weeks. Each chapter may adapt the weekly allocation to suit its material.
 
+## Applied extension · Inside an AI compliance team
+
+Week 7 follows DunaWorks as a software company developing an AI hiring product. Learn the team's roles and English–Hungarian terminology, follow a shortlist change from pull request to post-release investigation, and design an agent-assisted evidence review. The five-hour extension includes a synthetic case packet and worked answers. [Read on GitHub](chapters/week-07/chapter.md) · [Download the PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf)
+
 ## Repository contents
 
 | Path | Purpose |
