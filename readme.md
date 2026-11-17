@@ -6,9 +6,9 @@ The approach follows the Pareto principle: prioritize the concepts and workflows
 
 ## Start here
 
-1. Read the [six-week learning plan](learning-plan.md).
+1. Read the [seven-week learning plan](learning-plan.md).
 2. Open the [Week 1 chapter as a PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf), or [read it on GitHub](chapters/week-01/chapter.md).
-3. Complete the company-mapping exercise and discuss a recent workflow with a practitioner. Continue with Weeks 2–6 in the roadmap below.
+3. Complete the company-mapping exercise and discuss a recent workflow with a practitioner. Use Weeks 2–5 to practice controls and applicability, Week 6 to select a workflow, and Week 7 to test your automation idea on an AI product release.
 
 The Week 1 PDF has 28 pages, a clickable chapter map, bookmarks, an English-Hungarian glossary, worked examples, exercises, explained answers, and linked original readings.
 
@@ -26,7 +26,7 @@ The organizing question is: **Which requirement applies, who must act, and how w
 
 ## Roadmap
 
-Plan for five hours per week, for approximately 30 hours total. Material availability does not imply that the learner has completed the week.
+Plan for five hours per week, for approximately 35 hours total. Material availability does not imply that the learner has completed the week.
 
 | Week | Focus | Material status |
 | --- | --- | --- |
@@ -36,20 +36,16 @@ Plan for five hours per week, for approximately 30 hours total. Material availab
 | 4 | Privacy, cybersecurity, and operational resilience | [Markdown](chapters/week-04/chapter.md) · [PDF](chapters/week-04/Week_4_Privacy_Security_and_Resilience_EN_HU.pdf) |
 | 5 | Applicability, regulatory change, AI, and sector specialties | [Markdown](chapters/week-05/chapter.md) · [PDF](chapters/week-05/Week_5_Applicability_and_Regulatory_Change_EN_HU.pdf) |
 | 6 | Customer discovery, workflow selection, and a product hypothesis | [Markdown](chapters/week-06/chapter.md) · [PDF](chapters/week-06/Week_6_Discovery_and_Pilot_Design_EN_HU.pdf) |
+| 7 | Inside an AI compliance team · roles, case handling, release decisions and agent-assisted evidence review | [Markdown](chapters/week-07/chapter.md) · [PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf) |
 
-The full [learning plan](learning-plan.md) contains the readings, exercises, and completion criteria for all six weeks. Each chapter may adapt the weekly allocation to suit its material.
-
-## Applied extension · Inside an AI compliance team
-
-Week 7 follows DunaWorks as a software company developing an AI hiring product. Learn the team's roles and English–Hungarian terminology, follow a shortlist change from pull request to post-release investigation, and design an agent-assisted evidence review. The five-hour extension includes a synthetic case packet and worked answers. [Read on GitHub](chapters/week-07/chapter.md) · [Download the PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf)
+The [learning plan](learning-plan.md) gives the readings, exercises and completion criteria for each week. For the automation capstone, follow DunaWorks as the developer of an AI hiring tool. Use the case packet to decide what the compliance officer can conclude, which evidence an agent can collect and who may approve a release. [Week 7 workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair)
 
 ## Repository contents
 
 | Path | Purpose |
 | --- | --- |
-| [learning-plan.md](learning-plan.md) | The complete six-week plan |
-| [chapters/week-01/chapter.md](chapters/week-01/chapter.md) | Editable, GitHub-readable Week 1 chapter |
-| [Week 1 PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf) | The companion reading edition |
+| [learning-plan.md](learning-plan.md) | Seven-week schedule, exercises and completion criteria |
+| [Chapter directory](chapters/) | All seven chapters in editable Markdown and companion PDF editions |
 | [agents.md](agents.md) | Full instructions for creating and updating this learning material |
 | [AGENTS.md](AGENTS.md) | Entry point for tools that automatically discover agent instructions |
 

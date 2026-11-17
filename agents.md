@@ -6,7 +6,7 @@ Create learning material for an experienced software developer and CTO exploring
 
 Use the Pareto principle to build broad, practical literacy: understand the main specialties, recognize recurring workflows, interview practitioners, and identify a bounded product opportunity. Deep specialist study comes after a target customer, activity, and jurisdiction are chosen.
 
-The baseline is the six-week, approximately 30-hour plan in [learning-plan.md](learning-plan.md). Week 1 is the established example of the intended chapter style.
+The [learning plan](learning-plan.md) spans seven weeks at about five hours each (35 hours total). Week 1 establishes the chapter style. Week 6 develops a product hypothesis. Week 7 applies it to the roles, decisions and evidence in an AI compliance team.
 
 ## Read before changing material
 
@@ -106,7 +106,7 @@ When creating or updating a PDF:
 - Ensure examples, questions, and answer keys remain consistent.
 - Mark a chapter ready only after its output has been checked.
 
-Update the README's links and material-status table when files are added or changed. Distinguish material readiness from the learner's progress. Preserve existing chapters and create only the requested next material.
+When adding a week or changing its scope, update its schedule, exercise and pass condition in the learning plan and its Markdown and PDF links in the README roadmap. Keep the course duration consistent across both documents and these instructions. Distinguish material readiness from the learner's progress. Preserve existing chapters and create only the requested next material.
 
 ## Uncertainty and collaboration
 

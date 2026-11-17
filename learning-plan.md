@@ -1,10 +1,10 @@
-**Corporate compliance: a 30-hour founder’s learning plan**
+# Corporate compliance in seven weeks
 
-Prepared 22 October 2026. Intended audience: a technical founder exploring compliance automation. Perspective: large companies and multinational groups, with EU examples and widely used US corporate-compliance concepts.
+Prepared 22 October 2026. Updated 17 November 2026. Intended audience: a technical founder exploring compliance automation. Perspective: large companies and multinational groups, with EU examples and widely used US corporate-compliance concepts.
 
 The outcome is working literacy: understand the main specialties, follow how work gets done, interview practitioners intelligently, and choose a narrow product hypothesis. “80%” is a prioritization heuristic, not a measurable promise of legal coverage. Specialist competence comes after selecting a domain, customer segment, and jurisdiction.
 
-Spend five hours per week for six weeks. For weeks 1–5, allocate two hours to targeted reading, two hours to a practical exercise, and one hour to a practitioner conversation plus notes. The reading times are caps; stop when you can complete the exercise. Week 6 has its own five-hour schedule. Start arranging interviews during week 1.
+Allow five hours per week, approximately 35 hours in total. For weeks 1–5, allocate two hours to targeted reading, two hours to a practical exercise, and one hour to a practitioner conversation plus notes. The reading times are caps; stop when you can complete the exercise. Week 6 turns discovery into a pilot proposal. Week 7 tests that proposal against the work of an AI compliance team. Both weeks have their own five-hour schedules. Start arranging interviews during week 1.
 
 A useful organizing question is: **Which requirement applies to this business activity, who performs the control, and how can someone verify that it worked?**
 
@@ -30,7 +30,9 @@ The field is easiest to survey through business activities:
 
 This is a teaching map. Companies distribute these responsibilities differently. Financial-crime duties depend heavily on activity and jurisdiction; customer AML programs are especially relevant to regulated sectors and other designated businesses. Sanctions and trade restrictions have a different scope. Knowing one does not establish the other’s applicability.
 
-**Week 1: understand the organization and its compliance program.**
+## Week 1 · Understand the organization and its compliance program
+
+[Read the chapter](chapters/week-01/chapter.md)
 
 Learn governance, risk, compliance, internal control, and assurance as separate concepts. Learn how legal advice, business ownership, compliance oversight, and internal audit interact. Include leadership behavior, incentives, training, reporting channels, investigation, and remediation in your picture of the program.
 
@@ -48,7 +50,9 @@ Interview: speak to one compliance professional or internal auditor. Ask them to
 
 Pass condition: explain who runs a control, who challenges it, and who independently assesses it. Identify five factors that change a company’s compliance scope: activities, legal entities, jurisdictions, data, and counterparties.
 
-**Week 2: learn controls, evidence, testing, and assurance.**
+## Week 2 · Learn controls, evidence, testing, and assurance
+
+[Read the chapter](chapters/week-02/chapter.md)
 
 This is the most reusable technical material. Learn inherent risk, residual risk, preventive and detective controls, manual and automated controls, segregation of duties, control design, operating effectiveness, findings, remediation, and retesting.
 
@@ -77,7 +81,9 @@ Interview: ask an auditor or control owner to describe evidence they rejected an
 
 Pass condition: explain why a well-designed control can fail in execution, and why incomplete evidence can prevent a conclusion.
 
-**Week 3: survey ethics, conduct, third parties, and financial crime.**
+## Week 3 · Survey ethics, conduct, third parties, and financial crime
+
+[Read the chapter](chapters/week-03/chapter.md)
 
 Learn the practical vocabulary around bribery, gifts and hospitality, conflicts of interest, competition risks, sanctions, export controls, customer due diligence, and suspicious-activity escalation. Include whistleblowing confidentiality, non-retaliation, case handling, and root-cause analysis.
 
@@ -96,7 +102,9 @@ Interview: speak to ethics/compliance, procurement risk, or financial-crime oper
 
 Pass condition: distinguish supplier due diligence, customer AML checks, and sanctions screening. Explain how a concern becomes a documented investigation and a remediation action.
 
-**Week 4: survey privacy, security, and operational resilience.**
+## Week 4 · Survey privacy, security, and operational resilience
+
+[Read the chapter](chapters/week-04/chapter.md)
 
 Learn privacy vocabulary: personal data, controller and processor, purpose, legal basis, retention, data-subject rights, processing inventories, impact assessments, and breach handling. Learn security and resilience vocabulary: assets, identity and access, incident response, supplier risk, recovery, testing, and critical-service dependencies.
 
@@ -112,7 +120,9 @@ Interview: speak to privacy operations, security GRC, or third-party risk. Ask w
 
 Pass condition: distinguish security assurance, privacy obligations, and service resilience. Explain why an ISO certificate or SOC report has to be checked for relevant scope and does not settle every supplier question.
 
-**Week 5: learn applicability, regulatory change, and ongoing operations.**
+## Week 5 · Learn applicability, regulatory change, and ongoing operations
+
+[Read the chapter](chapters/week-05/chapter.md)
 
 Survey the remaining specialties through applicability: employment and safety, environmental duties, supply-chain due diligence, product regulation, tax, and AI governance. Recognize the categories and responsible experts. Detailed legal requirements belong in the specialization you choose next.
 
@@ -132,7 +142,9 @@ Interview: ask a compliance lead how changes are monitored, who decides applicab
 
 Pass condition: show why “a regulation mentions AI” is insufficient to identify an affected company, product, or required action. Explain how to maintain a dated, reviewable interpretation.
 
-**Week 6: turn the learning into a product hypothesis.**
+## Week 6 · Turn the learning into a product hypothesis
+
+[Read the chapter](chapters/week-06/chapter.md)
 
 Spend one hour on the existing product landscape, 90 minutes on three short interviews, 30 minutes on a scorecard, and two hours on one thin prototype.
 
@@ -147,7 +159,7 @@ Use these official pages to understand existing product categories. This is a le
 
 For each, record the user, triggering event, inputs, decisions, output, integrations, and advertised automation. Product claims describe vendor positioning; customer interviews must establish whether those capabilities solve the target customer’s problem.
 
-Across the six weeks, aim for eight conversations: three potential users of the same narrow workflow, one budget owner, one assurance reviewer, and several adjacent operators or implementers. Roles can overlap. Eight is a discovery target, not proof of market demand.
+By the end of Week 6, aim for eight conversations: three potential users of the same narrow workflow, one budget owner, one assurance reviewer, and several adjacent operators or implementers. Roles can overlap. Eight is a discovery target, not proof of market demand.
 
 Ask for a walkthrough of a recent real example, with sensitive information removed:
 
@@ -177,6 +189,22 @@ Build a prototype for one buyer, one workflow, and one bounded decision. Use syn
 
 Pass condition: write a one-page opportunity memo with target customer, buyer, current process, repeated pain, current tools, proposed output, human decision, required data, baseline metric, and paid-pilot proposal. Label what interviews established and what remains an assumption.
 
+## Week 7 · Inside an AI compliance team
+
+DunaWorks develops and sells an AI recruitment tool. Its customer’s recruiter can reach only 20 of 300 applicants. Use your Week 2 control test, Week 5 applicability assessment and Week 6 opportunity memo to work through the release from the software provider’s side. [Read the chapter](chapters/week-07/chapter.md) · [Download the PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf)
+
+| Time | Task | What to produce |
+| --- | --- | --- |
+| 75 min | Follow Éva, the compliance officer, through the release and a later customer complaint. | Map who owns the risk, implements the fix, verifies it and can authorize rollout. |
+| 45 min | Use the chapter’s guided readings on the Three Lines Model, AI provider duties and AI risk management. | Trace one requirement to a control, the evidence for it and the person who reviews it. |
+| 90 min | Work the build D case before opening the answer key. Compare eligible applicant IDs with the recruiter’s actual results. | An evidence request and a release recommendation that state what the records establish and what remains unknown. |
+| 45 min | Design one Agentic Compliance Platform workflow for the case. | Specify the trigger, permitted actions, stopping condition, human decision and tests for duplicate events and revoked access. |
+| 45 min | Ask a practitioner to reconstruct a recent release they challenged. | Revise the Week 6 memo with the actual bottleneck, the reviewer’s acceptance criteria and a baseline for evaluating the pilot. |
+
+**Pass condition.** Trace one signal (*jelzés*) to a finding (*megállapítás*), corrective action (*helyesbítő intézkedés*) and verified closure (*ellenőrzött lezárás*). Explain who can close the finding and who can approve the release. Show how the agent handles a missing test result, and how you would measure both reviewer time and material misses. [Workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair) · [Worked answer](chapters/week-07/chapter.md#answer-key-and-a-reusable-decision-record)
+
+## Reference for all seven weeks
+
 The recurring data objects are a useful guide for a technical founder:
 
 | Object | Minimum useful information |
@@ -187,7 +215,10 @@ The recurring data objects are a useful guide for a technical founder:
 | Execution | What happened, when, by whom or which system, result |
 | Evidence | Source, collection time, covered period, population, access restrictions |
 | Test | Scope, method, inputs, evaluator, result, limitations |
-| Finding or exception | Reason, severity, decision authority, owner, due date, status |
+| Case | Trigger, scope, assigned owner, state, linked evidence and decisions |
+| Finding | Criterion, evidence of deviation, severity, owner, due date, verification status |
+| Exception | Internal rule, approved scope, authorizing person, conditions and expiry |
+| Decision | Question, alternatives, authority, rationale, supporting evidence, date and scope |
 | Remediation | Planned change, completion evidence, verification, retest |
 | Report | Audience, reporting period, conclusions, open issues, supporting references |
 
