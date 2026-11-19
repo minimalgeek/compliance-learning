@@ -37,7 +37,7 @@ DunaWorks is a fictional Hungarian software developer with 2,000 employees and o
 
 On Friday afternoon a model update is ready for rollout. The evaluation dashboard is green. Éva, the compliance officer, opens the test data and finds that every CV in it is in English. The pilot employer accepts Hungarian and German CVs too. The release team has evidence about one language. What does it know about applicants in the other two?
 
-DunaWorks has a fictional internal rule requiring evaluation in each supported pilot language. QA owns the test. Product owns rollout. Éva can challenge the evidence and recommend a hold. Internal audit can later assess whether the release process consistently enforced the rule. Ask each person what decision they can make today and what record they would leave.
+DunaWorks has a fictional internal rule requiring evaluation in each supported pilot language. The quality assurance (QA) team owns the test. Product owns rollout. Éva can challenge the evidence and recommend a hold. Internal audit can later assess whether the release process consistently enforced the rule. Ask each person what decision they can make today and what record they would leave.
 
 > **Magyarul.** A teszt eredménye csak a vizsgált nyelvre ad választ. A megfelelőségi szakértő jelzi a bizonyítékhiányt, a tesztelők megvizsgálják a többi nyelvet, a kiadásról pedig az arra jogosult vezető dönt.
 
@@ -84,7 +84,7 @@ Likelihood means how plausible an event is. Impact means how serious its consequ
 | Term | Meaning in our example |
 | --- | --- |
 | Inherent risk | The exposure imagined before considering the relevant controls: a parsing failure could hide an applicant. |
-| Residual risk | The exposure remaining after adding a fallback queue: a recruiter might review it too late. |
+| Residual risk | The exposure remaining after verifying the fallback queue in the assessed setting: a recruiter might review it too late. |
 | Risk appetite | The amount and type of exposure decision-makers are willing to take when pursuing objectives. |
 
 Risk management means identifying uncertainty, deciding how to respond, assigning actions, and checking the result. DunaWorks might improve review, avoid a transaction, obtain more information, or accept a permitted remaining business exposure through the right authority.
@@ -95,9 +95,9 @@ Risk management means identifying uncertainty, deciding how to respond, assignin
 
 Magyarul: nem az a jó kockázatleírás, hogy "baj lehet", hanem hogy mi történhet, miért, és annak mi lenne a következménye.
 
-**Try the FordoX vocabulary.** Under its pilot specification, DunaWorks must make the product wait for recruiter review before applying a suggested rejection. Name the theme, the risk and the control. **Compliance Micro Theme** (*megfelelőségi résztéma*) is FordoX’s term for an operational topic such as human oversight. The compliance risk (*megfelelőségi kockázat*) is that the workflow could apply a suggested rejection before the required review takes place. An eligible applicant losing an interview is a possible consequence. The control requires a recruiter to inspect the application and record a decision before rejection takes effect.
+**Try the FordoX vocabulary.** Under its pilot specification, DunaWorks must make the product wait for recruiter review before applying a suggested rejection. Name the theme, the risk and the control. **Compliance Micro Theme** (*megfelelőségi résztéma*) is FordoX’s term for an operational topic such as human oversight. The compliance risk (*megfelelőségi kockázat*) is that the workflow could apply a suggested rejection before the required review takes place. An eligible applicant losing an interview is a possible consequence. The product blocks rejection until a recruiter records the review. Sample employer decisions to check whether recruiters actually inspected applications.
 
-**Risk tolerance** (*kockázattűrés*) makes broad risk appetite concrete. DunaWorks might permit a limited pilot while requiring every eligible application to remain reachable in its full queue. A missing application fails that internal criterion. The risk owner needs evidence about frequency and impact before estimating exposure across employers. [FordoX taxonomy](../../taxonomy.md)
+**Risk tolerance** (*kockázattűrés*) is the approved limit for remaining exposure in a defined scope. A test criterion answers a narrower question. For example, the pilot requires zero missing eligible applications in a recruiter-role test. One omission fails that test. Estimating exposure across employers requires evidence of the frequency and consequences of omissions. Comparing that estimate with tolerance requires the approved limit. [FordoX taxonomy](../../taxonomy.md)
 
 <a id="compliance"></a>
 
@@ -132,16 +132,16 @@ GRC stands for governance, risk, and compliance. It groups related work: directi
 
 A measure intended to help achieve an objective or reduce a risk. It can be a human action, a system rule, a review, or a combination. The word is broader than checking something after the event.
 
-Under a fictional DunaWorks release policy, every candidate-ranking model change needs a documented evaluation before rollout. Engineering restricts deployment to approved model versions. Compliance reconciles production deployment history with approvals each month.
+Under fictional policy P-2, QA evaluates the exact model and application build for the proposed rollout. A **model digest** is an identifier calculated from the model contents. An **application build ID** identifies the packaged software that runs the model. The same model can behave differently in a build that changes how scores are displayed.
 
 | Vocabulary | Concrete example |
 | --- | --- |
-| Preventive control | Deployment stops when the model version lacks approval. |
+| Preventive control | An automated gate blocks deployment until it finds a valid approval for the exact model digest, application build ID and rollout scope. |
 | Detective control | A monthly reconciliation flags an unapproved production version. |
 | Manual control | QA examines failures on multilingual CVs and challenges the evaluation scope. |
-| Automated control | The deployment job checks the model digest against the approved digest. |
+| Automated control | On deployment the gate records the actual digest, build, scope, approval reference and time. |
 
-The policy requires evaluation before deployment. The procedure tells QA how to select the benchmark, run it and attach results for the exact model version. The deployment check enforces the approved-version rule. Each produces a different record.
+First, QA documents the benchmark, languages, results, digest and build. Next, an authorized approver reviews those results and signs for that exact combination and rollout scope. Finally, the automated gate validates the approval and logs what it deployed. Compliance reconciles actual deployments to those approvals each month.
 
 Design asks whether the safeguard can achieve its purpose. A check that accepts results from any model version has a design weakness. A correctly designed check bypassed by one deployment path has an operating weakness.
 
@@ -159,7 +159,7 @@ Week 2 will examine control testing in more detail. For now, be able to describe
 
 Information that supports a conclusion. Useful evidence is relevant to the actual question and has an understandable origin, scope, and time period.
 
-The claim is that every ranking model deployed in September had prior evaluation approval. Start with production deployment events, then match model identifiers and approval timestamps. Starting with the evaluation folder hides versions deployed without an evaluation.
+The claim is that every ranking model deployed in September had prior evaluation approval. Start with production deployment events, then match the deployed digests, builds, scopes and times to prior approvals. Starting with the evaluation folder hides versions deployed without an evaluation.
 
 Provenance means where information came from and what happened to it. A deployment history directly obtained from a named system, with a collection time and defined filters, has a clearer provenance than a spreadsheet someone forwarded without explanation.
 
@@ -171,7 +171,7 @@ Provenance means where information came from and what happened to it. A deployme
 | Traceable? | You need to connect the approval to the correct model and deployment. |
 | Reliable? | An unexplained edit can change what a record means. |
 
-Scope is the boundary of a statement or review: entities, systems, processes, locations, and periods. An audit trail records meaningful actions and decisions over time. An attestation is a stated assertion, such as a manager confirming a review; the strength and formal meaning depend on context.
+Scope is the boundary of a statement or review: entities, systems, processes, locations, and periods. An audit trail records meaningful actions and decisions over time. A management assertion states what management claims. A QA sign-off records the tester’s work on a named build and scope. The authorized release approval is a separate record.
 
 > **MAGYARUL**
 >
@@ -183,15 +183,15 @@ Founder implication: evidence collection, evidence quality, and the final judgme
 
 ## Assurance: justified confidence
 
-**ASSURANCE** - *bizonyosságot nyújtó értékelés; megalapozott bizalom*
+**ASSURANCE** - *bizonyosságot nyújtó értékelés*
 
-A conclusion intended to increase confidence in something, based on an assessment against stated criteria. In everyday terms: someone has done enough defined checking to support a bounded conclusion.
+An independent assurance engagement is an assignment to assess a defined subject against stated criteria and report a conclusion. The conclusion explains what the work supports and how much confidence the intended reader can place in it.
 
-The product director says every ranking release had an evaluation. Internal audit selects a defined period, obtains the deployment population independently, checks approvals against model versions, investigates gaps and reports exactly which release paths it covered.
+The product director’s assertion is that every ranking release had an evaluation. QA’s signed test record identifies one build and its results. Internal audit selects a defined period, obtains the deployment population independently, checks approvals against model versions, investigates gaps and reports exactly which release paths it covered.
 
 An audit is a structured examination. Internal audit is a function that provides independent assessment and advice within the organization. External auditors or other assurance providers come from outside. The engagement determines what they examine: a financial-statement audit does not automatically examine every compliance process.
 
-Monitoring is ongoing observation, such as a daily report of unapproved model deployments. Testing examines a control against a method and criteria. Assurance is the confidence supported by the resulting assessment. These words describe related activities, not interchangeable outputs.
+Monitoring is ongoing observation, such as a daily report of unapproved model deployments. Testing examines a control against a method and criteria. The assurance practitioner weighs that evidence and issues a scoped conclusion. The work and the conclusion give the reader grounds for confidence.
 
 > **WHY INDEPENDENCE MATTERS**
 >
@@ -233,7 +233,7 @@ Job titles are clues, not a reliable ownership map. The same title can cover dif
 
 | Role | Practical meaning |
 | --- | --- |
-| Board / governing body | Oversees direction and accountability. Magyarul: a legfőbb irányító testület; often an igazgatóság in this simplified model. |
+| Board / governing body | Oversees direction and accountability. Magyarul: irányító testület. At DunaWorks this is the board of directors (*igazgatóság*). |
 | CEO / executives | Run the company and allocate operational resources. CEO: chief executive officer, vezérigazgató. |
 | Business or process owner | Answers for a business activity and its process. Example: the finance director owns payment operations. |
 | CCO / compliance team | CCO: chief compliance officer, megfelelőségi vezető. Coordinates relevant compliance expertise, oversight, and challenge. |
@@ -254,7 +254,7 @@ The IIA separates roles by their contribution to governance and risk management.
 
 ```mermaid
 flowchart TD
-  board["Governing body: oversight"]
+  board["Board of directors: oversight"]
   subgraph management["Management"]
     first["First line: run the process"]
     second["Second line: support and challenge"]
@@ -280,7 +280,7 @@ Original DunaWorks illustration. The IIA role summary above is deliberately shor
 
 ## Responsibility, accountability, and challenge
 
-**RESPONSIBILITY / ACCOUNTABILITY** - *feladatért való felelősség / számonkérhetőség, végső elszámolási felelősség*
+**RESPONSIBILITY / ACCOUNTABILITY** - *feladatért való felelősség / elszámoltathatóság*
 
 Responsibility concerns doing assigned work. Accountability concerns answering for the decision or result. In everyday corporate speech these can blur, so clarify the actual authority and expectation.
 
@@ -335,7 +335,8 @@ These labels describe different sources of expectations and different outputs. R
 | Guidance | An authority's or professional body's explanation or evaluation approach. Its legal significance depends on context. |
 | Standard | An agreed set of requirements or recommendations. Adoption may be voluntary, contractual, or otherwise required. |
 | Policy | The company's own statement of expectations. It can be stricter than an external baseline. |
-| Certification | An assessment result against a specified standard and scope, issued by a certification body. |
+| Certification | A certification body assesses conformity with a stated standard and scope and decides whether to certify. |
+| Certificate | The document recording certification. Check the certified entity, scope, issuer and validity dates. |
 | Audit report | A report on defined subject matter, criteria, procedures, and conclusions. |
 
 ISO's FAQ explains that ISO develops standards while external certification bodies perform certification. It also explains that ISO 37301 is generally voluntary, although adoption can become a legal or contractual requirement in a particular context. [S6](#source-s6)
@@ -423,10 +424,10 @@ DunaWorks has another fictional policy: remove a departing employee's access to 
 | Concept | What it looks like here |
 | --- | --- |
 | Objective | Former staff should no longer have inappropriate access. |
-| Risk | A usable account remains after departure and is misused. |
-| Control | HR triggers offboarding; IT disables access and checks exceptions. |
+| Risk | DunaWorks could miss its 24-hour disablement duty. Someone could then misuse the account. |
+| Control | HR triggers offboarding and IT disables each in-scope account by its deadline. |
 | Evidence | Departure timestamp, identity match, system logs, and any approved exception. |
-| Monitoring | A daily comparison flags unmatched departures or active accounts. |
+| Daily overdue-access alert (detective control) | IT compares expected removals with current access and escalates overdue or unresolved pairs to the on-call owner. Each alert run has its own result. |
 | Assurance question | Did the process meet its criteria across the defined systems and period? |
 
 An identity provider is a system that manages identities and often access to applications. Its log might show one account was disabled, but the company still needs to understand which applications that action affected. A separate application account can remain active outside that scope.
@@ -516,7 +517,7 @@ This is a fictional starting answer. It demonstrates structure and deliberately 
 
 | Activity | Expectation / owner | Control / evidence | Review / issue route |
 | --- | --- | --- | --- |
-| Ranking release | Product owns rollout. QA evaluates changes. | Match model digest and approval to deployment history. | Compliance challenges gaps and the director decides whether to pause rollout. |
+| Ranking release | Product owns rollout. QA evaluates changes. | Match digest, build ID, scope and authorized approval to deployment history. | Compliance challenges gaps and the director decides whether to pause rollout. |
 | Intermediary payment | Internal prior-review rule. Finance owns payments; business owns the relationship. | Payment blocked pending approval. Contract, decision, and timestamps. | Compliance challenges unresolved concerns; a designated manager handles escalation. |
 | Employee offboarding | Internal 24-hour rule for three systems. HR and IT have assigned tasks. | Disable accounts and compare departures. HR record and access logs. | Security follows unmatched cases; serious failures reach the designated owner. |
 | Cloud-supplier onboarding | Contract, privacy, and security requirements to be assessed. Procurement coordinates. | Record relevant data uses and obtain approval before use. Assessment and decision. | Privacy, legal, and security specialists assess their areas; gaps receive owners. |
@@ -581,10 +582,11 @@ These are practical learning translations. Professional and statutory terminolog
 
 | English | Hungarian | Plain-English meaning | AI recruitment example |
 | --- | --- | --- | --- |
-| Accountability | számonkérhetőség, elszámolási felelősség | Who must answer for the result. | The product director answers for enabling ranking. |
-| Applicability | alkalmazhatóság; ránk vonatkozik-e | Whether a requirement covers this activity and entity. | Counsel checks whether the tool evaluates candidates. |
-| Assurance | bizonyosságot nyújtó értékelés | Confidence supported by defined assessment work. | Audit independently tests a quarter of model releases. |
-| Attestation | nyilatkozat, állítás igazolása | An assertion; formal meaning depends on context. | QA signs a statement identifying the build tested. |
+| Accountability | elszámoltathatóság | Who must answer for the result. | The product director answers for enabling ranking. |
+| Applicability | alkalmazandóság | Whether a requirement covers this activity and entity. | Counsel checks whether the tool evaluates candidates. |
+| Assurance | bizonyosságot nyújtó értékelés | Assessment against criteria that supports a scoped conclusion. | Audit independently tests a quarter of model releases. |
+| Management assertion / QA sign-off | vezetői állítás / a tesztelő igazolása | Management makes a claim. A tester signs for work performed. | The director claims all releases were evaluated. QA signs for one build. |
+| Attestation engagement | bizonyosságot nyújtó megbízás | An independent practitioner examines a defined subject and reports a conclusion against criteria. | An independent System and Organization Controls (SOC) 2 examination is a formal example in [Week 2](../week-02/chapter.md#what-an-assurance-report-buys-the-reader). |
 | Audit | audit, módszeres vizsgálat | A structured examination with a defined scope. | An auditor selects deployments and reconstructs approvals. |
 | Audit trail | ellenőrzési nyomvonal | A history of relevant actions and decisions. | Model digest, evaluator and decision timestamp link one release. |
 | Compliance | megfelelőség | Meeting applicable requirements and commitments. | QA follows the approved evaluation rule before deployment. |
@@ -616,7 +618,7 @@ These are practical learning translations. Professional and statutory terminolog
 | Root cause | kiváltó vagy alapvető ok | Why the problem arose beneath the immediate symptom. | A score-based query excluded every record with a missing score. |
 | Scope | hatókör, vizsgált kör | The boundary of an activity, claim, or assessment. | The run covered the German pilot tenant and one recruiter role. |
 | Segregation of duties | feladatok és jogosultságok szétválasztása | Dividing incompatible tasks to reduce error or abuse. | The model author and release approver are different people. |
-| Stakeholder | érintett, érdekelt fél | A person or group with an interest in the organization. | An applicant can be affected without having an account. |
+| Stakeholder | érdekelt fél | A person or group with an interest in the organization. | An applicant can be affected without having an account. |
 | Whistleblowing | visszaélés-bejelentés | Raising a concern about suspected wrongdoing. | An engineer reports pressure to conceal a failed evaluation. |
 
 

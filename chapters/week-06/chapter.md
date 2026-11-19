@@ -66,18 +66,18 @@ The 31-point candidate leads by one point. Lower its data-access score from 4 to
 
 Take one approved folder of product specifications and one reviewed internal policy. A new document version triggers comparison with the last reviewed version. The **bounded decision** is whether an identified change should be routed to the AI compliance reviewer under that policy. The reviewer decides what the change means and whether a formal assessment needs reopening.
 
-**Fictional policy P-7.** Route changes to candidate visibility, scoring inputs, human approval or ranking purpose. An authorized, unexpired exception covers only its named change and scope. A missing previous version or inaccessible referenced annex produces “insufficient evidence.” A spelling-only change can close as routine once both versions are available. These are operational states for this prototype.
+**Fictional policy P-7.** Route changes to candidate visibility, scoring inputs, human approval or ranking purpose. An authorized, unexpired exception covers only its named change and scope. A missing previous version or inaccessible referenced annex produces **Insufficient information**. The agent withholds a conclusion and requests the missing version. Escalate to the compliance lead when an unresolved critical change is scheduled for live use before the evidence can be reviewed. A spelling-only change can close as routine once both versions are available. These are operational states for this prototype.
 
 | Input pair | Expected output | Explanation the reviewer can check |
 | --- | --- | --- |
 | A. “Show unscored applicants” becomes “hide unscored applicants” | Route | Cite both queue rules and their version IDs. |
 | B. “Reciept” becomes “Receipt” | Routine | Cite the changed word. No policy category changed. |
-| C. New version says “see Annex B”; annex unavailable | Insufficient evidence | Ask for the exact annex and version. |
+| C. New version says “see Annex B”; annex unavailable | Insufficient information | The annex determines the changed workflow. Ask its owner for the cited version and resume review on receipt. |
 | D. Live ranking uses interview transcripts. An exception covers use in an offline evaluation | Route | Cite scoring input and environment. Exception scope differs. |
 | E. A synthetic demo hides unscored records. A signed exception names this demo, period and revision | Approved exception | Attach authorization, match fields and expiry. Keep it visible to reviewer. |
-| F. Document deleted; event contains only a title | Insufficient evidence | Mark unavailable source and request prior authorized snapshot; avoid inventing its content. |
+| F. Document deleted; event contains only a title | Insufficient information | Without the text, the change cannot be assessed. Ask the document owner for an authorized snapshot and resume when it arrives. |
 
-**Two-hour build.** Use 20 minutes to assemble pairs and policy, 25 to label them with a reviewer or provisional answer key, 35 to build a manual or scripted version comparison, 25 to run it blind and 15 to inspect errors. A spreadsheet can hold source versions, quoted spans, applicable rule, proposed disposition, reviewer decision and reason. Label any unreviewed ground truth provisional. You can validate the decision without a live connector.
+**Two-hour build.** Use 20 minutes to assemble pairs and policy, 25 to label them with a reviewer or provisional answer key, 35 to build a manual or scripted version comparison, 25 to run it blind and 15 to inspect errors. A spreadsheet can hold source versions, quoted spans, applicable rule, proposed disposition, reviewer decision and reason. Mark each reference answer provisional until the designated reviewer approves it against the policy and source versions. You can validate the decision without a live connector.
 
 For a future Drive, Notion or GitHub integration, ask which tenant, folders or repositories can be read, which version identifiers are stable, whether the reviewer can open the cited version and what happens after access is revoked. Use a selected approved source in the first trial. A GitHub pull request can establish that code changed. A policy document can establish intended behavior. Neither alone establishes what happened in production.
 
@@ -87,30 +87,38 @@ Use this synthetic fixture within the prototype block. Every ID below is at vers
 
 | Record | Supplied fact |
 | --- | --- |
-| O1, pilot policy §2 | A recruiter must review each application before exclusion. |
-| T1, CMT | Meaningful human oversight of recommendations. |
-| R1 and R2, risks | R1: a filter could hide an unscored applicant, bypassing the review required by O1. R2: the workflow could permit one-click rejection without the inspection O1 requires. Either failure could cost an applicant an interview. |
-| C1 and C2, controls | C1 requires full-queue review before exclusion. C2 reconciles eligible IDs against the recruiter-visible queue. |
-| E1, E2 and E3, evidence | E1 is the approved procedure for C1. E2 is a build-matched recruiter test demonstrating C1’s review screen. E3 is an engineering proposal to implement C2. |
+| S1, signed pilot agreement v1 | DunaWorks and the employer agreed the duties below. Clause 1 defines eligibility for the pilot vacancy. |
+| O1, clause 2(a) | DunaWorks must make eligible applications visible to recruiters and prevent exclusion until the review step is recorded. |
+| O2, clause 2(b) | The employer must ensure that a recruiter actually reviews each eligible application before exclusion. |
+| T1, primary Compliance Micro Theme (CMT) | Human oversight is the primary topic for each of the two duty-bearing subjects. |
+| R1 and R2, provider scenarios | A score filter could hide eligible unscored applications (R1). An alternate rejection path could bypass the recorded-review gate (R2). Each can breach O1. |
+| R3, employer scenario | Under time pressure a recruiter could mark a file reviewed without inspecting it. This can breach O2 and cost an applicant an interview even when the product gate works. |
+| C1 and C2, provider controls | C1 supplies the full queue and blocks exclusion until a review is recorded. C2 would reconcile eligible IDs to visible IDs after each release. |
+| C3, employer control | The employer assigns each eligible file to a recruiter for inspection and a reasoned decision before exclusion. A supervisor samples those decisions. |
+| E1, approved procedures | The product procedure specifies both C1 behaviors. The employer procedure describes the steps and sampling rule for C3. |
+| E2, recruiter-role build test | For the candidate configuration the run reaches all eligible fixture IDs, including an unscored one. Exclusion is blocked before recording a review and permitted afterward on the tested path. |
+| E3, engineering proposal | The proposal describes C2. No deployed reconciliation or completed run is supplied. |
+| E4, employer sample | Five sampled decisions from one pilot vacancy last week include the file inspected, recruiter, time, rationale and exclusion time. The reviewer checked inspection preceded exclusion in all five. |
 
-**Expected links.** O1 → T1. T1 → R1 and R2. C1 addresses R1 by requiring full-queue coverage and R2 by requiring inspection. C2 addresses R1 by detecting omissions. C1 needs evidence of both implementation and actual review. E1 supports design and E2 supports implementation for the tested build. Request sampled decisions before marking C1 verified effective. E3 supports the **suggested** state for C2. Record the missing reconciliation run as an outstanding evidence requirement.
+**Worked links.** Link R1 and R2 directly to O1, and R3 to O2. Both duties share T1. E1 supports the designs of C1 and C3. E2 supports C1 implementation for the tested build, role, paths and fixture. C2 could detect R1, but E3 supports only a proposed design. E4 is operating evidence for C3 in five decisions. It cannot settle whether the employer reviewed every eligible application. A product log showing a click alone cannot establish what a recruiter examined.
 
-**Score the agent.** Count supported expected links recovered, unsupported links proposed and correct control states. Report denominators separately. Treat promotion to verified effective on this packet as a material error even if every link is correct. Repeat with E2 tied to a superseded build. The agent should retain the historical result and request evidence for the candidate build. [FordoX taxonomy](../../taxonomy.md)
+**Score the agent.** Grade the duty–scenario links and the evidence supporting each control claim. Track C1 as implemented in the tested configuration, C2 as proposed and C3 as implemented in the sampled workflow. Give effectiveness its own scope and result. Ask the employer for the eligible decision population and how the five files were selected before concluding on broader operation. If E2 belongs to a superseded build, retain its historical result. For the current build record **Insufficient information** because its visibility and gate behavior remain untested. The quality assurance (QA) team supplies the matching run and Compliance resumes review on receipt. [FordoX taxonomy](../../taxonomy.md)
 
 ## Evaluate misses, reviewer work and uncertain cases
 
 A **baseline** is the current process measured on comparable work. Time the analyst using the existing version viewer and policy, including follow-ups. Then time assisted review with the same decision rules. Avoid letting a reviewer memorize the answer first. For a small pilot, split matched cases between conditions, counterbalance order across reviewers and reserve unseen cases. Record case difficulty and access failures. Count setup, review and rework separately.
 
-Suppose an independent reviewer labels 20 synthetic pairs: 8 should route, 7 are routine, 3 have insufficient evidence and 2 have authorized exceptions. The prototype routes 9, of which 7 truly need routing and 2 are routine. It misses one material visibility change. It correctly handles the three insufficient-evidence cases and the two exceptions. The other five routine pairs close correctly.
+Suppose a reviewer approves reference answers for 20 synthetic pairs under P-7 v1. Eight need compliance review, seven are routine, three need evidence and two have valid exceptions. The prototype sends nine for review, including seven of the eight required and two routine changes. It handles the three evidence requests and both exceptions correctly. Of the eight requiring review, two also need escalation under the timing rule. The prototype escalates one. The missed escalation is the same critical visibility change it missed for review.
 
-| Question | Calculation | Meaning |
-| --- | --- | --- |
-| How many material changes were found? | 7 of 8 = 87.5% recall | One required review was missed. Inspect it before rollout. |
-| How much alert noise reached the reviewer? | 2 of 9 routed alerts were false; precision is 7 of 9, about 78% | Nine alerts cost review time; two did not need escalation. |
-| How often did the four-way disposition match? | (7 + 5 + 3 + 2) / 20 = 85% | Good aggregate agreement can coexist with a consequential miss. |
-| Did time improve? | Baseline median 12 min; assisted median 8 min | A four-minute difference in these synthetic summaries. Check real workloads and tail cases. |
+| Action | Precision (correct actions / actions taken) | Recall (correct actions / required actions) | Missed critical cases |
+| --- | --- | --- | --- |
+| Route to compliance review | 7/9 (78%) | 7/8 (87.5%) | 1 visibility change |
+| Request evidence | 3/3 (100%) | 3/3 (100%) | 0 |
+| Escalate to higher authority | 1/1 (100%) | 1/2 (50%) | 1, the same visibility change |
 
-**Question.** A team proposes improving the dashboard by hiding “insufficient evidence” cases. What happens to recall? In the example, hiding the three unknowns need not change the seven-of-eight material-change count, because none of the reference labels for those three was “route.” It would remove three necessary follow-ups and understate work. Track abstentions and their resolution separately. A hidden missing annex can be a serious failure even if a binary routing metric looks unchanged.
+Primary disposition matches in 17 of 20 cases (seven routes, five routine, three requests, two exceptions). Escalation can accompany a primary action. Report it separately and identify overlapping misses by case ID. Hiding the three unknowns would leave routing recall unchanged while erasing three required follow-ups. If baseline and assisted median active times are 12 and 8 minutes, the four-minute improvement must be read alongside those missed actions.
+
+**When a reference answer is challenged.** Mark a new answer *provisional*, a signed answer *reviewer-approved*, and an unresolved challenge *disputed*. For example, a reviewer challenges a “routine” label because the original annex changed a scoring input. Retrieve the exact annex and policy version from that run. The designated reviewer checks both, supersedes a wrong answer with the correction, reason, date and reviewer, and preserves the original. Rescore the saved baseline and agent outputs on the same corrected set. Keep both score reports with their reference-set versions. Report unresolved disputes and their case IDs separately from scored cases. A later policy revision gets its own evaluation.
 
 **Evaluate trust.** Ask whether every cited passage exists in the authorized version, whether both normal and exceptional cases have enough context and whether overrides are recorded. Categorize misses by cause, such as unavailable source, bad version match, incomplete policy or erroneous interpretation. Each points to a different product change. Re-evaluate on held-out cases after adjusting the prototype.
 
@@ -120,7 +128,7 @@ Use one sentence each for customer, buyer, trigger, current process, pain, curre
 
 | Memo field | Worked example for DunaWorks, entirely hypothetical |
 | --- | --- |
-| Customer, user, reviewer, buyer | B2B software teams with a AI product release review queue. Product engineers edit specs; AI compliance operations triages; AI compliance lead decides materiality; general counsel sponsors a trial. |
+| Customer, user, reviewer, buyer | Business-to-business (B2B) software teams with an AI product release review queue. Product engineers edit specs; AI compliance operations triages; AI compliance lead decides materiality; general counsel sponsors a trial. |
 | Current workflow and pain | Editors send voluntary messages. Analysts compare versions manually and chase missing annexes. Frequency, waiting time and missed changes need customer evidence. |
 | Output and authority | Draft review card with old and new citations, policy trigger, missing input or applicable exception. Human reviewer accepts, dismisses or requests evidence. |
 | Pilot access | One approved folder, version history, internal policy and redacted past dispositions. Tenant administrator grants bounded access; security reviews retention and deletion. |
@@ -139,9 +147,9 @@ Use one sentence each for customer, buyer, trigger, current process, pain, curre
 | Discovery interview | Reconstructing work and testing assumptions with a participant | problémafeltáró interjú |
 | Buyer / gatekeeper | Controls spending / authorizes access or deployment | költségkeret gazdája / hozzáférés jóváhagyója |
 | Baseline | Measured performance of today's process | összehasonlítási alapérték |
-| Ground truth | Agreed reference answer for evaluation, with its limits | ellenőrzött referenciaeredmény |
+| Reference answer | Versioned expected action with reviewer, evidence, policy and status (provisional, reviewer-approved or disputed) | referenciaválasz |
 | Precision / recall | Correct alerts among alerts / detected positives among actual positives | pozitív találatok pontossága / felismerési arány |
-| Abstention | Explicitly withholding a conclusion when evidence is insufficient | döntéstől való tartózkodás |
+| Abstention | Agent withholds a conclusion, records Insufficient information and requests evidence. The authorized human retains the decision. | tartózkodás a következtetés levonásától |
 | Paid pilot | Time-limited paid trial with a buyer and agreed acceptance criteria | fizetett próbaüzem |
 
 These live pages were reviewed on 17 November 2026. They establish vendor positioning and documented workflows. Use the landscape exercise to discover what actually runs at a customer.

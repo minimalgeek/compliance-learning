@@ -40,7 +40,7 @@ DunaWorks is a Hungarian-headquartered software developer with 2,000 employees a
 
 ## Who can change what?
 
-At 09:30 Éva has three calls to make. Product can say what the shortlist promises. A recruiter at a pilot customer can demonstrate what users do under time pressure. QA, the quality assurance team, can establish what this build actually did. Asking each one “Is the feature compliant?” would give her three opinions and little usable evidence.
+At 09:30 Éva has three calls to make. Product can say what the shortlist promises. A recruiter at a pilot customer can demonstrate what users do under time pressure. The quality assurance (QA) team can establish what this build actually did. Asking each one “Is the feature compliant?” would give her three opinions and little usable evidence.
 
 The Institute of Internal Auditors’ **Three Lines Model** helps explain who is accountable. Business management delivers the product and manages its risks. Specialist functions such as compliance advise, monitor and challenge. Internal audit can independently assess both. The board oversees management. A “line” describes a role; headcount and reporting structures vary. [IIA role descriptions](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf)
 
@@ -49,8 +49,8 @@ The Institute of Internal Auditors’ **Three Lines Model** helps explain who is
 | Define the product and proposed use | Product manager documents recruiter tasks, target markets and system limits. An engineering lead confirms implementation. | Product director owns product risk and resources. |
 | Interpret the rule | Counsel interprets the legal text. Privacy and employment specialists supply their assessments. Éva translates approved interpretations into review questions. | Named legal reviewer signs the interpretation. Head of compliance owns the review procedure. |
 | Run a safeguard | Engineering builds it. QA tests the release candidate. Customer success teaches recruiters how to use it. | Named control owner ensures it operates and failures are followed up. |
-| Decide a disputed launch | Éva records dissent and escalates. Risk committee considers scope, options and authority. | Delegated executive records a decision within their mandate. Applicable legal duties still bind the company. |
-| Assess the program | Internal audit selects its own sample and can examine whether Éva’s team challenged product leadership. | Head of internal audit reports independently to the governing body under its charter. |
+| Assess, accept risk and release | Éva in Compliance assesses each requirement. QA verifies build behavior and Éva reviews the scoped evidence. | Product Leadership accepts residual risk within its delegated authority. The chief executive officer (CEO) is the ultimate escalation authority. The designated release director authorizes rollout for the named scope. |
+| Assess the program | Internal audit selects its own sample and can examine whether Éva’s team challenged product leadership. | Head of internal audit reports independently to the board of directors under its charter. |
 
 **Agent opportunity.** Route the specific question to the role with evidence or authority. Populate a decision record from the current delegation register, including entity, scope and expiry. If the product director is also the proposed independent reviewer, flag the conflict. The platform should preserve who actually decided and which delegation applied that day.
 
@@ -74,14 +74,15 @@ When a customer writes “the law requires all candidates to be visible,” Éva
 
 | Record and Hungarian term | Question it answers | DunaWorks example |
 | --- | --- | --- |
-| Obligation · kötelezettség | Who owes what, under which authority, for which use and period? | A signed customer term requires access to all eligible applications for the vacancy. Legal requirements have their own entries. |
+| Obligation · kötelezettség | Who owes what, under which authority, for which use and period? | Pilot agreement v1, clause 2(a), requires DunaWorks to expose eligible applications to ordinary recruiters. Clause 1 defines eligibility. Legal requirements have their own entries. |
 | Policy · szabályzat | What rule has management adopted? | Changes affecting applicant visibility need a documented release review. |
 | Procedure · eljárásrend | How does a named operator perform the work? | QA opens the candidate build with recruiter permissions and traverses each page. |
 | Intended purpose · rendeltetés | What use, users and conditions does the provider describe? | Help employers prioritize applications for recruiter review. Compare sales claims, instructions and product design. |
 | Compliance risk scenario · megfelelőségi kockázati forgatókönyv | Who owes which obligation, and how could they miss it? | DunaWorks promises access to every eligible application. A score filter could hide unscored applications from the recruiter. |
 | Possible impact · lehetséges következmény | What could follow if that happened? | An eligible applicant could miss consideration for an interview. |
-| Inherent / residual risk · eredendő / fennmaradó kockázat | What is the exposure before safeguards, and what remains afterward? | Making everyone reachable addresses visibility. Recruiters might still review only the first twenty. |
-| Risk appetite / tolerance · kockázatvállalási hajlandóság / kockázattűrés | What exposure will management take, and what boundary triggers action? | Management permits a synthetic pilot. Its release rule requires full eligible-ID coverage before live rollout. |
+| Inherent / residual risk · eredendő kockázat / maradványkockázat | What is the exposure before safeguards, and what remains afterward? | Making everyone reachable addresses visibility. Recruiters might still review only the first twenty. |
+| Risk appetite / tolerance · kockázatvállalási hajlandóság / kockázattűrés | What exposure is management willing to take, and what limit is approved for this scope? | Record the tolerance source, version and approving authority. The workshop supplies no approved tolerance. |
+| Release test criterion · kiadási tesztfeltétel | What would count as success in the visibility test? | A complete matching recruiter run must reach every eligible ID. A missing ID fails visibility. |
 
 **Try the distinction.** “Unfair recruitment” is too broad for an engineer to act on. “A parser gives no score to a nonstandard CV; the query drops unscored records; a recruiter cannot consider the candidate” is testable at three points. Product can design a fallback, QA can plant an unscored example and compliance can ask whether it remains visible.
 
@@ -93,22 +94,24 @@ When a customer writes “the law requires all candidates to be visible,” Éva
 
 | Object and Hungarian term | Minimum useful record in the shortlist case |
 | --- | --- |
-| Control · kontroll, kockázatot mérséklő intézkedés | C-4: recruiter can reach every eligible ID independently of rank. Owner, scope, expected behavior and trigger. |
-| Control execution · a kontroll végrehajtása | Release test R-88: operator, release candidate, tenant configuration, time, inputs and actual result. |
+| Control objective · kontrollcél | Ordinary recruiters can reach each eligible application, including an unscored one. |
+| Control · kontroll | C-4 is the independently pageable full queue. Engineering maintains the query and permissions that expose eligible applications regardless of rank. |
+| Control execution · a kontroll végrehajtása | When the recruiter opens the next page, C-4 serves that page under the tenant’s permissions. The request log identifies the build, actor and IDs returned. |
 | Evidence · bizonyíték, alátámasztó adat | Source export, fixture manifest and recruiter-view observations with versions, collection time, scope and access rights. |
-| Test / assessment · ellenőrzési próba / értékelés | Compare expected and reachable sets. Evaluator records method, result, uncertainty and limitations. |
+| Test / assessment · ellenőrzési próba / értékelés | In release test R-88, QA traverses the queue and compares expected and reachable sets. The evaluator records method, result, uncertainty and limitations. |
 | Finding · vizsgálati megállapítás | F-21: 280 eligible IDs unreachable on build A in staging. Link criterion, observed condition, consequence and owner. |
 | Remediation / retest · helyesbítés / ismételt ellenőrzés | Fix pagination and verify the corrected release with a boundary case and the original 300-ID population. |
 | Exception · jóváhagyott eltérés | A competent owner permits a precisely scoped departure from an internal rule until a date, with conditions. Preserve its authority. |
-| Incident / complaint · incidens / panasz | A customer reports an adverse event or concern. Preserve original report, exposure, facts, awareness times and response. |
+| Complaint · panasz | A customer reports a concern. Record the original account, receipt time and requested response. |
+| Incident · incidens | Triage or investigation identifies an event from a complaint or internal evidence. Record the basis for the determination, containment and a separate reportability assessment. |
 
-A **design assessment** (*a kontroll kialakításának értékelése*) asks whether the safeguard could address the risk if performed as specified. **Operating effectiveness** (*a kontroll működési eredményessége*) asks whether it worked in the stated scope and period. A passing run on build B supports one release decision. Evidence from a single run leaves the operating history of fifty releases unknown.
+A **design assessment** (*a kontroll kialakításának értékelése*) asks whether the safeguard could address the risk if performed as specified. **Operating effectiveness** (*a kontroll működési eredményessége*) asks whether it worked in the stated scope and period. Track implementation status separately from effectiveness. The passing Build C run supports visibility for that build, recruiter role, vacancy and configuration. Evidence from a single run leaves the operating history of fifty releases unknown.
 
-**Agent opportunity.** Give each object an ID and link it to the exact version examined. One risk can require several controls; one control can support several obligations. A finding can reopen. A complaint can create a separate incident case linked to the original finding. Preserve historical conclusions when a policy, build or interpretation changes so an auditor can reconstruct yesterday’s decision.
+**Agent opportunity.** Give each object an ID and link it to the exact version examined. One risk can require several controls; one control can support several obligations. A finding can reopen. Triage can link a complaint to a separately assessed incident. An internal review can also identify an incident. Preserve historical conclusions when a policy, build or interpretation changes so an auditor can reconstruct yesterday’s decision.
 
 ## From a signal to an owned case
 
-A **signal** (*jelzés*) is an input worth examining. A **case** (*ügy*) groups facts and decisions about a defined question. A **task** (*feladat*) is work assigned inside the case. A pull request, a revised product document and a customer support ticket can refer to the same feature. They arrive from different people, at different times, with different access rights.
+A **signal** (*jelzés*) is an input worth examining. A **case** (*ügy*) groups facts and decisions about a defined question. A **task** (*feladat*) is work assigned inside the case. A pull request (PR), a revised product document and a customer support ticket can refer to the same feature. They arrive from different people, at different times, with different access rights.
 
 Take the shortlist PR. An analyst opens case AI-17, records the EU hiring product and release candidate, and asks whether the change alters applicant visibility. The responsible reviewer is Éva. The analyst links the PR and specification. A task goes to QA for a recruiter-view test. A separate model-risk review remains with the evaluation lead.
 
@@ -116,10 +119,13 @@ Take the shortlist PR. An analyst opens case AI-17, records the EU hiring produc
 | --- | --- | --- |
 | Received → triaged | Analyst establishes product, urgency, possible harm and affected release | Suggest a matching case and route. Keep ambiguous matches separate for review. |
 | Triaged → awaiting evidence | Reviewer names the missing fact, its source and owner | Request the missing build or fixture under the case’s permissions. Track response and age. |
+| Awaiting evidence → assessed | Record what arrived, its scope and the reviewer’s conclusion per requirement. For Insufficient information, name the remaining gap, why it matters, supplier and next review. | Attach evidence to the specific claim and keep unresolved requests open. |
 | Assessed → action open | A finding cites the criterion and observed failure | Draft a remediation ticket linked to the finding. Owner confirms due date and scope. |
 | Action open → awaiting retest | Owner supplies a new build and describes the correction | Trigger the authorized test on the new version. Keep the original failed run. |
 | Verified → closed | Reviewer accepts the evidence for the named finding. Release authority separately decides launch. | Draft the closure and release records. Record each authorized decision independently. |
 | Closed → reopened | New complaint, regression or invalidated assumption changes the evidence | Alert the former owner and show the triggering fact alongside the old conclusion. |
+
+**Proposed retest workflow for discussion.** A matching pass goes to the verifier. A failed run returns to remediation. An inconclusive run prompts a request for the specific missing evidence. The case owner records who can act and when review resumes.
 
 **Other exits matter.** A duplicate can be linked and retired; a reasoned out-of-scope decision records why; an inconclusive review stays open or is escalated with its limitation visible. An “approved exception” needs scope, expiry and an authorized decision. A missed due date tells the agent whom to notify. It supplies no evidence that the underlying work passed.
 
@@ -158,7 +164,7 @@ A customer asks sales, “Has your AI been certified?” Sales forwards the ques
 
 **10:10, evidence request to QA.** “For build A, please provide the complete synthetic vacancy manifest, our eligibility rule, recruiter role, feature settings, and all IDs reachable through the two tabs. Include candidates without scores. Tell me if pagination or export limits prevent a complete result. QA can use synthetic IDs for this test.” This is an **evidence request** (*bizonyítékbekérés*). It states the claim a reviewer must be able to verify.
 
-**11:00, population agreed.** QA confirms one synthetic EU vacancy has 300 distinct eligible applications. Withdrawn applications were excluded before freezing the manifest. Zero-score and unscored applications remain eligible. “All” means reachable in this vacancy through the recruiter’s normal interface with ordinary permissions. Administrator database access answers a different question. Product owns that definition. QA captures the manifest before reading the result.
+**11:00, population agreed.** QA confirms one synthetic EU vacancy has 300 distinct eligible direct submissions. Transfers from other vacancies use a different intake path and need a separate source-to-destination reconciliation. Withdrawn applications were excluded before freezing the manifest. Zero-score and unscored applications remain eligible. “All” means reachable in this vacancy through the recruiter’s normal interface with ordinary permissions. Administrator database access answers a different question. Product owns that definition. QA captures the manifest before reading the result.
 
 **13:00, intake decision.** Build A’s recruiter view exposes twenty distinct eligible IDs. All 300 were expected. The test environment is documented and the run covers every page the interface exposes. Éva opens F-21 for the missing 280. She does not infer that 280 real people were rejected. The test used synthetic applications in staging. Release operations checks whether any customer had a live flag; unknown exposure would change triage priority.
 
@@ -176,23 +182,23 @@ A customer asks sales, “Has your AI been certified?” Sales forwards the ques
 | Recruiters treat rank as a hiring decision | Product designs an override and explains limits; customer success runs a task-based usability test with pilot recruiters under realistic time pressure. | Assemble authorized usage summaries and test scripts. Surface evidence of whether recruiters could find, understand and use the alternative view. |
 | Upstream model changes after evaluation | Vendor manager identifies affected versions and notice terms. Model owner qualifies the update, tests regressions and documents rollback. | Compare vendor notice and deployed model inventory; reopen affected tests. Mark missing version evidence explicitly. |
 
-**Risk treatment** (*kockázatkezelési intézkedés*) can mean avoiding the use, changing the design, reducing exposure through rollout limits, or accepting a remaining exposure within delegated authority. A contract can allocate responsibilities and some financial consequences. It cannot restore an applicant’s missed opportunity. The director can disable ranking and ship other features if fixing it would miss the launch date.
+**Risk treatment** (*a kockázat kezelése*) means choosing how to address exposure. A **treatment measure** (*kockázatkezelési intézkedés*) is a specific action, such as manual review of unscored applications. Where the pilot contract assigns review to the employer, the employer assigns each file, records the recruiter’s reasoning and samples decisions against the eligible population. An applicant could still miss an interview if a file is skipped. DunaWorks verifies that the file reached the recruiter and that exclusion waited for the review record. Each party supplies evidence for the part it controls.
 
 **Challenge for the officer.** Training is useful when a recruiter needs to learn how to reach another view. It cannot make an inaccessible record appear. Tie every mitigation to the mechanism of harm and ask what observation would show the mitigation failed.
 
 ## Wednesday: build evidence someone else can test
 
-**Control C-4.** Each eligible application for a vacancy must be reachable through the customer recruiter view regardless of rank or score. Engineering owns implementation; QA owns the release test; Éva reviews evidence for high-impact changes. The rule is fictional. Its wording matters: “all eligible” gives QA a population, “recruiter view” fixes the identity, and “regardless of score” makes the unscored case necessary.
+**Objective of control C-4.** Each eligible application for a vacancy must be reachable through the customer recruiter view regardless of rank or score. Engineering owns implementation; QA owns the release test; Éva reviews evidence for high-impact changes. The rule is fictional. Its wording matters: “all eligible” gives QA a population, “recruiter view” fixes the identity, and “regardless of score” makes the unscored case necessary.
 
 | Test element | Worked instruction |
 | --- | --- |
-| Expected population | Freeze eligible synthetic IDs from the submission manifest using the approved eligibility rule and time window. Record excluded withdrawals. |
+| Expected population | Freeze eligible synthetic direct-submission IDs for the tested vacancy from the submission manifest using the approved eligibility rule and time window. Record excluded withdrawals. |
 | Observed population | Use an ordinary recruiter login on the release candidate. Traverse every exposed page in the full queue. Capture IDs, duplicate rows and access errors. |
 | Compare | Compute expected IDs missing from the view and unexpected IDs present. Count duplicate rows separately. Equal counts can hide substitution. |
-| Decide | A complete trusted run with missing IDs establishes a failure. An interrupted traversal leaves the result inconclusive. An unexpected applicant from another tenant triggers separate access and privacy triage. |
+| Decide | Missing eligible IDs in a complete matching run fail visibility. Open a separate finding for duplicate IDs. Investigate each unexpected ID and route cross-tenant exposure for access and privacy triage. An interrupted traversal leaves coverage unresolved. |
 | Preserve | Attach the run ID, candidate build, model/config version where relevant, vacancy, test identity, time, manifest, output, method and reviewer. Restrict access to evidence. |
 
-**The fix.** Engineering decouples the capped query from the full-queue endpoint. Build B returns 300 rows. One ID appears twice; one eligible applicant is absent. The count matches and the set fails. Build C returns 300 distinct expected IDs, no extras and no duplicates. QA verifies the unscored fixture is among them. The comparison supports closing the observed visibility defect on build C in this configuration. A different customer integration or build needs its own evidence.
+**The fix.** Engineering decouples the capped query from the full-queue endpoint. Build B returns 300 rows. One ID appears twice; one eligible applicant is absent. Build B fails visibility on the omission. QA records the duplicate as a separate finding. Build C returns 300 distinct expected IDs, no extras and no duplicates. QA verifies the unscored fixture is among them. Build C passes visibility for the 300 eligible direct submissions in this vacancy and configuration. The comparison supports closing that scoped visibility finding. A different customer integration or build needs its own evidence.
 
 **Root cause** (*kiváltó ok*) explains how the weakness survived: both views shared a capped query and the largest automated fixture had twelve records. **Correction** restores the queue. **Corrective action** reduces recurrence by adding boundary tests and a release check for shared-query changes. A reviewer can verify the correction today and leave the recurrence-prevention action open until it has run.
 
@@ -200,15 +206,15 @@ A customer asks sales, “Has your AI been certified?” Sales forwards the ques
 
 ## Thursday: decide, escalate and document dissent
 
-Sales has promised the new shortlist on Friday. The product director asks whether the VP can “sign off the risk.” Éva first asks what decision the VP is empowered to take. DunaWorks’ fictional delegation permits the director to release unaffected functionality with ranking disabled. An exception to the internal release policy requires committee approval. Counsel checks whether any applicable external duty limits the available options.
+Sales has promised the new shortlist on Friday. The product director asks whether the VP can “sign off the risk.” Éva first asks what decision the VP is empowered to take. For this release the product director is the designated release director. The fictional delegation lets the director release unaffected functionality with ranking disabled. The risk committee reviews internal policy exceptions. Product Leadership may accept residual risk only within its delegation. Escalation beyond that authority ultimately goes to the CEO. Counsel checks whether any applicable external duty limits the available options.
 
-**Release memo AI-17.** Requested decision: ship build C to the contracted pilot scope or keep ranking disabled. Criterion: every eligible candidate reachable by an ordinary recruiter. Only 20 of 300 eligible IDs were reachable on build A; B returned 300 rows with one duplicate and one omission; C matched all 300 distinct IDs. Evidence: QA runs A–C against the frozen manifest. Limitation: synthetic staging test, one integration, one role. Separate open question: meaningful human oversight under peak workload. Owner: product director. Recommendation: ship the pagination fix; keep ranking disabled for live customers pending the workload review. Decision required Thursday at 16:00 under internal release procedure.
+**Release memo AI-17.** Requested decision: ship the Build C pagination fix and decide whether to enable pilot ranking. Criterion: every eligible candidate reachable by an ordinary recruiter. Only 20 of 300 eligible IDs were reachable on build A; B returned 300 rows with one duplicate and one omission; C matched all 300 eligible direct-submission IDs for the tested vacancy. Evidence: QA runs A–C against the frozen manifest. Limitation: synthetic staging test, one integration, one role. Separate open question: meaningful human oversight under peak workload. Owner: product director. Recommendation: ship the pagination fix; keep ranking disabled for live customers pending the workload review. Decision required Thursday at 16:00 under internal release procedure.
 
 **Meeting record.** The director accepts the recommendation. Release operations verifies the live flag is off, records the build and rollout scope, and gives support the decision. Éva closes F-21 only when the reviewer accepts the fix for the tested scope. The workload action retains its own owner, due date and acceptance test. Support should be able to tell a customer precisely what changed.
 
-**What if the director disagrees?** Éva records the alternative, her evidence and unresolved risk, and requests a decision from the named escalation authority. An exception request states the internal rule, reason, alternatives, expiry, affected customers, interim safeguards, monitoring owner and revocation trigger. The committee can decline. Expiry triggers fresh action; silence cannot renew it. A product executive cannot vote away a binding legal requirement.
+**What if the director disagrees?** Éva records the alternative, her evidence and unresolved risk, and requests a decision from the named escalation authority. An exception request states the internal rule, reason, alternatives, expiry, affected customers, interim safeguards, monitoring owner and revocation trigger. Committee approval is required for a policy exception. A residual-risk decision beyond Product Leadership’s delegation goes to the CEO. Expiry triggers fresh action; silence cannot renew it. A product executive cannot vote away a binding legal requirement.
 
-**Agent opportunity.** Assemble the decision packet, verify signatory delegation and detect that an earlier run refers to build B. Route the draft to the committee if authority is insufficient. Record who approved which version and any dissent. If a new commit or flag change lands after approval, flag the scope change and request review before carrying the decision forward.
+**Agent opportunity.** Assemble the decision packet, verify signatory delegation and detect that an earlier run refers to build B. Route a policy exception to the committee and a risk acceptance beyond delegated authority to the CEO. Record who approved which version and any dissent. If a new commit or flag change lands after approval, flag the scope change and request review before carrying the decision forward.
 
 ## After launch: complaints, incidents and recovery
 
@@ -222,7 +228,7 @@ Six weeks later, assume a separate workload study was reviewed and a limited liv
 | Correct and restore | Fix the transfer path. Reconcile the affected population and coordinate re-review of recovered applications with the employer. | Track recovery and customer acknowledgement separately from software deployment. List cases with unknown outcomes. |
 | Learn and verify | Éva checks that subsequent tests include transfers. Product updates guidance. Quality lead checks whether other ingress paths have the same blind spot. | Reopen affected controls, propose new regression fixtures and collect evidence from the next relevant release. |
 
-A **complaint** is a signal from someone affected. A **confirmed incident** establishes that an event occurred. A **reportable serious incident** has a legal definition and conditions that need assessment. For high-risk systems the AI Act distinguishes post-market monitoring from serious-incident reporting. Counsel checks the applicable law and reporting clock for the event. The company should preserve facts while that assessment is underway. [AI Act Articles 72 and 73](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72) · [Serious-incident reporting](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-73)
+A **complaint** is an incoming report of a concern. It may come from an affected person or from a customer on someone else’s behalf. The incident lead records a **confirmed incident** when the evidence establishes the event. A **reportable serious incident** has a legal definition and conditions that need assessment. Under AI Act Article 72, a high-risk system’s provider actively collects, documents and analyzes performance data from deployers and other sources throughout the system’s lifetime to evaluate ongoing compliance with the applicable requirements. An internal monitoring review can identify an incident before any customer complains. Record the incident assessment separately from counsel’s determination of reportability under Article 73. Counsel checks the applicable law and reporting clock for the event. The company should preserve facts while that assessment is underway. [AI Act Articles 72 and 73](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72) · [Serious-incident reporting](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-73)
 
 > Magyarul: A hiba javítása és a következmények rendezése külön feladat. A javított verzió már megjelenítheti az áthelyezett jelölteket, de ettől a korábban kimaradt pályázatokat még nem vizsgálta meg a munkáltató.
 
@@ -260,14 +266,14 @@ An **Agentic Compliance Platform** here means software that can use approved too
 
 ## Choose a pilot and measure it honestly
 
-**Pilot question.** Can a compliance analyst produce an acceptable release-evidence packet faster while reliably detecting gaps that could change a release decision? Start with one recruitment product, one approved repository, one policy, one QA system and synthetic records. The output is a draft packet and a recommended next action. Product leadership keeps release authority.
+**Pilot question.** Can a compliance analyst produce an acceptable release-evidence packet faster while reliably detecting gaps that could change a release decision? Start with one recruitment product, one approved repository, one policy, one QA system and synthetic records. The output is a draft packet and a recommended next action. The designated release director keeps release authority.
 
-**Compare approaches.** The baseline analyst uses the existing ticket, PR diff and test results. The assisted analyst receives the same inputs plus citations, version checks and reconciled ID sets. Alternate the order across reviewers or use matched unseen cases. Include an ordinary low-risk edit as well as failures, approved exceptions, inaccessible evidence and superseded builds. Agree a reference result and severity with a practitioner before running the comparison. Label disputes and adjudicate them.
+**Compare approaches.** The baseline analyst uses the existing ticket, PR diff and test results. The assisted analyst receives the same inputs plus citations, version checks and reconciled ID sets. Alternate the order across reviewers or use matched unseen cases. Include an ordinary low-risk edit as well as failures, approved exceptions, inaccessible evidence and superseded builds. Agree reference actions and severity with a practitioner before running the comparison. Report unresolved disputes separately. If a label is corrected against the original evidence and policy, rescore both approaches on the corrected set and retain earlier results.
 
 | Measure | How to calculate and interpret it |
 | --- | --- |
 | Material misses | Count reference cases needing a hold or evidence request that the tool clears. Report by severity, input completeness and failure type. |
-| Useful routing | Count correct escalations among all escalations and detected material cases among all reference material cases. Track false alerts and their cost. |
+| Review routing, evidence requests and escalation | Score each action separately. Precision is correct actions divided by actions taken. Recall is correct actions divided by required actions. Report missed critical case IDs for each action, including overlaps. Mark an empty denominator as undefined. |
 | Citation correctness | Open each sampled citation with reviewer permissions. Confirm it resolves to the claimed version and supports the exact statement. |
 | Unknown handling | Count unavailable-source cases correctly sent for evidence. A confident pass on incomplete input is an error. |
 | Reviewer effort | Compare active minutes to an accepted packet, including corrections. Track elapsed waiting separately and record rework. |
@@ -283,16 +289,17 @@ Use the following independent exercise after reading the case. You are responsib
 
 | Packet item | Contents |
 | --- | --- |
-| P1. Approved requirement | Full queue must expose all eligible IDs to a recruiter, including unscored applicants. Withdrawn applications are excluded. |
-| P2. Frozen manifest | Seven submitted IDs: A, B, C, D, E, F, G. F was withdrawn before cutoff. E has no score. All belong to the pilot vacancy. |
+| P1. Approved requirement | Pilot agreement v1, clause 2(a), requires DunaWorks to make eligible applications visible and prevent exclusion until a review is recorded. Clause 2(b) requires the employer to ensure actual review. The release visibility test requires zero missing eligible IDs from an ordinary recruiter’s full queue. Unscored applications are eligible. Withdrawals before cutoff are excluded. |
+| P2. Frozen manifest | Seven direct submissions to the tested vacancy: A, B, C, D, E, F, G. F was withdrawn before cutoff. E has no score. All belong to the pilot vacancy. |
 | P3. Recruiter run on build D | The complete traversal returns A, B, C, D, D, G. Role, tenant, commit and feature configuration match. |
 | P4. Administrator screenshot | Admin can retrieve E directly in the database. Screenshot has today’s date. |
-| P5. Fix and test | A merged PR restores E to the recruiter view. Attached passing test identifies build C. No new recruiter run on D or its successor is attached. |
-| P6. Exception and support | Sales cites a signed exception for an internal demo using synthetic records only. Support separately reports one missing transferred applicant in a live customer; source history requested. |
+| P5. Fix and test | Engineering merged a PR intended to restore E. The attached passing run is on Build C, with the 300-ID direct-submission manifest. A reviewed recruiter-role run for the corrected build and pilot configuration is still outstanding. |
+| P6. Exception and support | Sales cites a signed exception for an internal demo using synthetic records only. Support separately relays a live customer’s complaint about a missing transferred applicant. Transfer history has been requested. |
+| P7. Authority and missing evidence | Éva assesses requirements for Compliance and verifies findings. Product Leadership holds delegated residual-risk acceptance authority. The release director controls live ranking. The packet includes neither an approved tolerance nor employer evidence of actual review. |
 
 **90-minute case lab.** Spend 15 minutes listing each record type and owner. Spend 20 deriving expected and observed sets and the decision for D. Use 20 to draft an evidence request of at most 80 words. Use 20 to draft a release memo of at most 120 words. Spend 15 explaining what you would do about the complaint and what your report to leadership may claim.
 
-In the release memo, propose one FordoX risk decision: Accept, Remediate, Escalate or Block. Record the evidence for residual risk, the applicable tolerance or missing approval, the decision authority and the reassessment trigger. Explain separately what should happen to the live pilot. [FordoX taxonomy](../../taxonomy.md)
+In the release memo, record five fields independently: risk disposition, escalation, finding status, release decision and Compliance’s assessment outcome for each requirement. State the residual rating or uncertainty, the tolerance source if available and the reassessment trigger. Identify who verifies the correction, who may accept residual risk and who can authorize rollout. [FordoX taxonomy](../../taxonomy.md)
 
 **45-minute design lab.** Pick a trigger. Write the platform’s exact inputs, two permitted tool actions, its durable case state, the stopping condition and the human decision. Predict its behavior if the evidence is delivered twice or source access is revoked. Name one acceptance test for each. State the current manual baseline you would measure and who can authoritatively label a material miss.
 
@@ -302,19 +309,36 @@ In the release memo, propose one FordoX risk decision: Accept, Remediate, Escala
 
 **Reconciliation.** Expected eligible set = A, B, C, D, E, G. The six rows in P3 contain five distinct IDs, A, B, C, D, G. E is missing; D is duplicated; no unexpected ID is present. The complete matching run establishes failure on build D. P4 establishes that E exists in storage. The approved claim concerns recruiter access. The test for build C and the merged fix leave the corrected candidate’s behavior unresolved.
 
-**Build D risk decision.** Recommend **Remediate** to the accountable risk owner. The compliance risk is that filtering could prevent DunaWorks from meeting the approved requirement that every eligible ID be reachable by an ordinary recruiter. A missed interview is a possible impact. The approved pilot criterion permits zero missing eligible IDs. E is missing, and D appears twice. This run establishes a visibility control failure on build D. It supplies neither subgroup outcomes nor the frequency of harm across vacancies. Leave the residual rating unresolved and request the approved risk tolerance if a numerical or categorical comparison is required. The zero-omission test criterion alone cannot supply that rating.
+**Build D decision record.** QA compared the complete matching run with the frozen manifest. Éva reviewed that comparison for Compliance. Record the following together.
 
-Engineering repairs the query. QA reruns the full traversal on the corrected candidate with the scoped recruiter role. The compliance reviewer can close the finding when that evidence satisfies the criterion. The risk owner reassesses remaining exposure, records the relevant tolerance and decision, and escalates anything outside delegated authority. The release director keeps live ranking on hold pending that review and makes a separate rollout decision. Record the build, accountable person, date, rationale and next review point. Reopen on a changed eligibility rule, queue configuration or new affected applicant path.
+| Field | Worked result |
+| --- | --- |
+| Release test criterion | Zero missing eligible direct-submission IDs for the tested vacancy, role and configuration. Build D fails because E is missing. Log the duplicate D as a separate finding. Investigate any unexpected ID, with access and privacy triage for cross-tenant exposure. |
+| Compliance assessment per requirement | Visibility is **unmet** on Build D. Whether exclusion waits for a review record is **Insufficient information**. Whether the employer’s recruiters actually review eligible files is also **Insufficient information**. The broader human-oversight assessment remains inconclusive. |
+| Risk disposition | **Remediate.** Engineering owns the visibility correction. **Residual rating unresolved. Approved tolerance not supplied.** Compliance requests the approved limit and delegation from Product Leadership before any acceptance assessment. |
+| Escalation | No acceptance requested or escalation recorded. If time pressure creates a decision beyond Product Leadership’s mandate, refer it to the CEO as ultimate escalation authority. |
+| Finding status and verifier | The omission and duplicate findings remain open. QA supplies the corrected build’s results. Éva verifies the findings individually against the matching evidence. |
+| Release decision | The release director places a temporary **hold** on live pilot ranking pending evidence and reassessment. A **block** is an explicit prohibition on deployment for the scope, for example where a binding prerequisite rules it out. The synthetic-demo exception covers only the demo. |
+
+**Evidence still needed.** QA must supply a complete recruiter traversal on the corrected build and configuration to verify visibility, and an attempted exclusion before and after recording review to verify the gate. The employer must supply the eligible decision population and a scoped sample showing what recruiters examined and when. The sample addresses actual review. Éva resumes each assessment on receipt, before live activation. Reopen it if the eligibility rule, build, role, configuration or intake path changes. Only Product Leadership may accept supported residual risk within its delegation. Only the designated release director may lift this release hold.
 
 **A suitable evidence request.** “QA: on the candidate containing the merged fix, run the full queue as an ordinary pilot recruiter against the frozen manifest. Attach commit, tenant, flag, role, all returned IDs, pagination completion and comparison with the six eligible IDs. Include E with no score. Record any duplicate separately. If the run cannot finish, identify the missing evidence.”
 
-**A suitable memo.** “Hold live ranking for the pilot. On build D, six rows contained five distinct eligible IDs. E was missing and D appeared twice. Admin access and a passing test on C do not verify recruiter behavior on the corrected build. The existing exception covers a synthetic demo only. Engineering owns the change; QA owns retest. I will review the new run, then the director can decide rollout within the approved scope. Support is investigating a separate live transfer issue; customer exposure is unknown.”
+**A suitable memo.** “Hold live pilot ranking. Build D omitted eligible application E and returned D twice. Build C passed for a different build and manifest. Engineering’s merged fix awaits a matching recruiter-role test. Remediate both open findings. No escalation requested. Compliance finds visibility unmet and broader human oversight inconclusive. Residual rating unresolved. Approved tolerance not supplied. QA will retest the corrected build and gate. The employer will supply sampled review decisions. Éva will verify and reassess on receipt, before activation. Product Leadership handles residual-risk acceptance within delegation. The release director decides rollout. Support will investigate the live transfer complaint separately.”
 
-**Complaint disposition.** Open or link a restricted incident-assessment case. Preserve receipt time, route for timely containment and impact assessment, ask for the source and destination history using authorized access, and involve the employer for candidate follow-up where warranted. A product defect and a possible live impact can coexist with different evidence states. The fact pattern alone cannot settle the legal reporting decision.
+**Complaint disposition.** Record the live transfer report as a complaint. Preserve receipt time and obtain the source vacancy, destination, transfer history and recruiter-visible results under restricted access. The 300-ID direct-submission test did not exercise transfers. Triage exposure and containment now. If the facts establish an incident, open or link the incident record and document the determination. An internal review can reach the same determination. Legal and privacy assess reportability separately. Involve the employer in follow-up for any affected applicant.
 
 **Platform answer.** On new test completion, retrieve the approved manifest and candidate run. Use tenant/build/role checks and set comparison; attach one analysis per unique run. Duplicate notification reuses the analysis. If access is revoked before collection, stop retrieval and mark the evidence unavailable. A source-permission failure must never become a passing result. Authorized humans decide finding closure and launch.
 
-**Reusable record.** Capture question → governing criterion/source/version → entity/product/build → expected and observed behavior → evidence and limits → affected people → recommendation and alternatives → authority and decision → owner/due date → retest and reopening trigger. A peer should be able to reconstruct the conclusion and name one new fact that would change it.
+**Reusable record.** Use one row per requirement or finding where the evidence differs.
+
+| Record | Fields to complete |
+| --- | --- |
+| Scope and criterion | Source, version, passage, duty bearer, required conduct, entity, vacancy, intake path, build, role, configuration, test criterion and expected population |
+| Evidence and verification | Requested artifact, why needed, supplier and due date, received artifact and version, observed result, reviewer, scoped conclusion and limits |
+| Assessment and treatment | Compliance assessor, outcome per requirement, possible impact, residual rating or unresolved, approved tolerance and source or missing approval, risk disposition and action owner |
+| Authority and status | Escalation recipient and reason, finding status and verifier, delegated risk acceptance authority, release authority and release decision, scope and expiry |
+| Follow-up | Missing evidence, who will supply it, when review resumes, retest result and reassessment trigger |
 
 ## English–Hungarian desk glossary
 
@@ -324,7 +348,7 @@ These are working translations for conversations with practitioners. Use the off
 | --- | --- | --- |
 | Compliance officer / function | megfelelőségi szakértő / megfelelőségi terület | Person / organizational function that advises, monitors, challenges and escalates. |
 | Governance / accountability | vállalatirányítás / elszámoltathatóság | Who has authority, and who must explain the outcome? |
-| Risk owner / control owner | kockázatgazda / kontrollgazda | Who can change the exposure? Who ensures a specific safeguard operates? |
+| Risk owner / control owner | kockázatgazda / kontrollgazda | Who answers for managing the risk under delegation? Who ensures a particular safeguard operates? |
 | Delegation / escalation | hatáskör átruházása / döntés magasabb szintre emelése | Who may decide today? Who handles matters beyond that mandate? |
 | Applicability / obligation register | alkalmazandóság / kötelezettségnyilvántartás | Why a provision reaches this activity; where the dated interpretation lives. |
 | Provider / deployer | szolgáltató / alkalmazó | DunaWorks supplies the branded system; the employer uses it to recruit. |
@@ -333,9 +357,9 @@ These are working translations for conversations with practitioners. Use the off
 | Evidence provenance / scope | a bizonyíték eredete / vizsgálati kör | Source, version, period, population, permissions and collection method. |
 | Finding / evidence gap | megállapítás / hiányzó bizonyíték | Demonstrated deviation versus an unanswered question. |
 | Root cause / corrective action | kiváltó ok / helyesbítő intézkedés | Why a defect escaped, and what reduces repetition. |
-| Exception / risk acceptance | jóváhagyott eltérés / kockázatvállalás | Authorized departure from an internal rule / decision about remaining exposure. |
+| Exception / risk acceptance | jóváhagyott eltérés / a maradványkockázat elfogadása | Authorized departure from an internal rule / decision about remaining exposure. |
 | Monitoring / independent assurance | folyamatos nyomon követés / független bizonyosságot nyújtó értékelés | Routine management review / independent assessment of a defined claim. |
-| Post-market monitoring | forgalomba hozatal utáni nyomon követés | Systematic learning from performance and events after release to customers. |
+| Post-market monitoring | forgalomba hozatal utáni nyomon követés | The high-risk provider systematically gathers and analyzes performance evidence over the system’s lifetime to evaluate ongoing compliance. |
 
 **Pass condition.** Explain in either language how one shortlist change produces a signal, case, risk, control test, finding, corrective action, verified closure and a separate release decision. For each, identify its owner, its evidence, what an agent could do, and what would make the agent stop.
 
