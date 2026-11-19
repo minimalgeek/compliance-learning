@@ -22,6 +22,8 @@ The approach follows the Pareto principle: prioritize the concepts and workflows
 
 The organizing question is: **Which requirement applies, who must act, and how would we know that it happened?**
 
+Use the [English–Hungarian FordoX taxonomy](taxonomy.md) to follow an obligation through a compliance theme, risk, controls and evidence to the accountable owner’s decision.
+
 ## Roadmap
 
 Plan for five hours per week, for approximately 35 hours total. Material availability does not imply that the learner has completed the week.

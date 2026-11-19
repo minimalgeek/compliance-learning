@@ -203,6 +203,8 @@ DunaWorks develops and sells an AI recruitment tool. Its customer’s recruiter 
 
 **Pass condition.** Trace one signal (*jelzés*) to a finding (*megállapítás*), corrective action (*helyesbítő intézkedés*) and verified closure (*ellenőrzött lezárás*). Explain who can close the finding and who can approve the release. Show how the agent handles a missing test result, and how you would measure both reviewer time and material misses. [Workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair) · [Worked answer](chapters/week-07/chapter.md#answer-key-and-a-reusable-decision-record)
 
+Use the [FordoX decision chain](taxonomy.md) throughout the existing exercises. In Week 1 explain a theme, risk and control. In Week 2 label the evidence for each claim. In Week 5 produce a legal classification and a separate scenario assessment. In Week 6 test versioned links and control states. In Week 7 justify the risk decision, finding closure and release recommendation separately.
+
 ## Reference for all seven weeks
 
 The recurring data objects are a useful guide for a technical founder:

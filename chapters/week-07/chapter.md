@@ -291,6 +291,8 @@ Use the following independent exercise after reading the case. You are responsib
 
 **90-minute case lab.** Spend 15 minutes listing each record type and owner. Spend 20 deriving expected and observed sets and the decision for D. Use 20 to draft an evidence request of at most 80 words. Use 20 to draft a release memo of at most 120 words. Spend 15 explaining what you would do about the complaint and what your report to leadership may claim.
 
+In the release memo, propose one FordoX risk decision: Accept, Remediate, Escalate or Block. Record the evidence for residual risk, the applicable tolerance or missing approval, the decision authority and the reassessment trigger. Explain separately what should happen to the live pilot. [FordoX taxonomy](../../taxonomy.md)
+
 **45-minute design lab.** Pick a trigger. Write the platform’s exact inputs, two permitted tool actions, its durable case state, the stopping condition and the human decision. Predict its behavior if the evidence is delivered twice or source access is revoked. Name one acceptance test for each. State the current manual baseline you would measure and who can authoritatively label a material miss.
 
 **45-minute practitioner interview.** Walk through a recent release using an approved redacted example. Identify the person who could order a change, who actually challenged the evidence, and whose sign-off closed the finding. Ask for one decision that could be automated and one that still needed a person. Record observed facts separately from assumptions, including why a buyer might decline the proposed pilot.
@@ -298,6 +300,10 @@ Use the following independent exercise after reading the case. You are responsib
 ## Answer key and a reusable decision record
 
 **Reconciliation.** Expected eligible set = A, B, C, D, E, G. The six rows in P3 contain five distinct IDs, A, B, C, D, G. E is missing; D is duplicated; no unexpected ID is present. The complete matching run establishes failure on build D. P4 establishes that E exists in storage. The approved claim concerns recruiter access. The test for build C and the merged fix leave the corrected candidate’s behavior unresolved.
+
+**Build D risk decision.** Recommend **Remediate** to the accountable risk owner. The approved pilot criterion permits zero missing eligible IDs. E is missing, and D appears twice. This run establishes a visibility control failure on build D. It supplies neither subgroup outcomes nor the frequency of harm across vacancies. Leave the residual rating unresolved and request the approved risk tolerance if a numerical or categorical comparison is required. The zero-omission test criterion alone cannot supply that rating.
+
+Engineering repairs the query. QA reruns the full traversal on the corrected candidate with the scoped recruiter role. The compliance reviewer can close the finding when that evidence satisfies the criterion. The risk owner reassesses remaining exposure, records the relevant tolerance and decision, and escalates anything outside delegated authority. The release director keeps live ranking on hold pending that review and makes a separate rollout decision. Record the build, accountable person, date, rationale and next review point. Reopen on a changed eligibility rule, queue configuration or new affected applicant path.
 
 **A suitable evidence request.** “QA: on the candidate containing the merged fix, run the full queue as an ordinary pilot recruiter against the frozen manifest. Attach commit, tenant, flag, role, all returned IDs, pagination completion and comparison with the six eligible IDs. Include E with no score. Record any duplicate separately. If the run cannot finish, identify the missing evidence.”
 

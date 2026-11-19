@@ -44,6 +44,19 @@ Imagine four records on an auditor's desk. The policy defines the deadline. A jo
 
 **Provenance** is where a record came from and how it reached the test. Retain the query or export criteria, collection time, period, system owner and access restrictions. A screenshot of a disabled account today cannot establish the date it was disabled. A late-collected event history might still establish that date. The collection date and the event date do different jobs.
 
+### Classify the evidence
+
+In the matrix exercise, use the following packet for a proposed review-before-rejection control. Label each item by the claim it supports. Which item would you request next?
+
+| Item | Worked answer |
+| --- | --- |
+| Specification v3 says the model suggests whom to reject | Assessment evidence. It establishes why oversight needs assessment. |
+| Approved reviewer procedure | Control design evidence. It prescribes a review before rejection. |
+| Test on build 18 shows an ordinary recruiter reversing a suggestion | Control implementation evidence for this build, role and configuration. |
+| A month of decision logs includes ten overrides | Control operation evidence. Ten overrides without a denominator or case details leaves the quality of review unresolved. |
+
+Ask for the eligible decision population and a permission-scoped sample showing what reviewers saw, when they acted and why. An agent can reconcile timestamps and retrieve authorized records. A reviewer judges whether the sample supports meaningful oversight. Classify each artifact against a claim, since the same artifact can serve different purposes. [FordoX taxonomy](../../taxonomy.md)
+
 ## Build a five-row risk-and-control matrix
 
 A **risk-and-control matrix** links a failure scenario to the action intended to address it and the procedure that checks it. One row per control is a useful starting point. Split a row when owners or triggers differ. Use the following worked matrix as a model. The identifiers refer to invented company policies.

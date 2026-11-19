@@ -71,6 +71,10 @@ Spend 70 minutes on the impact record and 50 on the inventory below. Identify th
 
 **Platform opportunity.** An agent can flag the conflicting claims, cite both versions and request role-matched evidence. Counsel owns the legal interpretation. A successful override test supports one product claim. The broader review still needs evidence that recruiters understand the output and have time and authority to intervene.
 
+**Write two assessments for R12.** In the first record, counsel examines the provider, market, intended employment use, Article 6, Annex III point 4(a), applicable dates and any conditions affecting classification. The ranking specification supports examining the recruitment category. The administrator test cannot settle that legal determination.
+
+In the second record, assess a concrete harm before safeguards. Suppose the pilot team’s approved rubric rates losing an interview opportunity as High impact and recurring exposure across vacancies as Medium likelihood, combining to High inherent risk. The impact describes the harm. To support Medium likelihood, obtain relevant workflow or trial evidence of how often an erroneous suggestion would affect the queue. With only the R12 packet, likelihood and the combined rating remain provisional. **Self-check.** If a new trial changes the estimated frequency, revisit the scenario score. Revisit legal classification when its underlying business or legal facts change. [FordoX taxonomy](../../taxonomy.md)
+
 ## An AI inventory that survives a product change
 
 An **AI inventory** records actual uses, their owners and the decisions they influence. One vendor can supply several systems, and the same model can draft an email or rank job applicants. An EU AI Act **provider** generally develops or has a system developed and places it on the market or puts it into service under its name or trademark. A **deployer** uses a system under its authority in the relevant sense. Multiple parties and roles may be involved. Capture the facts before assigning duties. Check scope, definitions, intended purpose, classification provisions and applicable dates. See the Commission readings.

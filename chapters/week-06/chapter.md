@@ -81,6 +81,22 @@ Take one approved folder of product specifications and one reviewed internal pol
 
 For a future Drive, Notion or GitHub integration, ask which tenant, folders or repositories can be read, which version identifiers are stable, whether the reviewer can open the cited version and what happens after access is revoked. Use a selected approved source in the first trial. A GitHub pull request can establish that code changed. A policy document can establish intended behavior. Neither alone establishes what happened in production.
 
+### Test the agent’s links
+
+Use this synthetic fixture within the prototype block. Every ID below is at version 1. Each link in the expected answer has to cite a passage or a test result. Keep earlier versions when a model or policy changes.
+
+| Record | Supplied fact |
+| --- | --- |
+| O1, pilot policy §2 | A recruiter must review each application before exclusion. |
+| T1, CMT | Meaningful human oversight of recommendations. |
+| R1 and R2, risks | An unscored applicant disappears from review. A recruiter accepts an erroneous rejection without inspection. |
+| C1 and C2, controls | C1 requires full-queue review before exclusion. C2 reconciles eligible IDs against the recruiter-visible queue. |
+| E1, E2 and E3, evidence | E1 is the approved procedure for C1. E2 is a build-matched recruiter test demonstrating C1’s review screen. E3 is an engineering proposal to implement C2. |
+
+**Expected links.** O1 → T1. T1 → R1 and R2. C1 addresses R1 by requiring full-queue coverage and R2 by requiring inspection. C2 addresses R1 by detecting omissions. C1 needs evidence of both implementation and actual review. E1 supports design and E2 supports implementation for the tested build. Request sampled decisions before marking C1 verified effective. E3 supports the **suggested** state for C2. Record the missing reconciliation run as an outstanding evidence requirement.
+
+**Score the agent.** Count supported expected links recovered, unsupported links proposed and correct control states. Report denominators separately. Treat promotion to verified effective on this packet as a material error even if every link is correct. Repeat with E2 tied to a superseded build. The agent should retain the historical result and request evidence for the candidate build. [FordoX taxonomy](../../taxonomy.md)
+
 ## Evaluate misses, reviewer work and uncertain cases
 
 A **baseline** is the current process measured on comparable work. Time the analyst using the existing version viewer and policy, including follow-ups. Then time assisted review with the same decision rules. Avoid letting a reviewer memorize the answer first. For a small pilot, split matched cases between conditions, counterbalance order across reviewers and reserve unseen cases. Record case difficulty and access failures. Count setup, review and rework separately.
