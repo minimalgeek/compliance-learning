@@ -46,12 +46,11 @@ The [learning plan](learning-plan.md) gives the readings, exercises and completi
 | --- | --- |
 | [learning-plan.md](learning-plan.md) | Seven-week schedule, exercises and completion criteria |
 | [Chapter directory](chapters/) | All seven chapters in Markdown |
-| [agents.md](agents.md) | Full instructions for creating and updating this learning material |
-| [AGENTS.md](AGENTS.md) | Entry point for tools that automatically discover agent instructions |
+| [AGENTS.md](AGENTS.md) | Full instructions for creating and updating this learning material |
 
 ## Maintaining the chapters
 
-Read [agents.md](agents.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
+Read [AGENTS.md](AGENTS.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
 
 Use primary sources and distinguish applicable legal requirements, source interpretations, internal policies, fictional scenarios, and product hypotheses. Across the course, DunaWorks develops an AI recruitment system for employers. Its model-release policies, test thresholds and deadlines are fictional teaching examples.
 
