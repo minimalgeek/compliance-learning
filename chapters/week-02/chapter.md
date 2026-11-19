@@ -20,9 +20,9 @@ DunaWorks is the fictional AI recruitment software developer from Week 1, headqu
 
 ## Start with the risk and write a testable control
 
-A **risk** is a possible event and its consequence. “Access management” names a topic. “A former engineer can still export applicant evaluations after leaving” identifies who, what and why it matters. **Inherent risk** means the exposure before considering safeguards. **Residual risk** is what remains with the safeguards in place. Even after accounts are disabled, a previously downloaded evaluation dataset can remain on a laptop. Estimating residual risk requires understanding this boundary.
+A **risk** is uncertainty that could affect an objective. DunaWorks could miss its duty to disable accounts on time. One possible consequence is unauthorized access to applicant records. “Access management” names a topic. “A former engineer can still export applicant evaluations after leaving” identifies who, what and why it matters. **Inherent risk** means the exposure before considering safeguards. **Residual risk** is what remains with the safeguards in place. Even after accounts are disabled, a previously downloaded evaluation dataset can remain on a laptop. Estimating residual risk requires understanding this boundary.
 
-A **control** is an action that helps achieve an objective. Write down the actor, trigger, action, scope and record. DunaWorks policy L-4 requires the identity team to disable every departing employee's accounts in Model registry, Cloud and Evaluation store within 24 elapsed hours of effective departure. A pre-authorized, system-specific extension can change a deadline under this fictional policy. The owner reconciles HR departures to system logs monthly. Disabling accounts limits access. The reconciliation detects omissions. They serve different purposes.
+A **control** is an action that helps achieve an objective. Write down the actor, trigger, action, scope and record. DunaWorks policy L-4 requires the identity team to disable every departing employee's accounts in Model registry, Cloud and Evaluation store within 24 elapsed hours of effective departure. A pre-authorized, system-specific extension can change a deadline under this fictional policy. Three controls support L-4. The identity team disables each account to prevent continued access. A daily overdue-access alert checks expected removals against account status and alerts the on-call owner to act on overdue or unresolved pairs. Each month a reviewer reconciles the complete expected employee–system population to effective disablement events and approved extensions. A dated alert configuration supports a claim about implementation. To check operation, inspect the scheduled runs, which overdue pairs they flagged and who received them. Use the monthly worksheet to verify the reconciliation. The daily alert supports timely intervention. The monthly reconciliation detects omissions, late removals and gaps in the record, including cases that never generated a ticket.
 
 A **preventive control** can stop an unwanted action, such as blocking a payment until a second person approves it. A **detective control** finds a problem after it occurs, such as reconciling yesterday's payments. Either can be manual or automated. **Segregation of duties** means dividing incompatible powers. If one clerk can change a supplier's bank account and release the payment, a second approval screen under that clerk's own login accomplishes little.
 
@@ -34,13 +34,13 @@ Imagine four records on an auditor's desk. The policy defines the deadline. A jo
 
 | Record | Question the reviewer can answer | Additional check |
 | --- | --- | --- |
-| Control definition L-4 v3 | What was supposed to happen? | Confirm this version governed October. |
+| Policy L-4 v3 | What was supposed to happen? | Confirm this version governed October. |
 | HR departure export | Which employees should appear? | Reconcile to HR's monthly totals across all three entities. |
 | Destination audit event | What happened to this account, and when? | Check stable account ID, time zone, event semantics and export window. |
 | Exception approval | Was a different deadline authorized? | Match person, system, dates and approver authority. |
 | Test worksheet | How did the evaluator reach the result? | Follow the inputs and independently reproduce one row. |
 
-**Population** means the full set of events covered by a claim. Start from HR, expand each departure to the three required systems, then look up evidence for every expected pair. Starting from system logs silently drops people with no matching event. Ask whether temporary staff, transfers and shared accounts belong in scope. An answer may require a second population and a separate control.
+**Population** means every unit the claim covers. Here the expected units are employee–system pairs, including pairs with no recorded event. Start from HR, expand each departure to the three required systems, then look up evidence for every expected pair. Starting from system logs silently drops people with no matching event. Ask whether temporary staff, transfers and shared accounts belong in scope. An answer may require a second population and a separate control.
 
 **Provenance** is where a record came from and how it reached the test. Retain the query or export criteria, collection time, period, system owner and access restrictions. A screenshot of a disabled account today cannot establish the date it was disabled. A late-collected event history might still establish that date. The collection date and the event date do different jobs.
 
@@ -63,7 +63,7 @@ A **risk-and-control matrix** links a failure scenario to the action intended to
 
 | Policy and risk | Control, owner and trigger | Evidence and test | Example finding and response |
 | --- | --- | --- | --- |
-| P-2. An unevaluated model ships | Release engineering checks evaluation approval before each rollout | Match deployed model digests to signed evaluations and times | One release preceded approval. Engineering restricts deployment and retests the next rollout. |
+| P-2. A model ships outside its evaluated scope | Quality assurance (QA) documents results for the exact model digest and application build ID. An authorized approver signs for that pair and rollout scope. The deployment gate validates the approval and logs the actual deployment. | Match each deployment’s digest (from model contents), build ID (packaged application), scope and time to the prior evaluation and approval | One rollout preceded approval. Engineering repairs the gate and tests that it blocks the unapproved pair and records a properly approved rollout. |
 | L-4. A leaver retains access | Identity team disables three accounts within 24 hours of departure | Join HR population to effective disablement events | Evaluation store is late. Identity lead fixes the queue and reruns the test. |
 | V-3. An unreviewed model endpoint receives CVs | Procurement requires clearance before enabling each model supplier | Compare activation time with signed review and conditions | Activation predates review. Procurement checks which tenants used the endpoint and retests the gate. |
 | A-1. Unneeded administrator rights persist | System owner reviews all privileged grants quarterly | Reconcile full grant export to review decisions and removals | Emergency admins omitted. Owner expands export and repeats review. |
@@ -108,7 +108,7 @@ Five people times three systems gives **15 expected pairs**. An inner join to av
 
 **Manager's report.** “Of 15 expected October disablements, eleven met the ordinary deadline and one met an authorized extension. Evaluation store was late for E02, and two pairs need additional evidence.” If a dashboard reports a rate, define which statuses are in its numerator and denominator. A result of eleven ordinary passes out of fifteen is reproducible. Calling every other case a failure changes its meaning.
 
-**Finding F-17.** The reviewer records the policy version, matched event and two-hour overrun. The identity lead checks whether E02 used Evaluation store during the exposure and whether others were affected. The reviewer distinguishes possible exposure from demonstrated access. Suppose queue history establishes that a manual retry was required after a timeout. The owner adds retry monitoring, provides the deployment record by 5 November and tests a deliberately delayed job. On 12 November the reviewer rechecks subsequent departures and confirms the alert reached the on-call person. These are example assignments and dates.
+**Finding F-17.** The reviewer records the policy version, matched event and two-hour overrun. The identity lead checks whether E02 used Evaluation store during the exposure and whether others were affected. The reviewer distinguishes possible exposure from demonstrated access. Suppose queue history establishes that a manual retry was required after a timeout. The owner adds retry monitoring, provides the deployment record by 5 November and tests a deliberately delayed job. On 12 November the reviewer checks subsequent departures against destination events to assess timely disablement. Alert delivery establishes that the notification worked on the observed run. The monthly reconciliation needs its own worksheet covering all expected pairs. These are example assignments and dates.
 
 Closing the engineering ticket proves a change was delivered. The retest establishes what the change accomplished. If monitoring still overlooks a system, reopen the finding or explicitly record the residual issue and its authorized owner.
 
@@ -116,7 +116,7 @@ Closing the engineering ticket proves a change was delivered. The retest establi
 
 A buyer asks DunaWorks for “the audit.” First find out which claim the buyer needs assessed. Internal control over financial reporting concerns the reliability of financial statements. An access control may support that objective for the accounting system. The same procedure on a public demo environment answers a different question. The SEC guide illustrates financial-reporting controls in a historical US public-company context.
 
-**System and Organization Controls (SOC)** is the AICPA's family of assurance services. SOC 1 addresses controls relevant to user entities' financial reporting. A SOC 2 examination addresses controls relevant to selected trust services criteria for a described system. In a Type 1 report, look for the specified date and the design assessment. In Type 2, also look for the period, the auditor's tests and results, and the opinion on operating effectiveness. Read the boundaries, exceptions and controls the customer is expected to perform.
+**System and Organization Controls (SOC)** is the AICPA's family of assurance services. SOC 1 addresses controls relevant to user entities' financial reporting. A SOC 2 examination is an independent **attestation engagement**. Management provides its assertion and the practitioner reports an opinion on controls relevant to selected trust services criteria for a described system. In a Type 1 report, look for the specified date and the design assessment. In Type 2, also look for the period, the auditor's tests and results, and the opinion on operating effectiveness. Read the boundaries, exceptions and controls the customer is expected to perform.
 
 **ISO/IEC 27001:2022** specifies requirements for an information security management system. Certification concerns the management system within its stated scope. A supplier certificate might cover its Frankfurt hosting operation while your proposed support desk sits in another entity. Read the scope statement, issuer and validity dates. Ask how the actual service fits. A certification and a SOC report provide different evidence to the same purchasing decision.
 
@@ -126,7 +126,7 @@ A buyer asks DunaWorks for “the audit.” First find out which claim the buyer
 
 | English term | Plain meaning | Magyarul |
 | --- | --- | --- |
-| Inherent / residual risk | Exposure before safeguards / exposure that remains | eredendő / fennmaradó kockázat |
+| Inherent / residual risk | Exposure before safeguards / exposure that remains | eredendő kockázat / maradványkockázat |
 | Control owner | Person accountable for an operating control | a kontrollért felelős személy |
 | Segregation of duties | Split powers that one person could misuse together | összeférhetetlen feladatok szétválasztása |
 | Population | Everything the test claims to cover | a vizsgálat teljes alapsokasága |

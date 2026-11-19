@@ -6,7 +6,7 @@ An **applicability assessment** connects a particular provision to a legal entit
 
 > Magyarul: A „ránk vonatkozik?” kérdést érdemes pontosítani. Melyik cégünk melyik tevékenységére, milyen szerepben, melyik országban és mikortól vonatkozhat az adott előírás?
 
-**Five hours.** Spend 50 minutes on the chapter and 70 on the sources. Use two hours to produce a one-page impact assessment and a five-row AI inventory. Use the final hour for an interview and notes. DunaWorks is a fictional AI software developer headquartered in Hungary with German and US operations.
+**Five hours.** Spend 50 minutes on the chapter and 70 on the sources. Use two hours to produce a one-page regulatory change impact assessment and a five-row AI inventory. Use the final hour for an interview and notes. DunaWorks is a fictional AI software developer headquartered in Hungary with German and US operations.
 
 ### Chapter map
 
@@ -57,9 +57,9 @@ Annex III point 4(a) covers specified employment uses including evaluating candi
 
 ## Workshop: write the impact record and verify the change
 
-**Case packet.** The approved specification describes a recruiter choosing candidates after reviewing each application. Revision R12 adds suggested rejections. A sales deck calls them automatic. The designer shows an override button. QA demonstrates that an administrator can reverse a suggestion. Nobody has demonstrated this with an ordinary recruiter account. DunaWorks’ fictional pilot criterion requires an ordinary recruiter to be able to disregard a suggestion before it affects the hiring queue.
+**Case packet.** The approved specification describes a recruiter choosing candidates after reviewing each application. Revision R12 adds suggested rejections. A sales deck calls them automatic. The designer shows an override button. The quality assurance (QA) team demonstrates that an administrator can reverse a suggestion. Nobody has demonstrated this with an ordinary recruiter account. DunaWorks’ fictional pilot criterion requires an ordinary recruiter to be able to disregard a suggestion before it affects the hiring queue.
 
-Spend 70 minutes on the impact record and 50 on the inventory below. Identify the disputed fact, accountable owner, evidence needed, interim recommendation and reopening trigger. Decide what an agent could extract from the specification, sales deck and QA run.
+Spend 70 minutes on the regulatory change impact assessment and 50 on the inventory below. Identify the disputed fact, accountable owner, evidence needed, interim recommendation and reopening trigger. Decide what an agent could extract from the specification, sales deck and QA run.
 
 | Worked field | DunaWorks assessment |
 | --- | --- |
@@ -73,11 +73,11 @@ Spend 70 minutes on the impact record and 50 on the inventory below. Identify th
 
 **Write two assessments for R12.** In the first record, counsel examines the provider, market, intended employment use, Article 6, Annex III point 4(a), applicable dates and any conditions affecting classification. The ranking specification supports examining the recruitment category. The administrator test cannot settle that legal determination.
 
-In the second record, assess how DunaWorks could miss its pilot requirement before safeguards. A default permission could prevent ordinary recruiters from disregarding a rejection before it affects the queue. Suppose the pilot team’s approved rubric rates losing an interview opportunity as High impact and recurring exposure across vacancies as Medium likelihood, combining to High inherent risk. The impact describes the harm. To support Medium likelihood, obtain relevant workflow or trial evidence of how often the permission would prevent a required intervention. With only the R12 packet, likelihood and the combined rating remain provisional. **Self-check.** If a new trial changes the estimated frequency, revisit the scenario score. Revisit legal classification when its underlying business or legal facts change. [FordoX taxonomy](../../taxonomy.md)
+In the second record, ask how likely DunaWorks is to miss its fictional override duty for **ordinary recruiters handling suggested rejections in pilot vacancies during the next 30 days**. Before controls, a default permission could prevent timely intervention. Compare role configurations and role-matched trials across these vacancies. Record how often an override would be unavailable and how representative the trials are. Suppose the rubric combines Medium likelihood of duty failure and High impact to give High inherent risk. R12 alone leaves that rating provisional. To estimate the likelihood of a lost interview, also trace erroneous suggestions, subsequent human decisions and timely corrections. A failed override establishes neither how often the model is wrong nor what happened to an applicant. Reassess the scenario when trial evidence changes and reopen legal classification when the facts behind counsel’s interpretation change. [FordoX taxonomy](../../taxonomy.md)
 
 ## An AI inventory that survives a product change
 
-An **AI inventory** records actual uses, their owners and the decisions they influence. One vendor can supply several systems, and the same model can draft an email or rank job applicants. An EU AI Act **provider** generally develops or has a system developed and places it on the market or puts it into service under its name or trademark. A **deployer** uses a system under its authority in the relevant sense. Multiple parties and roles may be involved. Capture the facts before assigning duties. Check scope, definitions, intended purpose, classification provisions and applicable dates. See the Commission readings.
+An **AI inventory** records actual uses, their owners and the decisions they influence. One vendor can supply several systems, and the same model can draft an email or rank job applicants. An EU AI Act **provider** generally develops or has a system developed and places it on the market or puts it into service under its name or trademark. A **deployer** uses the system under its authority, excluding personal, non-professional use. The **intended purpose** includes the use, context and conditions specified by the provider in instructions, sales or promotional statements and technical documentation. Multiple parties and roles may be involved. Capture the facts before assigning duties. Check scope, definitions, intended purpose, classification provisions and applicable dates. See the Commission readings.
 
 | Use, owner and purpose | People, data and supplier | Role question and reviewer |
 | --- | --- | --- |
@@ -91,9 +91,17 @@ An **AI inventory** records actual uses, their owners and the decisions they inf
 
 ## Run the register after the first assessment
 
-Imagine legal discovers that the upstream model supplier changed its scoring method. The API and version label might still look identical. A useful system can reopen a question without announcing a breach. The analyst compares the updated facts to the prior decision, asks which assumption changed, and records either a reason for retaining the assessment or actions with owners.
+Imagine legal discovers that the upstream model supplier changed its scoring method. The application programming interface (API) and version label might still look identical. A useful system can reopen a question without announcing a breach. The analyst compares the updated facts to the prior decision, asks which assumption changed, and records either a reason for retaining the assessment or actions with owners.
 
-A practical register has four linked records. The **source record** stores issuer, jurisdiction, text, provision, version and dates. The **interpretation** names the reviewer, business facts and applicability rationale. The **implementation task** names the control owner, required behavior, due date and evidence. The **verification record** describes the test, result and remaining limits. One source can lead to several local interpretations. One software release can close some tasks while another market remains open.
+Here is one register entry for the fictional override exercise. Its internal criterion and the legal classification have separate sources.
+
+| Register field | R12 entry |
+| --- | --- |
+| Source version and provision | Approved DunaWorks pilot release policy v1, clause 3. Product Leadership issued the policy. Clause 3 establishes the duty. R12 is the product specification under review. |
+| Extracted obligation | Before enabling suggested rejections in the pilot, DunaWorks must let an ordinary recruiter disregard a suggestion before it affects the hiring queue. |
+| Applicability rationale | R12 introduces suggested rejections into that pilot workflow. Compliance records the affected tenant and permission profile. Counsel maintains the separate AI Act interpretation. |
+| Implementation task | Product confirms the promised workflow. Engineering configures the recruiter override before pilot activation. QA tests it on the candidate build. |
+| Verification result | The received run demonstrates administrator access only. For the recruiter criterion, Compliance records **Insufficient information**. QA must supply a role-matched run with before-and-after queue states. Compliance resumes review on receipt, before activation. |
 
 **Operating rhythm.** Compliance monitors relevant official feeds and business-change notices. A weekly triage allocates owners. The specialist decides scope or asks for missing facts. Business owners implement changes. Reviewers retest the affected operation. A monthly management report identifies decisions awaiting expertise, overdue actions and tested closures. Use different dates for publication, legal application, internal target and actual verification.
 
@@ -103,13 +111,13 @@ A practical register has four linked records. The **source record** stores issue
 
 | English term | Plain meaning | Magyarul |
 | --- | --- | --- |
-| Applicability | Whether a provision reaches this specific activity | az előírás alkalmazandósága az adott tevékenységre |
+| Applicability | Whether a provision reaches this specific activity | alkalmazandóság |
 | Legal entity | Organization with its own legal identity | jogi személy |
 | Entry into force / application | When an act takes legal effect / when provisions start applying | hatálybalépés / alkalmazás kezdete |
-| Impact assessment | Reasoned account of who or what must change | hatásvizsgálat |
+| Regulatory change impact assessment | Examines which activities, controls and owners a change affects | szabályozási változás hatásvizsgálata |
 | Obligation register | Versioned list of requirements and ownership | kötelezettségnyilvántartás |
-| AI provider / deployer | Makes a system available under its name / uses it under its authority | MI-szolgáltató / alkalmazó |
-| Intended purpose | What the provider intends the system to be used for | rendeltetés, tervezett felhasználási cél |
+| AI provider / deployer | Develops or commissions the system and places it on the market or puts it into service under its own name or trademark / uses it under its authority outside personal, non-professional activity | MI-szolgáltató / alkalmazó |
+| Intended purpose | Use, context and conditions the provider specifies in instructions, promotional or sales statements and technical documentation | rendeltetés, tervezett felhasználási cél |
 
 - **European Parliament and Council**, Regulation (EU) 2024/1689. Spend 25 minutes tracing the proposed ranking change through Article 6, Annex III point 4(a) and Article 14. Record one question for counsel and one testable product claim. [Article 6](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6) · [Article 14](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14)
 - **European Commission**, AI Act overview and AI Act Service Desk, live resources reviewed 17 November 2026. Spend 25 minutes on roles, employment uses, high-risk classification and the implementation timeline for Regulation (EU) 2024/1689. [Overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) · [Article 3](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3) · [Annex III, point 4](https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3)

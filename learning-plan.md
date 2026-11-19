@@ -1,6 +1,6 @@
 # Corporate compliance in seven weeks
 
-Prepared 22 October 2026. Updated 17 November 2026. Intended audience: a technical founder exploring compliance automation. Perspective: large companies and multinational groups, with EU examples and widely used US corporate-compliance concepts.
+Prepared 22 October 2026. Updated 19 November 2026. Intended audience: a technical founder exploring compliance automation. Perspective: large companies and multinational groups, with EU examples and widely used US corporate-compliance concepts.
 
 The outcome is working literacy: understand the main specialties, follow how work gets done, interview practitioners intelligently, and choose a narrow product hypothesis. “80%” is a prioritization heuristic, not a measurable promise of legal coverage. Specialist competence comes after selecting a domain, customer segment, and jurisdiction.
 
@@ -44,7 +44,7 @@ Targeted reading, two hours total:
 - [IIA Three Lines Model](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf): focus on the role descriptions and relationships.
 - [ISO 37301 public overview](https://committee.iso.org/sites/tc309/home/projects/published/iso-37301-compliance-management.html): understand the purpose of a compliance management system. The free overview is enough for this stage.
 
-Two-hour exercise: invent a 2,000-person multinational company developing and selling AI recruiting software. Give it EU and US operations, distributors, cloud vendors, employees, and public-sector customers. Create a one-page map of its activities, plausible obligation areas, responsible teams, and external reviewers. Record uncertainty instead of assuming every regulation applies.
+Two-hour exercise: invent a 2,000-person multinational company developing and selling AI recruiting software. Give it EU and US operations, distributors, cloud vendors, employees, and public-sector customers. Create a one-page map of its activities, plausible obligation areas, responsible teams, and external reviewers. Record uncertainty and trace one model release through documented evaluation, authorized approval and the automated deployment check.
 
 Interview: speak to one compliance professional or internal auditor. Ask them to describe their last completed piece of work, who provided inputs, and who reviewed the result.
 
@@ -62,15 +62,15 @@ Targeted reading, two hours total:
 
 - [COSO internal-control overview](https://www.coso.org/guidance-on-ic): identify the five components—control environment, risk assessment, control activities, information and communication, and monitoring.
 - [SEC explanation of internal controls](https://www.sec.gov/files/info/smallbus/404guide/controls.shtml): use the concepts to understand controls over financial reporting. This is introductory historical guidance, not a current determination of which SOX provisions apply.
-- [AICPA SOC overview](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) and [ISO/IEC 27001 overview](https://www.iso.org/standard/27001): identify what each covers. SOC 2 is an attestation report; ISO/IEC 27001 is a certifiable management-system standard. Their scopes matter. Some detailed AICPA examples require an account or membership; paid material is optional.
+- [AICPA SOC overview](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) and [ISO/IEC 27001 overview](https://www.iso.org/standard/27001): identify what each covers. A SOC 2 report communicates the results of an independent attestation engagement. ISO/IEC 27001 is a certifiable management-system standard. Their scopes matter. Some detailed AICPA examples require an account or membership; paid material is optional.
 
 Two-hour exercise: create a risk-and-control matrix with five rows. Include a source requirement or policy, business risk, control, owner, frequency, evidence, test, finding, and remediation. Use synthetic model releases, employee departures, model supplier onboarding, privileged access and evaluation approvals.
 
 Run this deliberately small control test:
 
-- Fictional company policy: disable departing employees’ access to three named critical systems within 24 hours of effective departure.
+- Fictional policy L-4 requires the identity team to disable departing employees’ access to three named critical systems within 24 hours of effective departure.
 - Inputs: the complete HR departure population for a month, identity records, access-change logs, and approved exceptions.
-- Test: match each departure to all three systems and compare departure and disablement timestamps.
+- Distinguish disablement, the daily overdue-access alert and the monthly reconciliation. For the reconciliation, build all 15 expected employee–system pairs from HR and compare destination timestamps with the applicable deadlines.
 - Plant one missing system record, one late removal, and one mismatched identity.
 - Record separate outcomes for pass, failure, approved exception, and insufficient evidence.
 - Assign an owner and due date for failures; require a retest before closure.
@@ -106,7 +106,7 @@ Pass condition: distinguish supplier due diligence, customer AML checks, and san
 
 [Read the chapter](chapters/week-04/chapter.md)
 
-Learn privacy vocabulary: personal data, controller and processor, purpose, legal basis, retention, data-subject rights, processing inventories, impact assessments, and breach handling. Learn security and resilience vocabulary: assets, identity and access, incident response, supplier risk, recovery, testing, and critical-service dependencies.
+Learn privacy vocabulary: personal data, controller and processor, purpose, legal basis, retention, data-subject rights, processing inventories, data protection impact assessments, and breach handling. Learn security and resilience vocabulary: assets, identity and access, incident response, supplier risk, recovery, testing, and critical-service dependencies.
 
 Targeted reading, two hours total:
 
@@ -134,13 +134,13 @@ Targeted reading, two hours total:
 - Revisit the public ISO 37301 overview and the DOJ material on continuous improvement.
 - Choose one relevant official regulator or government portal for your hypothetical company’s employment, safety, environmental, or product obligations. Read one overview or enforcement notice. Record its jurisdiction and business scope.
 
-Two-hour exercise: choose a real published regulatory development from an official source. Create a one-page impact assessment with source and version, affected entity/activity, applicability rationale, unknowns for an expert, existing controls, gaps, assigned actions, and verification. The learning goal is a reviewable assessment, not a claim that the hypothetical company is compliant.
+Two-hour exercise: choose a real published regulatory development from an official source. Create a one-page regulatory change impact assessment with source version, cited provision, extracted duty, duty bearer, affected entity/activity, applicability rationale, unknowns for an expert, existing controls, gaps, assigned actions, and verification. The learning goal is a reviewable assessment, not a claim that the hypothetical company is compliant.
 
 Add an AI-use inventory with five fictional uses. Record owner, purpose, affected people, data, vendor, applicable-role questions, and reviewer. Treat classification as a hypothesis until checked.
 
 Interview: ask a compliance lead how changes are monitored, who decides applicability, and how completed implementation is verified.
 
-Pass condition: show why “a regulation mentions AI” is insufficient to identify an affected company, product, or required action. Explain how to maintain a dated, reviewable interpretation.
+Pass condition: show why “a regulation mentions AI” is insufficient to identify an affected company, product, or required action. Show the versioned provision, extracted duty, applicability rationale, implementation task and scoped verification result in one register entry.
 
 ## Week 6 · Turn the learning into a product hypothesis
 
@@ -185,9 +185,9 @@ Treat these as hypotheses worth testing:
 
 Score each hypothesis from 1–5 for frequency, effort, budget access, data access, integration burden, reviewer acceptance, measurable benefit, and differentiation from the customer’s current tools. Define the direction of each score consistently. Use scores to expose assumptions rather than manufacture certainty.
 
-Build a prototype for one buyer, one workflow, and one bounded decision. Use synthetic or approved data. Compare it against the current process on a small set of representative cases, including missing evidence and an exception. A workflow mockup or a manually assisted prototype is enough at this stage.
+Build a prototype for one buyer, one workflow, and one bounded decision. Use synthetic or approved data. Use the pilot agreement to distinguish DunaWorks’ visibility and review-gate duty from the employer’s actual-review duty. Compare the prototype and baseline on the same versioned reference answers, including missing evidence and an exception. Report precision, recall and missed critical cases separately for review routing, evidence requests and escalation. Correct disputed labels against the original policy and evidence, preserve past scores and report unresolved disputes separately. A workflow mockup or a manually assisted prototype is enough at this stage.
 
-Pass condition: write a one-page opportunity memo with target customer, buyer, current process, repeated pain, current tools, proposed output, human decision, required data, baseline metric, and paid-pilot proposal. Label what interviews established and what remains an assumption.
+Pass condition: write a one-page opportunity memo with target customer, buyer, current process, repeated pain, current tools, proposed output, human decision, required data, baseline metric, and paid-pilot proposal. Label what interviews established and what remains an assumption. Show how the action metrics change if the prototype misses a required escalation after correctly routing a change for review.
 
 ## Week 7 · Inside an AI compliance team
 
@@ -197,13 +197,13 @@ DunaWorks develops and sells an AI recruitment tool. Its customer’s recruiter 
 | --- | --- | --- |
 | 75 min | Follow Éva, the compliance officer, through the release and a later customer complaint. | Map who owns the risk, implements the fix, verifies it and can authorize rollout. |
 | 45 min | Use the chapter’s guided readings on the Three Lines Model, AI provider duties and AI risk management. | Trace one requirement to a control, the evidence for it and the person who reviews it. |
-| 90 min | Work the build D case before opening the answer key. Compare eligible applicant IDs with the recruiter’s actual results. | An evidence request and a release recommendation that state what the records establish and what remains unknown. |
+| 90 min | Work the build D case before opening the answer key. Compare eligible applicant IDs with the recruiter’s actual results. | An evidence request and five decision fields for Build D. State the test criterion, residual rating or uncertainty, approved tolerance or missing source, and evidence needed to resume review. |
 | 45 min | Design one Agentic Compliance Platform workflow for the case. | Specify the trigger, permitted actions, stopping condition, human decision and tests for duplicate events and revoked access. |
 | 45 min | Ask a practitioner to reconstruct a recent release they challenged. | Revise the Week 6 memo with the actual bottleneck, the reviewer’s acceptance criteria and a baseline for evaluating the pilot. |
 
 **Pass condition.** Trace one signal (*jelzés*) to a finding (*megállapítás*), corrective action (*helyesbítő intézkedés*) and verified closure (*ellenőrzött lezárás*). Explain who can close the finding and who can approve the release. Show how the agent handles a missing test result, and how you would measure both reviewer time and material misses. [Workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair) · [Worked answer](chapters/week-07/chapter.md#answer-key-and-a-reusable-decision-record)
 
-Use the [FordoX decision chain](taxonomy.md) throughout the existing exercises. In Week 1 explain a theme, risk and control. In Week 2 label the evidence for each claim. In Week 5 produce a legal classification and a separate scenario assessment. In Week 6 test versioned links and control states. In Week 7 justify the risk decision, finding closure and release recommendation separately.
+Use the [FordoX decision chain](taxonomy.md) throughout the existing exercises. In Week 1 explain a theme, risk and control. In Week 2 label the evidence for each claim. In Week 5 produce a legal classification and a separate scenario assessment. In Week 6 test versioned links and control states. In Week 7 explain how treatment, an open finding, a release hold and an inconclusive assessment can coexist.
 
 ## Reference for all seven weeks
 
@@ -211,20 +211,27 @@ The recurring data objects are a useful guide for a technical founder:
 
 | Object | Minimum useful information |
 | --- | --- |
-| Obligation | Authoritative source, version, jurisdiction, scope, interpretation owner |
-| Compliance risk | Applicable obligation and responsible party, how the obligation could be missed, possible impact on people and the organisation, assessment rationale |
-| Control | Intended outcome, owner, procedure, frequency or trigger, scope |
+| Source (*forrás*) | Document or instrument with identifiable versions. Record issuer, authority, version, jurisdiction and dates. |
+| Provision (*rendelkezés*) | Article, paragraph or clause located in a particular source version. |
+| Obligation (*kötelezettség*) | Duty or prohibition, bearer, conduct, scope, conditions, timing, interpretation owner and rationale. Label each provision link by purpose (duty, scope, exception). Identify guidance used for interpretation. |
+| Regulatory Subject / CMT | A Lynx Regulatory Subject can express a duty, right, condition or exemption. Start with one primary Compliance Micro Theme (CMT), FordoX’s operational topic, per subject. Several subjects can share a theme. |
+| Compliance risk | Risk is uncertainty that could affect an objective. Link each scenario directly to the duty that could be missed, then describe the possible consequences, population and time horizon. |
+| Control | Safeguard, objective, owner, procedure, trigger and scope. Record implementation status independently of assessed effectiveness for a scope and period. |
 | Execution | What happened, when, by whom or which system, result |
-| Evidence | Source, collection time, covered period, population, access restrictions |
-| Test | Scope, method, inputs, evaluator, result, limitations |
+| Evidence | Specific claim, requested and received records, versions, collection time, period, population, access, reviewer’s scoped conclusion and limits |
+| Test | Criterion defining what counts as success, scope, method, inputs, evaluator, observed result and limitations |
 | Case | Trigger, scope, assigned owner, state, linked evidence and decisions |
 | Finding | Criterion, evidence of deviation, severity, owner, due date, verification status |
 | Exception | Internal rule, approved scope, authorizing person, conditions and expiry |
-| Decision | Question, alternatives, authority, rationale, supporting evidence, date and scope |
+| Decision | Five fields: risk disposition, escalation, finding status, release decision and Compliance’s assessment outcome per requirement. Record assessor, verifier, delegated authorities, rationale, date, scope and reassessment trigger. |
 | Remediation | Planned change, completion evidence, verification, retest |
 | Report | Audience, reporting period, conclusions, open issues, supporting references |
 
-One control may support several requirements, and one requirement may need several controls. Reuse requires checking scope and purpose. Evidence needs a defined period and population. A link between two documents does not establish equivalence or effectiveness.
+One source version contains cited provisions. A provision can establish several duties and one duty can cite several provisions. A scenario links directly to the duty at risk. Several controls can address a scenario and one control can address several scenarios. Justify each coverage link with evidence for the specific mechanism and scope.
+
+A policy requirement states what must happen. A control implements a safeguard, an execution is one performance of it and a test checks behavior against a criterion. Compliance assesses the requirement. For **Insufficient information**, name the missing evidence, why it matters, who will supply it and when review resumes. The verifier checks the correction. Product Leadership may accept residual risk within delegated authority, with the chief executive officer as ultimate escalation authority. The release director records a **hold** to pause pending evidence or a **block** to prohibit deployment in the stated scope.
+
+Distinguish the criterion for a single test from the **residual risk assessment** (remaining exposure in light of evidenced controls) and **approved tolerance** (the authorized limit and its source). For Build D the visibility test fails, the residual rating is unresolved and the approved tolerance is not supplied.
 
 For an AI-assisted product, make source references, missing-information states, review history, and authorized approvals part of the workflow. Use deterministic checks where the criterion is explicit. Evaluate language-model suggestions against examples reviewed by a practitioner. Measure reviewer workload, material misses, false alerts, rework, and final output acceptance. A high document-processing rate alone says little about business value.
 
@@ -243,7 +250,7 @@ Keep a small glossary rather than memorizing acronyms:
 | RoPA / DPIA | Record of processing activities / data protection impact assessment |
 | KYC / CDD | Know your customer / customer due diligence |
 | Finding / remediation | An identified weakness / the work to correct and verify it |
-| Attestation | A stated assertion; its meaning and assurance level depend on context |
+| Attestation engagement | Independent work against specified criteria, resulting in a practitioner’s report. A management assertion gives the claim and a quality assurance sign-off documents the tester’s work. |
 
 Defer professional certifications, full standards, article-by-article legal study, comprehensive country matrices, detailed penalty calculations, and complex GRC implementations. Buy deeper training when a target workflow creates a concrete knowledge gap.
 

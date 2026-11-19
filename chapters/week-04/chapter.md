@@ -30,19 +30,19 @@ DunaWorks and HídDesk are fictional. DunaWorks is a Hungarian developer of AI r
 | Ticket store to backup | Recovery copy of tickets, including deleted live records until expiry | What is the retention schedule? What happens on restore? |
 | Optional vendor training feed | Full ticket text proposed for general product improvement | Who decides this purpose, on what basis, and can the feed stay disabled? |
 
-Under the EU General Data Protection Regulation (GDPR), a **controller** determines purposes and essential means of processing. A **processor** processes personal data on a controller's behalf. A **subprocessor** is another processor engaged by a processor. Assign roles for an activity. In the support-contact example, assume DunaWorks directs support and HídDesk acts on its documented instructions. If HídDesk chooses its own training purpose, reopen the role and legal analysis before enabling the feature. A contract label cannot settle the facts.
+Under the EU General Data Protection Regulation (GDPR), a **controller** (*adatkezelő*) determines, alone or jointly with others, why and how personal data are processed. A **processor** (*adatfeldolgozó*) processes personal data on the controller’s behalf. A **subprocessor** is another processor engaged by a processor. Assign roles for an activity. In the support-contact example, assume DunaWorks directs support and HídDesk acts on its documented instructions. If HídDesk chooses its own training purpose, reopen the role and legal analysis before enabling the feature. A contract label cannot settle the facts.
 
 A **lawful basis** is the justification under the GDPR for a particular processing operation. Identify whose data is involved and why DunaWorks needs it. A contract with Anna's employer does not automatically establish contractual necessity for Anna personally. Privacy counsel records the assessment, any required balancing and information for the person. An EU hosting address also leaves open who can access the data, from where, and under what arrangements.
 
 ## Follow one person's request through the system
 
-Anna asks for access to her data and correction of a note giving the wrong contact details. The **data subject** is the person the data concerns. The request reaches the general support mailbox. A trained agent records receipt, routes it promptly and checks identity proportionately. A privacy owner determines the applicable right, timing and scope, searches relevant systems and coordinates a response. A customer-facing employee should know where to route a request even if the person never uses the term GDPR. See the EDPB readings on basics and individuals' rights.
+Anna asks for access to her data and correction of a note giving the wrong contact details. The **data subject** (*érintett*) is the person the data concerns. The request reaches the general support mailbox. A trained agent records receipt, routes it promptly and checks identity proportionately. A privacy owner determines the applicable right, timing and scope, searches relevant systems and coordinates a response. A customer-facing employee should know where to route a request even if the person never uses the term GDPR. See the EDPB readings on basics and individuals' rights.
 
 A **record of processing activities (RoPA)** describes processing across activities. For the AI product support desk, record purpose, people and data categories, recipients, retention, transfers where relevant and security information as appropriate to the role. It helps find the right systems. It will not by itself retrieve Anna's note. For the actual request, link search results, redactions needed to protect others, corrections, recipient follow-up where relevant and the approved response.
 
 **Retention** means deciding how long to keep information for its purpose and how to implement expiry. Ask what happens in the active store, search index, exports and backup. Imagine a record deleted on Tuesday reappears when Monday's backup is restored. Engineering needs a way to reapply the deletion or restriction before normal access resumes. Privacy needs evidence that the procedure works.
 
-A **data protection impact assessment (DPIA)** examines a proposed processing operation, its necessity and proportionality, risks to people, and safeguards. GDPR Article 35 requires one when processing is likely to result in high risk to people's rights and freedoms. The deployment team screens the actual use, records its rationale and seeks specialist input where needed. A supplier questionnaire describes a vendor. A DPIA analyzes what this controller proposes to do to or with people's data.
+A **data protection impact assessment (DPIA)** examines a proposed processing operation, why the processing is necessary for its purpose, whether its extent is proportionate, the risks to individuals’ rights and freedoms, and the safeguards for those risks. For example, could the support team diagnose ranking errors with a ticket ID instead of a full applicant file? GDPR Article 35 requires one when processing is likely to result in high risk to people's rights and freedoms. The deployment team screens the actual use, records its rationale and seeks specialist input where needed. A supplier questionnaire describes a vendor. A DPIA analyzes what this controller proposes to do to or with people's data.
 
 ## Security and resilience use different clocks
 
@@ -57,6 +57,8 @@ A supplier's ISO/IEC 27001 certificate concerns an information security manageme
 ## Two incidents on the same Tuesday
 
 **Scenario A, service outage.** At 08:10 the ticket interface stops loading. Incident triage has a read-only offline list from 08:00. The incident lead opens a timeline, assigns an owner, switches triage to the fallback and logs new jobs for reconciliation. At 10:40 the service is restored from 08:00. Staff reconcile subsequent jobs and at 11:00 confirm normal triage. For this exercise the service recovered within 2 hours 50 minutes and its restored data point was 10 minutes before disruption. Record the fallback's blind spots too. Privacy checks whether personal data was lost, corrupted, disclosed or rendered unavailable in circumstances amounting to a personal data breach.
+
+GDPR Article 4(12) treats a security compromise as a **personal data breach** when it results in accidental or unlawful destruction, loss or alteration of personal data, or unauthorized disclosure of or access to those data. This includes data in transit, in storage or otherwise processed. [GDPR, Article 4](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
 
 **Scenario B, unauthorized disclosure.** At 08:10 a supplier analyst reports that another customer downloaded an export containing names and ranking incident notes. The service is still running. Contain further access, preserve logs and involve security and privacy promptly. Establish whose data was exposed, sensitivity, recipients, whether copies remain and likely effects on people. Record when the processor and controller each became aware, who took which action and why. A working website gives little comfort to the people whose notes were disclosed.
 
@@ -101,11 +103,11 @@ You have a 30-day pilot request. The sponsor wants live tickets immediately. The
 
 | English term | Plain meaning | Magyarul |
 | --- | --- | --- |
-| Controller / processor | Decides purposes and means / acts on instructions | adatkezelő / adatfeldolgozó |
-| Personal data breach | Security breach affecting personal data | adatvédelmi incidens |
+| Controller / processor | Determines the purposes and means of the activity alone or jointly / processes personal data on that controller’s behalf | adatkezelő / adatfeldolgozó |
+| Personal data breach | Security compromise resulting in destruction, loss, alteration, unauthorized disclosure or unauthorized access to personal data | adatvédelmi incidens |
 | Data subject | Person the data relates to | érintett |
 | Lawful basis | Legal justification for specified processing | adatkezelési jogalap |
-| DPIA | Assessment of processing risks to individuals | adatvédelmi hatásvizsgálat |
+| DPIA | Examines necessity, proportionality, risks to rights and freedoms, and safeguards for the proposed processing | adatvédelmi hatásvizsgálat |
 | Operational resilience | Ability to sustain and restore important services | működési ellenálló képesség |
 | RTO / RPO | Target restoration time / tolerable rollback in time | helyreállítási célidő / adatvesztési tűréshatár időben kifejezve |
 

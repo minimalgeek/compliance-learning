@@ -22,7 +22,7 @@ The approach follows the Pareto principle: prioritize the concepts and workflows
 
 The organizing question is: **Which requirement applies, who must act, and how would we know that it happened?**
 
-Use the [English–Hungarian FordoX taxonomy](taxonomy.md) to follow an obligation through a compliance theme, risk, controls and evidence to the accountable owner’s decision.
+Use the [English–Hungarian FordoX taxonomy](taxonomy.md) to trace a cited provision to the party that owes the duty, a scenario in which they could miss it, the control that addresses it and the evidence for the reviewer’s conclusion.
 
 ## Roadmap
 
@@ -31,14 +31,14 @@ Plan for five hours per week, for approximately 35 hours total. Material availab
 | Week | Focus | Chapter |
 | --- | --- | --- |
 | 1 | The organization, core terminology, roles, and compliance programs | [Read chapter](chapters/week-01/chapter.md) |
-| 2 | Controls, evidence, testing, and assurance | [Read chapter](chapters/week-02/chapter.md) |
+| 2 | Test 15 expected account removals and distinguish a policy, its controls and the evidence of operation | [Read chapter](chapters/week-02/chapter.md) |
 | 3 | Ethics, conduct, third parties, and financial crime | [Read chapter](chapters/week-03/chapter.md) |
 | 4 | Privacy, cybersecurity, and operational resilience | [Read chapter](chapters/week-04/chapter.md) |
-| 5 | Applicability, regulatory change, AI, and sector specialties | [Read chapter](chapters/week-05/chapter.md) |
-| 6 | Customer discovery, workflow selection, and a product hypothesis | [Read chapter](chapters/week-06/chapter.md) |
-| 7 | Inside an AI compliance team · roles, case handling, release decisions and agent-assisted evidence review | [Read chapter](chapters/week-07/chapter.md) |
+| 5 | Build a regulatory change impact assessment and a register tracing a provision to a tested duty | [Read chapter](chapters/week-05/chapter.md) |
+| 6 | Test a product hypothesis against two pilot duties and score the agent’s review, evidence-request and escalation actions | [Read chapter](chapters/week-06/chapter.md) |
+| 7 | Assess a failed visibility test, investigate a transfer complaint and write a scoped release decision | [Read chapter](chapters/week-07/chapter.md) |
 
-The [learning plan](learning-plan.md) gives the readings, exercises and completion criteria for each week. For the automation capstone, follow DunaWorks as the developer of an AI hiring tool. Use the case packet to decide what the compliance officer can conclude, which evidence an agent can collect and who may approve a release. [Week 7 workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair)
+The [learning plan](learning-plan.md) gives the readings, exercises and completion criteria for each week. For the automation capstone, follow DunaWorks as the developer of an AI hiring tool. Use the case packet to record the outcome per requirement, risk disposition, escalation, finding status and release decision. Identify who verifies the evidence, who may accept residual risk and who authorizes rollout. [Week 7 workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair)
 
 ## Repository contents
 
@@ -46,12 +46,11 @@ The [learning plan](learning-plan.md) gives the readings, exercises and completi
 | --- | --- |
 | [learning-plan.md](learning-plan.md) | Seven-week schedule, exercises and completion criteria |
 | [Chapter directory](chapters/) | All seven chapters in Markdown |
-| [agents.md](agents.md) | Full instructions for creating and updating this learning material |
-| [AGENTS.md](AGENTS.md) | Entry point for tools that automatically discover agent instructions |
+| [AGENTS.md](AGENTS.md) | Full instructions for creating and updating this learning material |
 
 ## Maintaining the chapters
 
-Read [agents.md](agents.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
+Read [AGENTS.md](AGENTS.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
 
 Use primary sources and distinguish applicable legal requirements, source interpretations, internal policies, fictional scenarios, and product hypotheses. Across the course, DunaWorks develops an AI recruitment system for employers. Its model-release policies, test thresholds and deadlines are fictional teaching examples.
 
