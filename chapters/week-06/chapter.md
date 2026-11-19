@@ -89,7 +89,7 @@ Use this synthetic fixture within the prototype block. Every ID below is at vers
 | --- | --- |
 | O1, pilot policy §2 | A recruiter must review each application before exclusion. |
 | T1, CMT | Meaningful human oversight of recommendations. |
-| R1 and R2, risks | An unscored applicant disappears from review. A recruiter accepts an erroneous rejection without inspection. |
+| R1 and R2, risks | R1: a filter could hide an unscored applicant, bypassing the review required by O1. R2: the workflow could permit one-click rejection without the inspection O1 requires. Either failure could cost an applicant an interview. |
 | C1 and C2, controls | C1 requires full-queue review before exclusion. C2 reconciles eligible IDs against the recruiter-visible queue. |
 | E1, E2 and E3, evidence | E1 is the approved procedure for C1. E2 is a build-matched recruiter test demonstrating C1’s review screen. E3 is an engineering proposal to implement C2. |
 

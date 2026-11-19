@@ -63,7 +63,7 @@ Use DunaWorks consistently as a Hungarian software developer with 2,000 employee
 
 Identify fictional internal policies, thresholds, deadlines, assignments, and data as teaching examples. Their appearance in a worked case does not make them general legal requirements.
 
-Use the [shared FordoX taxonomy](taxonomy.md) for product terminology and Hungarian equivalents. Match evidence to its claim and scope. Teach legal classification, organisational risk scoring and delegated decisions as distinct judgments.
+Use the [shared FordoX taxonomy](taxonomy.md) for product terminology and Hungarian equivalents. For a compliance risk, name the obligation, responsible party and plausible failure. Teach harm to people as a possible impact and support any claim of actual harm with evidence. Match evidence to its claim and scope. Teach legal classification, organisational risk scoring and delegated decisions as distinct judgments.
 
 ## Research and source handling
 

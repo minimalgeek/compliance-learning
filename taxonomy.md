@@ -16,6 +16,20 @@ A recruiter clicks **Reject** after reading a model recommendation. To assess th
 | Risk appetite / tolerance | kockázatvállalási hajlandóság / kockázattűrés | Appetite expresses management’s broad willingness to take risk. Tolerance sets the approved limit for this scenario and scope. Record its owner and version. |
 | Risk decision | kockázatkezelési döntés | Who has authority, what outcome follows, and what evidence or change would reopen the decision? Acceptance records a judgment. It leaves the assessed score intact. |
 
+## Writing a compliance risk
+
+FordoX uses *risk* broadly enough to include harm to people. For a compliance review, first identify the obligation, who owes it and how that party could fail to meet it. Record the possible consequences for people in the impact assessment. A finding requires evidence of what happened within a defined scope.
+
+| Question | DunaWorks example |
+| --- | --- |
+| What is the topic (CMT)? | Human oversight (*emberi felügyelet*). |
+| What is the obligation (*megfelelési kötelezettség*)? | A fictional pilot agreement requires DunaWorks to let ordinary recruiters override a suggested rejection before it takes effect. |
+| What is the compliance risk (*megfelelőségi kockázat*)? | A permissions change could reserve the override for administrators, leaving DunaWorks unable to provide the promised recruiter override. |
+| What is the possible impact (*lehetséges következmény*)? | An erroneous rejection could cost an applicant an interview. The employer might also suspend the pilot. |
+| What would count as a finding (*megállapítás*)? | In a hypothetical test, an ordinary recruiter is denied the override on the pilot configuration. Record the build, role, configuration and observed result. An administrator-only test would leave recruiter access unknown. |
+
+Suppose the recruiter catches the error and phones the applicant. The applicant gets the interview. DunaWorks still needs to correct the permissions and verify that recruiters can exercise the override it promised.
+
 ## From assessment to decision
 
 Suppose a separate, completed assessment of discriminatory recommendations finds high inherent risk under DunaWorks’ approved rubric. A reviewer verifies subgroup tests, human-review records and the handling of candidate challenges. The risk owner rates the remaining exposure Medium and explains the limits of the evidence. The approved tolerance for this use is Low. There is enough evidence to assign a rating, yet the rating exceeds the limit.

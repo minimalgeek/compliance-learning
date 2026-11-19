@@ -95,7 +95,7 @@ Risk management means identifying uncertainty, deciding how to respond, assignin
 
 Magyarul: nem az a jó kockázatleírás, hogy "baj lehet", hanem hogy mi történhet, miért, és annak mi lenne a következménye.
 
-**Try the FordoX vocabulary.** A pilot specification requires a person to review suggested rejections. Name the theme, the risk and the control. **Compliance Micro Theme** (*megfelelőségi résztéma*) is FordoX’s term for an operational topic such as human oversight. The risk is that a recruiter accepts a poor suggestion and an eligible applicant loses an opportunity. The control requires a recruiter to inspect the application and record a decision before rejection takes effect.
+**Try the FordoX vocabulary.** A pilot specification requires a person to review suggested rejections. Name the theme, the risk and the control. **Compliance Micro Theme** (*megfelelőségi résztéma*) is FordoX’s term for an operational topic such as human oversight. The compliance risk (*megfelelőségi kockázat*) is that the workflow could apply a suggested rejection before the required review takes place. An eligible applicant losing an interview is a possible consequence. The control requires a recruiter to inspect the application and record a decision before rejection takes effect.
 
 **Risk tolerance** (*kockázattűrés*) makes broad risk appetite concrete. DunaWorks might permit a limited pilot while requiring every eligible application to remain reachable in its full queue. A missing application fails that internal criterion. The risk owner needs evidence about frequency and impact before estimating exposure across employers. [FordoX taxonomy](../../taxonomy.md)
 

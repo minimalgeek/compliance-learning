@@ -212,7 +212,7 @@ The recurring data objects are a useful guide for a technical founder:
 | Object | Minimum useful information |
 | --- | --- |
 | Obligation | Authoritative source, version, jurisdiction, scope, interpretation owner |
-| Risk | Business activity, failure scenario, impact, assessment rationale |
+| Compliance risk | Applicable obligation and responsible party, how the obligation could be missed, possible impact on people and the organisation, assessment rationale |
 | Control | Intended outcome, owner, procedure, frequency or trigger, scope |
 | Execution | What happened, when, by whom or which system, result |
 | Evidence | Source, collection time, covered period, population, access restrictions |
