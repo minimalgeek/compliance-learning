@@ -2,7 +2,7 @@
 
 At DunaWorks, the head of IT opens an audit meeting with a green dashboard. “Every departure ticket closed in October.” The auditor asks to see who left. IT hands over its list of closed tickets. What would happen to someone who never got a ticket?
 
-DunaWorks is the fictional equipment and software group from Week 1, headquartered in Hungary with operations in Germany and the US. This week you will build a test whose starting point is independent of the process being tested. You will leave with a five-row risk-and-control matrix, a set of reproducible results and a finding someone can actually close.
+DunaWorks is the fictional AI recruitment software developer from Week 1, headquartered in Hungary with operations in Germany and the US. This week you will build a test whose starting point is independent of the process being tested. You will leave with a five-row risk-and-control matrix, a set of reproducible results and a finding someone can actually close.
 
 > Magyarul: A lezárt hibajegy azt bizonyítja, hogy valaki lezárta a jegyet. Azt, hogy minden kilépő minden hozzáférését időben megszüntették, más adatokkal is igazolni kell.
 
@@ -20,9 +20,9 @@ DunaWorks is the fictional equipment and software group from Week 1, headquarter
 
 ## Start with the risk and write a testable control
 
-A **risk** is a possible event and its consequence. “Access management” names a topic. “A former engineer can still export customer records after leaving” identifies who, what and why it matters. **Inherent risk** means the exposure before considering safeguards. **Residual risk** is what remains with the safeguards in place. Even after accounts are disabled, a previously downloaded customer file can remain on a laptop. Estimating residual risk requires understanding this boundary.
+A **risk** is a possible event and its consequence. “Access management” names a topic. “A former engineer can still export applicant evaluations after leaving” identifies who, what and why it matters. **Inherent risk** means the exposure before considering safeguards. **Residual risk** is what remains with the safeguards in place. Even after accounts are disabled, a previously downloaded evaluation dataset can remain on a laptop. Estimating residual risk requires understanding this boundary.
 
-A **control** is an action that helps achieve an objective. Write down the actor, trigger, action, scope and record. DunaWorks policy L-4 requires the identity team to disable every departing employee's accounts in Payroll, Cloud and CRM (customer relationship management) within 24 elapsed hours of effective departure. A pre-authorized, system-specific extension can change a deadline under this fictional policy. The owner reconciles HR departures to system logs monthly. Disabling accounts limits access. The reconciliation detects omissions. They serve different purposes.
+A **control** is an action that helps achieve an objective. Write down the actor, trigger, action, scope and record. DunaWorks policy L-4 requires the identity team to disable every departing employee's accounts in Model registry, Cloud and Evaluation store within 24 elapsed hours of effective departure. A pre-authorized, system-specific extension can change a deadline under this fictional policy. The owner reconciles HR departures to system logs monthly. Disabling accounts limits access. The reconciliation detects omissions. They serve different purposes.
 
 A **preventive control** can stop an unwanted action, such as blocking a payment until a second person approves it. A **detective control** finds a problem after it occurs, such as reconciling yesterday's payments. Either can be manual or automated. **Segregation of duties** means dividing incompatible powers. If one clerk can change a supplier's bank account and release the payment, a second approval screen under that clerk's own login accomplishes little.
 
@@ -50,21 +50,21 @@ A **risk-and-control matrix** links a failure scenario to the action intended to
 
 | Policy and risk | Control, owner and trigger | Evidence and test | Example finding and response |
 | --- | --- | --- | --- |
-| P-2. An unauthorized invoice is paid | Finance requires a second authorized approver before each release | Match bank releases to approval IDs, roles and times | One release preceded approval. Finance blocks release and retests the next batch. |
-| L-4. A leaver retains access | Identity team disables three accounts within 24 hours of departure | Join HR population to effective disablement events | CRM is late. Identity lead fixes the queue and reruns the test. |
-| V-3. An unreviewed distributor trades | Procurement requires clearance before activating each distributor | Compare activation time with signed review and conditions | Activation predates review. Procurement checks open orders and retests the gate. |
+| P-2. An unevaluated model ships | Release engineering checks evaluation approval before each rollout | Match deployed model digests to signed evaluations and times | One release preceded approval. Engineering restricts deployment and retests the next rollout. |
+| L-4. A leaver retains access | Identity team disables three accounts within 24 hours of departure | Join HR population to effective disablement events | Evaluation store is late. Identity lead fixes the queue and reruns the test. |
+| V-3. An unreviewed model endpoint receives CVs | Procurement requires clearance before enabling each model supplier | Compare activation time with signed review and conditions | Activation predates review. Procurement checks which tenants used the endpoint and retests the gate. |
 | A-1. Unneeded administrator rights persist | System owner reviews all privileged grants quarterly | Reconcile full grant export to review decisions and removals | Emergency admins omitted. Owner expands export and repeats review. |
-| E-2. A manager approves personal expenses | Finance routes each claim to a different authorized approver | Compare claimant, approver and delegation records | Self-approval under delegation. Finance changes routing and tests a delegated claim. |
+| E-2. Model authors approve their own evaluations | QA routes each model evaluation to a different authorized approver | Compare model author, approver and delegation records | Self-approval under delegation. QA changes routing and tests delegated approval. |
 
-**Try it.** Cover the last two columns and rewrite the test for each row. For the expense row, why might checking that two *usernames* differ be inadequate? One person may hold two accounts. A robust test checks who controlled each identity at approval time. For each finding, name a due date, an owner and a reviewer who can verify the correction.
+**Try it.** Cover the last two columns and rewrite the test for each row. For the evaluation row, why might checking that two *usernames* differ be inadequate? One person may hold two accounts. A robust test checks who controlled each identity at approval time. For each finding, name a due date, an owner and a reviewer who can verify the correction.
 
-COSO's internal-control framework places these activities alongside four other components. Management sets expectations and authority (**control environment**), identifies exposure (**risk assessment**), moves usable information to the right people (**information and communication**) and checks whether arrangements still work (**monitoring**). A perfect routing rule can become irrelevant if management routinely pays urgent invoices outside the system. See the COSO and SEC readings.
+COSO's internal-control framework places these activities alongside four other components. Management sets expectations and authority (**control environment**), identifies exposure (**risk assessment**), moves usable information to the right people (**information and communication**) and checks whether arrangements still work (**monitoring**). A perfect routing rule can become irrelevant if management routinely deploys urgent model updates outside the system. See the COSO and SEC readings.
 
 ## Lab: test the October departures
 
 HR confirms these five IDs are the complete October employee departure population for the exercise. All five had an account in each named system. Each departure took effect at **09:00 UTC on 12 October**. Exports cover the relevant days after departure. Cells show elapsed hours from departure to the destination's disable event. An approved extension X7 covers only E04's Cloud account through hour 48. Its approver had authority and signed before departure.
 
-| HR ID | Payroll | Cloud | CRM |
+| HR ID | Model registry | Cloud | Evaluation store |
 | --- | --- | --- | --- |
 | E01 | 1 | 3 | 4 |
 | E02 | 2 | 6 | 26 |
@@ -87,15 +87,15 @@ Five people times three systems gives **15 expected pairs**. An inner join to av
 
 | Pair | Result | Reason or next request |
 | --- | --- | --- |
-| E02 / CRM | Failure | Hour 26 is two hours late. No applicable extension exists. |
+| E02 / Evaluation store | Failure | Hour 26 is two hours late. No applicable extension exists. |
 | E03 / Cloud | Insufficient evidence | Ask for authoritative account history and extract completeness. Access may have persisted or the export may be incomplete. |
 | E04 / Cloud | Approved exception | X7 names the person and system. Hour 36 meets the authorized 48-hour limit. |
-| E05 / CRM | Insufficient evidence | Obtain the historical identity mapping or corrected log. E50's event alone proves nothing about E05. |
+| E05 / Evaluation store | Insufficient evidence | Obtain the historical identity mapping or corrected log. E50's event alone proves nothing about E05. |
 | Remaining eleven | Pass | All match an in-scope ID and meet the ordinary deadline. |
 
-**Manager's report.** “Of 15 expected October disablements, eleven met the ordinary deadline and one met an authorized extension. CRM was late for E02, and two pairs need additional evidence.” If a dashboard reports a rate, define which statuses are in its numerator and denominator. A result of eleven ordinary passes out of fifteen is reproducible. Calling every other case a failure changes its meaning.
+**Manager's report.** “Of 15 expected October disablements, eleven met the ordinary deadline and one met an authorized extension. Evaluation store was late for E02, and two pairs need additional evidence.” If a dashboard reports a rate, define which statuses are in its numerator and denominator. A result of eleven ordinary passes out of fifteen is reproducible. Calling every other case a failure changes its meaning.
 
-**Finding F-17.** The reviewer records the policy version, matched event and two-hour overrun. The identity lead checks whether E02 used CRM during the exposure and whether others were affected. The reviewer distinguishes possible exposure from demonstrated access. Suppose queue history establishes that a manual retry was required after a timeout. The owner adds retry monitoring, provides the deployment record by 5 November and tests a deliberately delayed job. On 12 November the reviewer rechecks subsequent departures and confirms the alert reached the on-call person. These are example assignments and dates.
+**Finding F-17.** The reviewer records the policy version, matched event and two-hour overrun. The identity lead checks whether E02 used Evaluation store during the exposure and whether others were affected. The reviewer distinguishes possible exposure from demonstrated access. Suppose queue history establishes that a manual retry was required after a timeout. The owner adds retry monitoring, provides the deployment record by 5 November and tests a deliberately delayed job. On 12 November the reviewer rechecks subsequent departures and confirms the alert reached the on-call person. These are example assignments and dates.
 
 Closing the engineering ticket proves a change was delivered. The retest establishes what the change accomplished. If monitoring still overlooks a system, reopen the finding or explicitly record the residual issue and its authorized owner.
 

@@ -59,9 +59,7 @@ Include, as relevant:
 - Source notes, direct original links, editions or dates, and useful reading locations.
 - Explicit connections to the founder's discovery and automation goals.
 
-Keep examples consistent. Week 1 uses fictional DunaWorks Group: 2,000 employees, Hungarian headquarters, German and US operations, equipment and subscription-software sales, intermediaries, cloud suppliers, and public- and private-sector customers.
-
-From Week 7 onward, DunaWorks is a 2,000-person software development company headquartered in Hungary with German and US operations. It develops and markets the AI recruiting platform under its own name; the employer customers use it to recruit. Use the provider perspective in new AI compliance material.
+Use DunaWorks consistently as a Hungarian software developer with 2,000 employees and German and US operations. It develops and markets an AI recruitment system. Employers use it to recruit. Teach transferable concepts through provider decisions, evidence and risks to applicants. Keep specialist examples where the original domain matters, including bribery, financial reporting and industrial safety. Identify any separate teaching company explicitly.
 
 Identify fictional internal policies, thresholds, deadlines, assignments, and data as teaching examples. Their appearance in a worked case does not make them general legal requirements.
 

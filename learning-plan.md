@@ -44,7 +44,7 @@ Targeted reading, two hours total:
 - [IIA Three Lines Model](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf): focus on the role descriptions and relationships.
 - [ISO 37301 public overview](https://committee.iso.org/sites/tc309/home/projects/published/iso-37301-compliance-management.html): understand the purpose of a compliance management system. The free overview is enough for this stage.
 
-Two-hour exercise: invent a 2,000-person multinational company selling software and industrial equipment. Give it EU and US operations, distributors, cloud vendors, employees, and public-sector customers. Create a one-page map of its activities, plausible obligation areas, responsible teams, and external reviewers. Record uncertainty instead of assuming every regulation applies.
+Two-hour exercise: invent a 2,000-person multinational company developing and selling AI recruiting software. Give it EU and US operations, distributors, cloud vendors, employees, and public-sector customers. Create a one-page map of its activities, plausible obligation areas, responsible teams, and external reviewers. Record uncertainty instead of assuming every regulation applies.
 
 Interview: speak to one compliance professional or internal auditor. Ask them to describe their last completed piece of work, who provided inputs, and who reviewed the result.
 
@@ -64,7 +64,7 @@ Targeted reading, two hours total:
 - [SEC explanation of internal controls](https://www.sec.gov/files/info/smallbus/404guide/controls.shtml): use the concepts to understand controls over financial reporting. This is introductory historical guidance, not a current determination of which SOX provisions apply.
 - [AICPA SOC overview](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) and [ISO/IEC 27001 overview](https://www.iso.org/standard/27001): identify what each covers. SOC 2 is an attestation report; ISO/IEC 27001 is a certifiable management-system standard. Their scopes matter. Some detailed AICPA examples require an account or membership; paid material is optional.
 
-Two-hour exercise: create a risk-and-control matrix with five rows. Include a source requirement or policy, business risk, control, owner, frequency, evidence, test, finding, and remediation. Use synthetic payment approvals, employee departures, supplier onboarding, privileged access, and expense claims.
+Two-hour exercise: create a risk-and-control matrix with five rows. Include a source requirement or policy, business risk, control, owner, frequency, evidence, test, finding, and remediation. Use synthetic model releases, employee departures, model supplier onboarding, privileged access and evaluation approvals.
 
 Run this deliberately small control test:
 
@@ -114,7 +114,7 @@ Targeted reading, two hours total:
 - [NIST CSF 2.0 small-business quick-start guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1300.pdf): use it to understand the cybersecurity lifecycle.
 - Skim the Commission’s [NIS2 overview](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) and [DORA overview](https://finance.ec.europa.eu/digital-finance/cyber-resilience_en). Learn the problems they address and the importance of scope. National implementation, sector, legal entity, and applicable text require follow-up for a real customer.
 
-Two-hour exercise: assess a fictional cloud supplier processing customer contact details. Produce a small data-flow map, supplier-question list, evidence request, proposed mitigations, and a decision record. Include security, privacy, and continuity questions separately. Trace one possible outage and one possible personal-data incident through different response paths.
+Two-hour exercise: assess a fictional cloud supplier handling reports about candidate-ranking errors. Produce a small data-flow map, supplier-question list, evidence request, proposed mitigations, and a decision record. Include security, privacy, and continuity questions separately. Trace one possible outage and one possible personal-data incident through different response paths.
 
 Interview: speak to privacy operations, security GRC, or third-party risk. Ask where a supplier review waits for other teams and how approvals are documented.
 

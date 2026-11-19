@@ -51,7 +51,7 @@ The [learning plan](learning-plan.md) gives the readings, exercises and completi
 
 Read [agents.md](agents.md) before editing or creating material. Keep the plain-language, example-driven, English-with-Hungarian approach. Preserve the broad learning objective and create only the requested material.
 
-Use primary sources and distinguish applicable legal requirements, source interpretations, internal policies, fictional scenarios, and product hypotheses. DunaWorks Group is the fictional company used in Week 1; its thresholds and time limits are teaching examples.
+Use primary sources and distinguish applicable legal requirements, source interpretations, internal policies, fictional scenarios, and product hypotheses. Across the course, DunaWorks develops an AI recruitment system for employers. Its model-release policies, test thresholds and deadlines are fictional teaching examples.
 
 Check links, chapter navigation, and Markdown rendering before marking a chapter ready.
 

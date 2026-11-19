@@ -31,21 +31,17 @@ Prepared for Balázs Faragó | 22 October 2026. Original teaching text and ficti
 
 <a id="story"></a>
 
-## Who approved this payment?
+## Who can authorize the ranking release?
 
-Imagine DunaWorks Group, a fictional company with 2,000 employees. It sells industrial equipment and subscription software. Its headquarters are in Hungary, with operations in Germany and the United States. It works with distributors, uses cloud suppliers, and sometimes sells to public-sector customers.
+DunaWorks is a fictional Hungarian software developer with 2,000 employees and operations in Germany and the US. It markets an AI recruitment platform under its own name. Employers use the platform to review applicants. DunaWorks also uses resellers, which introduces a separate conduct risk.
 
-On Friday afternoon, a salesperson requests a EUR 40,000 payment to a new intermediary. The intermediary promises to help close a large contract. The invoice says only "market support." Finance cannot find an approved contract or a completed background review. The sales director says the payment is urgent.
+On Friday afternoon a model update is ready for rollout. The evaluation dashboard is green. Éva, the compliance officer, opens the test data and finds that every CV in it is in English. The pilot employer accepts Hungarian and German CVs too. The release team has evidence about one language. What does it know about applicants in the other two?
 
-Several questions now overlap. Does the intermediary provide a legitimate service? Is the payment allowed? Who can approve it? What information is missing? Can a senior manager bypass the review? Who gets told if someone tries?
+DunaWorks has a fictional internal rule requiring evaluation in each supported pilot language. QA owns the test. Product owns rollout. Éva can challenge the evidence and recommend a hold. Internal audit can later assess whether the release process consistently enforced the rule. Ask each person what decision they can make today and what record they would leave.
 
-DunaWorks has a fictional internal policy requiring intermediary review before the first payment. The amount and rule are teaching examples, not universal legal thresholds. Legal specialists would separately assess the actual transaction and applicable law.
+> **Magyarul.** A teszt eredménye csak a vizsgált nyelvre ad választ. A megfelelőségi szakértő jelzi a bizonyítékhiányt, a tesztelők megvizsgálják a többi nyelvet, a kiadásról pedig az arra jogosult vezető dönt.
 
-> **MAGYARUL**
->
-> A compliance itt az, hogy a szabályos üzletmenethez legyenek működő lépések: tudjuk, mit kell ellenőrizni, ki dönthet, és hol marad nyoma a döntésnek.
-
-Keep this payment in mind. Governance determines decision authority. Risk management examines what might go wrong. Compliance addresses applicable requirements. Controls shape the payment process. Assurance helps others judge whether that process works.
+Later in the chapter, a reseller payment illustrates how the same responsibilities work in an anti-bribery investigation.
 
 <a id="governance"></a>
 
@@ -55,7 +51,7 @@ Keep this payment in mind. Governance determines decision authority. Risk manage
 
 The arrangements through which an organization is directed, overseen, and held accountable. For a company, think about decision rights, reporting, supervision, and consequences. [S4](#source-s4)
 
-At DunaWorks, the board asks management to grow the business while maintaining defined standards of conduct. It expects regular reporting on serious problems. It approves suitable oversight arrangements and makes sure management has the authority and resources to act.
+At DunaWorks, the board asks who can suspend candidate ranking if applicants disappear from a shortlist. Management gives the product director that authority, funds an on-call team and requires a report on unresolved incidents. When the alert arrives, an engineer disables ranking for the affected tenant and records the decision.
 
 Management then turns direction into daily operations: hiring staff, setting approval limits, running finance systems, and deciding how supplier review will work. A CEO and other executives are part of management; the board is the governing body in this simplified example. Actual corporate structures differ.
 
@@ -63,7 +59,7 @@ Management then turns direction into daily operations: hiring staff, setting app
 | --- | --- |
 | Governance | Who may authorize an exception, and which serious issues must reach the board? |
 | Management | How many reviewers do we need, and how will they handle the queue? |
-| Operations | Has this particular intermediary supplied its contract and ownership details? |
+| Operations | Did QA test the model version in this release? |
 
 An oversight committee is a smaller group assigned to examine a subject, such as audit or risk. Delegating detailed work does not make the wider oversight responsibility disappear. Stakeholders are people or groups with an interest in the company: employees, customers, owners, suppliers, and others.
 
@@ -81,14 +77,14 @@ Founder question: if your product finds a serious issue, who has authority to ac
 
 For this chapter, risk is uncertainty that could affect an objective. Describe an event and its consequences, rather than writing a vague label such as "supplier risk." [S5](#source-s5)
 
-DunaWorks wants to win legitimate business and pay only for legitimate services. A useful risk statement is: "A salesperson could use an intermediary invoice to route an improper payment, causing legal, financial, and reputational harm." The objective, possible event, and consequences are visible.
+DunaWorks wants recruiters to review every eligible applicant. If the ranking service drops CVs it cannot parse, qualified applicants can disappear before a recruiter sees them. The exposure depends on how often parsing fails, which applicants are affected and whether they can still receive timely review.
 
 Likelihood means how plausible an event is. Impact means how serious its consequences could be. A risk assessment records a reasoned view of those factors and the available information. A red-yellow-green score helps prioritization, but does not replace the explanation behind it.
 
 | Term | Meaning in our example |
 | --- | --- |
-| Inherent risk | The exposure imagined before considering the relevant controls: staff can request intermediary payments. |
-| Residual risk | The exposure remaining after considering reviews and payment checks: reviewers may still miss deception. |
+| Inherent risk | The exposure imagined before considering the relevant controls: a parsing failure could hide an applicant. |
+| Residual risk | The exposure remaining after adding a fallback queue: a recruiter might review it too late. |
 | Risk appetite | The amount and type of exposure decision-makers are willing to take when pursuing objectives. |
 
 Risk management means identifying uncertainty, deciding how to respond, assigning actions, and checking the result. DunaWorks might improve review, avoid a transaction, obtain more information, or accept a permitted remaining business exposure through the right authority.
@@ -113,7 +109,7 @@ An obligation is something the organization is required or has committed to do. 
 | --- | --- |
 | Law or regulation | A legal specialist identifies a relevant duty for a particular activity and jurisdiction. |
 | Contract | A customer agreement requires specified incident notifications or supplier checks. |
-| Internal commitment | DunaWorks requires review before paying a new intermediary. |
+| Internal commitment | DunaWorks requires evaluation before deploying a new ranking model. |
 | Adopted standard | The company chooses a management-system standard, possibly because customers expect it. |
 
 Ethics means considering what is right, fair, and responsible. A code of conduct explains the organization's expected behavior. Something can meet a narrow rule while still raising ethical concerns. Suppose a manager pressures a junior employee to stop asking questions: a healthy company needs a way to address that behavior, even before anyone proves a specific legal breach.
@@ -132,18 +128,18 @@ GRC stands for governance, risk, and compliance. It groups related work: directi
 
 A measure intended to help achieve an objective or reduce a risk. It can be a human action, a system rule, a review, or a combination. The word is broader than checking something after the event.
 
-DunaWorks configures its finance system to block the first payment to an intermediary until a designated reviewer has approved onboarding. The review and the payment block are related controls. A monthly search for payments made without approval is another control.
+Under a fictional DunaWorks release policy, every candidate-ranking model change needs a documented evaluation before rollout. Engineering restricts deployment to approved model versions. Compliance reconciles production deployment history with approvals each month.
 
 | Vocabulary | Concrete example |
 | --- | --- |
-| Preventive control | The system blocks the payment before money leaves. |
-| Detective control | A later report identifies payments that bypassed approval. |
-| Manual control | A reviewer examines the contract and questions the business purpose. |
-| Automated control | A system compares approval status with the payment request. |
+| Preventive control | Deployment stops when the model version lacks approval. |
+| Detective control | A monthly reconciliation flags an unapproved production version. |
+| Manual control | QA examines failures on multilingual CVs and challenges the evaluation scope. |
+| Automated control | The deployment job checks the model digest against the approved digest. |
 
-A policy states the rule or expectation: "Intermediaries need approval before payment." A procedure explains the steps: submit the form, attach the contract, route to the reviewer, and record the decision. A control is the risk-reducing measure within that process. One policy can require several procedures and controls.
+The policy requires evaluation before deployment. The procedure tells QA how to select the benchmark, run it and attach results for the exact model version. The deployment check enforces the approved-version rule. Each produces a different record.
 
-Design asks whether the measure is suitable for its purpose. Operation asks whether it actually happened as required. The payment block may be well designed but disabled in one subsidiary. Alternatively, it may run perfectly while allowing the requester to approve their own request.
+Design asks whether the safeguard can achieve its purpose. A check that accepts results from any model version has a design weakness. A correctly designed check bypassed by one deployment path has an operating weakness.
 
 > **DEVELOPER TRANSLATION**
 >
@@ -159,16 +155,16 @@ Week 2 will examine control testing in more detail. For now, be able to describe
 
 Information that supports a conclusion. Useful evidence is relevant to the actual question and has an understandable origin, scope, and time period.
 
-The claim is: "Every new intermediary paid during September had approval before payment." An approved onboarding record supports one part of that claim. The complete payment population tells you which intermediaries must be checked. The timestamps establish sequence. System configuration helps explain whether the block existed.
+The claim is that every ranking model deployed in September had prior evaluation approval. Start with production deployment events, then match model identifiers and approval timestamps. Starting with the evaluation folder hides versions deployed without an evaluation.
 
-Provenance means where information came from and what happened to it. A finance export directly obtained from a named system, with a collection time and defined filters, has a clearer provenance than a spreadsheet someone forwarded without explanation.
+Provenance means where information came from and what happened to it. A deployment history directly obtained from a named system, with a collection time and defined filters, has a clearer provenance than a spreadsheet someone forwarded without explanation.
 
 | Evidence question | Why it matters |
 | --- | --- |
-| Relevant? | A training certificate does not establish that a payment was approved. |
-| Complete? | Records for 18 intermediaries leave a gap if 25 were paid. |
-| Timely? | Approval after payment fails a rule requiring prior approval. |
-| Traceable? | You need to connect the approval to the correct entity and transaction. |
+| Relevant? | The evaluation must address the ranking task used in production. |
+| Complete? | Evidence for 18 versions leaves seven to investigate if 25 shipped. |
+| Timely? | Approval after rollout misses the release deadline. |
+| Traceable? | You need to connect the approval to the correct model and deployment. |
 | Reliable? | An unexplained edit can change what a record means. |
 
 Scope is the boundary of a statement or review: entities, systems, processes, locations, and periods. An audit trail records meaningful actions and decisions over time. An attestation is a stated assertion, such as a manager confirming a review; the strength and formal meaning depend on context.
@@ -187,15 +183,15 @@ Founder implication: evidence collection, evidence quality, and the final judgme
 
 A conclusion intended to increase confidence in something, based on an assessment against stated criteria. In everyday terms: someone has done enough defined checking to support a bounded conclusion.
 
-DunaWorks' finance manager says all intermediary payments were reviewed. That is a management assertion. An evaluator asks for the payment population, approval records, and timing information, performs defined checks, and reports a conclusion with its scope and limitations. The extra confidence comes from the assessment and supporting work.
+The product director says every ranking release had an evaluation. Internal audit selects a defined period, obtains the deployment population independently, checks approvals against model versions, investigates gaps and reports exactly which release paths it covered.
 
 An audit is a structured examination. Internal audit is a function that provides independent assessment and advice within the organization. External auditors or other assurance providers come from outside. The engagement determines what they examine: a financial-statement audit does not automatically examine every compliance process.
 
-Monitoring is ongoing observation, such as a daily report of unapproved payments. Testing examines a control against a method and criteria. Assurance is the confidence supported by the resulting assessment. These words describe related activities, not interchangeable outputs.
+Monitoring is ongoing observation, such as a daily report of unapproved model deployments. Testing examines a control against a method and criteria. Assurance is the confidence supported by the resulting assessment. These words describe related activities, not interchangeable outputs.
 
 > **WHY INDEPENDENCE MATTERS**
 >
-> Imagine you wrote the payment process, approved its exceptions, and then issued the only assessment of whether it worked. A reviewer free from those management responsibilities can challenge assumptions you helped create.
+> Imagine you designed the model release process, approved its exceptions, and then issued the only assessment of whether it worked. A reviewer free from those management responsibilities can challenge assumptions you helped create.
 
 Assurance always needs boundaries. A report might cover one subsidiary and one quarter. It might use a sample. It might identify missing records. Its conclusion should match the work performed. Absolute certainty about every event is rarely what the engagement can establish.
 
@@ -211,7 +207,7 @@ Build a business map before collecting a list of regulations. Ask what the compa
 
 | Dimension | DunaWorks question |
 | --- | --- |
-| Activities | Selling equipment, hosting software, arranging financing, or performing regulated services? |
+| Activities | Developing the model, hosting inference, ranking applicants or using recommendations to hire? |
 | Entities and places | Which subsidiary performs the activity, and where are the people and operations? |
 | Counterparties | Customers, public bodies, distributors, suppliers, and business partners? |
 | Data and systems | Whose data, what purpose, which systems, and which suppliers? |
@@ -447,7 +443,7 @@ Here is a fictional week for DunaWorks' compliance manager. It illustrates why t
 
 | Day | Work and output |
 | --- | --- |
-| Monday | Review new intermediary requests. Ask sales for missing business-purpose information. |
+| Monday | Review the proposed model change. Ask QA which languages the evaluation covered. |
 | Tuesday | Discuss a reported concern with the appropriate investigation team. Agree next actions and access to the case. |
 | Wednesday | Review a proposed contract requirement with legal and operations. Identify the owner and implementation work. |
 | Thursday | Follow up overdue remediation. Check whether the new evidence actually supports closure. |
@@ -516,11 +512,12 @@ This is a fictional starting answer. It demonstrates structure and deliberately 
 
 | Activity | Expectation / owner | Control / evidence | Review / issue route |
 | --- | --- | --- | --- |
+| Ranking release | Product owns rollout. QA evaluates changes. | Match model digest and approval to deployment history. | Compliance challenges gaps and the director decides whether to pause rollout. |
 | Intermediary payment | Internal prior-review rule. Finance owns payments; business owns the relationship. | Payment blocked pending approval. Contract, decision, and timestamps. | Compliance challenges unresolved concerns; a designated manager handles escalation. |
 | Employee offboarding | Internal 24-hour rule for three systems. HR and IT have assigned tasks. | Disable accounts and compare departures. HR record and access logs. | Security follows unmatched cases; serious failures reach the designated owner. |
 | Cloud-supplier onboarding | Contract, privacy, and security requirements to be assessed. Procurement coordinates. | Record relevant data uses and obtain approval before use. Assessment and decision. | Privacy, legal, and security specialists assess their areas; gaps receive owners. |
 
-At the top of your map, add: Hungarian parent plus German and US operations; equipment and software sales; distributors and cloud vendors; public- and private-sector customers. Confirm the actual entity and activity before selecting requirements.
+At the top of your map, add: Hungarian parent plus German and US operations; AI recruitment software sales; distributors and cloud vendors; public- and private-sector customers. Confirm the actual entity and activity before selecting requirements.
 
 Separately show the board's oversight and internal audit's independent assessment role. A business process can have several contributors while its individual decisions and outputs still need clear ownership.
 
@@ -536,7 +533,7 @@ Answer aloud or in a few sentences before reading the key. Explain your reasonin
 
 1. The board asks to receive serious overdue findings every quarter. The compliance manager prepares the report. Which part is governance, and which part is management work?
 
-2. DunaWorks has an excellent intermediary policy. You cannot find any review records for the last six months. What can you conclude, and what remains unknown?
+2. DunaWorks has a detailed model-evaluation policy. You cannot find any review records for the last six months. What can you conclude, and what remains unknown?
 
 3. A manager says the company has "high risk appetite," so an unapproved transaction can proceed despite a mandatory prohibition. What is wrong with the reasoning?
 
@@ -578,45 +575,46 @@ You are ready to continue when you can explain these distinctions using a new ex
 
 These are practical learning translations. Professional and statutory terminology can vary with the context.
 
-| English | Hungarian | Plain-English meaning |
-| --- | --- | --- |
-| Accountability | számonkérhetőség, elszámolási felelősség | Who must answer for the result. |
-| Applicability | alkalmazhatóság; ránk vonatkozik-e | Whether a requirement covers this activity and entity. |
-| Assurance | bizonyosságot nyújtó értékelés | Confidence supported by defined assessment work. |
-| Attestation | nyilatkozat, állítás igazolása | An assertion; formal meaning depends on context. |
-| Audit | audit, módszeres vizsgálat | A structured examination with a defined scope. |
-| Audit trail | ellenőrzési nyomvonal | A history of relevant actions and decisions. |
-| Compliance | megfelelőség | Meeting applicable requirements and commitments. |
-| Control | kontroll, kockázatkezelő intézkedés | A measure intended to support an objective or reduce risk. |
-| Culture | szervezeti kultúra | Behavior people learn is expected and rewarded. |
-| Due diligence | átvilágítás, kellő gondosság | Gathering and evaluating relevant information before or during a relationship or decision. |
-| Escalation | magasabb vagy illetékes szintre emelés | Getting an issue to suitable authority or expertise. |
-| Evidence | bizonyíték, alátámasztó információ | Information supporting a particular conclusion. |
-| Finding | megállapítás, feltárt hiányosság | An assessed issue or weakness supported by work. |
-| Governance | vállalatirányítás és felügyelet | Arrangements for directing and overseeing the company. |
-| GRC | irányítás, kockázatkezelés, megfelelőség | Related fields often coordinated through shared processes. |
+| English | Hungarian | Plain-English meaning | AI recruitment example |
+| --- | --- | --- | --- |
+| Accountability | számonkérhetőség, elszámolási felelősség | Who must answer for the result. | The product director answers for enabling ranking. |
+| Applicability | alkalmazhatóság; ránk vonatkozik-e | Whether a requirement covers this activity and entity. | Counsel checks whether the tool evaluates candidates. |
+| Assurance | bizonyosságot nyújtó értékelés | Confidence supported by defined assessment work. | Audit independently tests a quarter of model releases. |
+| Attestation | nyilatkozat, állítás igazolása | An assertion; formal meaning depends on context. | QA signs a statement identifying the build tested. |
+| Audit | audit, módszeres vizsgálat | A structured examination with a defined scope. | An auditor selects deployments and reconstructs approvals. |
+| Audit trail | ellenőrzési nyomvonal | A history of relevant actions and decisions. | Model digest, evaluator and decision timestamp link one release. |
+| Compliance | megfelelőség | Meeting applicable requirements and commitments. | QA follows the approved evaluation rule before deployment. |
+| Control | kontroll, kockázatkezelő intézkedés | A measure intended to support an objective or reduce risk. | Deployment rejects an unapproved model digest. |
+| Culture | szervezeti kultúra | Behavior people learn is expected and rewarded. | An engineer can report missing applicants during launch week. |
+| Due diligence | átvilágítás, kellő gondosság | Gathering and evaluating relevant information before or during a relationship or decision. | Procurement checks whether a model supplier keeps CV inputs. |
+| Escalation | magasabb vagy illetékes szintre emelés | Getting an issue to suitable authority or expertise. | An unresolved omission reaches the director who can pause rollout. |
+| Evidence | bizonyíték, alátámasztó információ | Information supporting a particular conclusion. | A recruiter-role test shows which applicants can be opened. |
+| Finding | megállapítás, feltárt hiányosság | An assessed issue or weakness supported by work. | The tested build omitted an eligible applicant. |
+| Governance | vállalatirányítás és felügyelet | Arrangements for directing and overseeing the company. | The board asks who may suspend ranking across tenants. |
+| GRC | irányítás, kockázatkezelés, megfelelőség | Related fields often coordinated through shared processes. | The team links rollout authority, candidate harm and release rules. |
 
 <a id="glossary-b"></a>
 
 ## The words you will hear next
 
-| English | Hungarian | Plain-English meaning |
-| --- | --- | --- |
-| Inherent risk | eredendő kockázat | Exposure before considering relevant controls. |
-| Internal audit | belső ellenőrzés | Independent internal assessment and advice. |
-| Management system | irányítási rendszer | Roles, processes, and routines for achieving objectives. |
-| Monitoring | nyomon követés, figyelemmel kísérés | Ongoing observation of performance or issues. |
-| Obligation | kötelezettség | Something required or committed to. |
-| Policy | szabályzat, alapelv | A stated organizational expectation. |
-| Procedure | eljárásrend | Instructions for performing the work. |
-| Remediation | hiányosság megszüntetése, javító intézkedés | Work to address a problem and its causes. |
-| Residual risk | maradványkockázat | Exposure remaining after considering controls. |
-| Risk appetite | kockázatvállalási hajlandóság | The amount and type of exposure the organization is willing to take. |
-| Root cause | kiváltó vagy alapvető ok | Why the problem arose beneath the immediate symptom. |
-| Scope | hatókör, vizsgált kör | The boundary of an activity, claim, or assessment. |
-| Segregation of duties | feladatok és jogosultságok szétválasztása | Dividing incompatible tasks to reduce error or abuse. |
-| Stakeholder | érintett, érdekelt fél | A person or group with an interest in the organization. |
-| Whistleblowing | visszaélés-bejelentés | Raising a concern about suspected wrongdoing. |
+| English | Hungarian | Plain-English meaning | AI recruitment example |
+| --- | --- | --- | --- |
+| Inherent risk | eredendő kockázat | Exposure before considering relevant controls. | Unscored applicants could disappear from review. |
+| Internal audit | belső ellenőrzés | Independent internal assessment and advice. | Audit checks whether emergency deployments bypassed evaluation. |
+| Management system | irányítási rendszer | Roles, processes, and routines for achieving objectives. | A named team maintains release rules, tests and corrective actions. |
+| Monitoring | nyomon követés, figyelemmel kísérés | Ongoing observation of performance or issues. | Support tracks recurring complaints about missing applications. |
+| Obligation | kötelezettség | Something required or committed to. | A signed pilot contract requires notice before a model switch. |
+| Policy | szabályzat, alapelv | A stated organizational expectation. | Every supported pilot language needs evaluation. |
+| Procedure | eljárásrend | Instructions for performing the work. | QA freezes the dataset, runs the build and attaches results. |
+| Remediation | hiányosság megszüntetése, javító intézkedés | Work to address a problem and its causes. | Engineering repairs queue filtering and QA retests the affected role. |
+| Residual risk | maradványkockázat | Exposure remaining after considering controls. | An applicant can be visible but still receive a late review. |
+| Risk appetite | kockázatvállalási hajlandóság | The amount and type of exposure the organization is willing to take. | Management sets how much pilot exposure it will accept within applicable requirements. |
+| Root cause | kiváltó vagy alapvető ok | Why the problem arose beneath the immediate symptom. | A score-based query excluded every record with a missing score. |
+| Scope | hatókör, vizsgált kör | The boundary of an activity, claim, or assessment. | The run covered the German pilot tenant and one recruiter role. |
+| Segregation of duties | feladatok és jogosultságok szétválasztása | Dividing incompatible tasks to reduce error or abuse. | The model author and release approver are different people. |
+| Stakeholder | érintett, érdekelt fél | A person or group with an interest in the organization. | An applicant can be affected without having an account. |
+| Whistleblowing | visszaélés-bejelentés | Raising a concern about suspected wrongdoing. | An engineer reports pressure to conceal a failed evaluation. |
+
 
 Roles: CCO = chief compliance officer; CRO = chief risk officer; CAE = chief audit executive; CEO = chief executive officer. Read the actual responsibilities behind each title.
 

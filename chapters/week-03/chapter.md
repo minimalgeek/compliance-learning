@@ -1,8 +1,8 @@
 # Week 3 · Who should approve the distributor payment?
 
-An accounts-payable clerk at DunaWorks has an invoice for EUR 40,000. The description says “market support.” A sales director insists it must be paid before a public tender closes. The intermediary exists in the vendor system. It even has a green review badge. The clerk cannot find a contract or tell what service anyone delivered.
+An accounts-payable clerk at DunaWorks has an invoice for EUR 40,000. The description says “market support.” A sales director insists it must be paid before a public employer closes its tender for applicant-ranking software. The intermediary exists in the vendor system. It even has a green review badge. The clerk cannot find a contract or tell what service anyone delivered.
 
-DunaWorks is a fictional Hungarian-headquartered group selling software and equipment in Europe and the US. Follow this invoice in two directions. Procurement asks whether the firm can engage the intermediary. An investigator later asks what actually happened. These teams need some of the same records, but their decisions and access rights differ.
+DunaWorks is a fictional Hungarian-headquartered group developing and selling AI recruiting software in Europe and the US. Follow this invoice in two directions. Procurement asks whether the firm can engage the intermediary. An investigator later asks what actually happened. These teams need some of the same records, but their decisions and access rights differ.
 
 > Magyarul: Az átvilágítás során azt vizsgáljuk, kivel és milyen feltételekkel üzletelhetünk. Egy későbbi bejelentés kivizsgálásakor már azt kell feltárni, mi történt egy konkrét ügyben.
 
@@ -20,7 +20,7 @@ DunaWorks is a fictional Hungarian-headquartered group selling software and equi
 
 ## Ask what the intermediary actually does
 
-An **intermediary** acts between a company and someone it wants to reach. A distributor may buy goods for resale. A sales agent may introduce customers for a commission. An installer may deal with government offices for permits. The label on the vendor record tells you little about the work, payment flows or people the intermediary can influence.
+An **intermediary** acts between a company and someone it wants to reach. A reseller might license the recruiting platform to an employer. Ask whether it also changes the model, sells it under its own brand or promises automatic rejection. Product counsel needs those facts to assess AI responsibilities. Finance still needs evidence of the service underlying the commission. A sales agent may introduce customers for a commission. An installer may deal with government offices for permits. The label on the vendor record tells you little about the work, payment flows or people the intermediary can influence.
 
 A **bribe** involves an improper benefit intended to influence a decision. A trip, a job for a relative or an inflated subcontract can raise questions as well as a cash payment. Legal elements differ by jurisdiction. **Gifts and hospitality** include meals, travel or entertainment. Context matters. Ask who receives the benefit, who decides the tender, who pays, why now and what company rules apply. A **conflict of interest** arises when a personal interest could interfere with someone's business duty. A buyer whose sibling owns the agent may need to disclose the relationship and step aside even if every invoice is genuine.
 
@@ -41,7 +41,7 @@ A **bribe** involves an improper benefit intended to influence a decision. A tri
 
 A **beneficial owner** is the natural person who ultimately owns or controls the entity under the relevant rules. A director signing a form may represent the entity without owning it. A possible sanctions list match is a lead. Ask for disambiguating identifiers, the list and version, ownership facts and a specialist's disposition. The US Treasury's OFAC framework concerns US sanctions. A Hungarian entity needs its own jurisdictional assessment.
 
-The Financial Action Task Force (FATF) banking guidance explains a **risk-based approach**: direct more attention to higher exposure. In the bank example, unusual account activity goes to financial-crime operations. A specialist evaluates suspicion and any reporting obligation under local law. The equipment seller's onboarding analyst cannot decide the bank's reporting duty.
+The Financial Action Task Force (FATF) banking guidance explains a **risk-based approach**: direct more attention to higher exposure. In the bank example, unusual account activity goes to financial-crime operations. A specialist evaluates suspicion and any reporting obligation under local law. The software provider's onboarding analyst cannot decide the bank's reporting duty.
 
 ## Design the distributor review around a real decision
 
@@ -56,7 +56,7 @@ DunaWorks policy permits only an authorized procurement manager to activate a di
 | First payment | Match invoice to contract, completed deliverable, approved payee and bank account | Finance releases or holds this payment. Onboarding approval alone cannot release it. |
 | Ongoing review | Watch changes to ownership, bank account, territory, commission or subcontractors | Owner reopens review on change and at the risk-based review date. |
 
-Suppose the approved scope was “equipment installation in Germany.” Sales now wants the same partner to introduce it to a public buyer in another territory. The badge can be accurate about the old installation contract and misleading about the new assignment. Store the relationship, role, scope, approval date and terms on the record. A one-bit vendor flag loses exactly the facts a payment reviewer needs.
+Suppose the approved scope was “recruitment software integration in Germany.” Sales now wants the same partner to introduce it to a public buyer in another territory. The badge can be accurate about the old integration contract and misleading about the new assignment. Store the relationship, role, scope, approval date and terms on the record. A one-bit vendor flag loses exactly the facts a payment reviewer needs.
 
 ## A report arrives while the payment is on hold
 
@@ -74,7 +74,7 @@ The following packet is synthetic. All dates refer to October. Spend 40 minutes 
 
 | Item | What it actually says |
 | --- | --- |
-| R1 / vendor master | Danube Channel Kft. cleared in May for German installations. Owner field lists a holding company. |
+| R1 / vendor master | Danube Channel Kft. cleared in May for German software integrations. Owner field lists a holding company. |
 | R2 / new request | Sales seeks public tender introductions. Fee EUR 40,000. First-page statement of work is unsigned. |
 | R3 / deliverable | Calendar invite shows an introductory call was planned. No attendance record or work report. |
 | R4 / payment | Invoice names the approved company. New instruction directs payment to a different account holder. |

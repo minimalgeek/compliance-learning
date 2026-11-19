@@ -1,8 +1,8 @@
 # Week 6 · Which compliance workflow is worth building?
 
-A privacy reviewer at DunaWorks reads the same product specification twice. The first version promises that support tickets are deleted after 30 days. The revision says “until the account closes.” Engineering sees a small wording change. The reviewer sees a decision that may need reopening. Who notices today, how much work follows, and who would pay to improve it?
+An AI compliance reviewer at DunaWorks reads the same product specification twice. The first version promises that recruiters can review unscored applicants. The revision says “hide applications without a score.” Engineering sees a small wording change. The reviewer sees a decision that may need reopening. Who notices today, how much work follows, and who would pay to improve it?
 
-DunaWorks is a fictional software and equipment group. This chapter turns a plausible incident into a testable product hypothesis. All customer statements, volumes, scores, prices and evaluation results in the examples are invented. Replace them with evidence from interviews and an authorized pilot.
+DunaWorks is a fictional developer of AI recruitment software. This chapter turns a plausible incident into a testable product hypothesis. All customer statements, volumes, scores, prices and evaluation results in the examples are invented. Replace them with evidence from interviews and an authorized pilot.
 
 > Magyarul: A „jó ötlet” és a fizetős próba között az a kérdés, hogy ki milyen döntést hoz ma, mi kerül neki időbe, és milyen mérhető eredményért fizetne.
 
@@ -35,7 +35,7 @@ Use 15 minutes per vendor. Record trigger, user, inputs, systems or integrations
 
 ## Interview for a recent decision
 
-A **user** operates the workflow. A **reviewer** must trust or approve the output. A **buyer** controls budget or can sponsor the purchase. A **gatekeeper** can permit or block access, deployment or procurement. One person may hold several roles. At DunaWorks the privacy analyst might want a document-change assistant while the privacy lead owns decisions, security grants integration access and the general counsel's office controls the budget.
+A **user** operates the workflow. A **reviewer** must trust or approve the output. A **buyer** controls budget or can sponsor the purchase. A **gatekeeper** can permit or block access, deployment or procurement. One person may hold several roles. At DunaWorks the AI compliance analyst might want a document-change assistant while the AI compliance lead owns decisions, security grants integration access and the general counsel's office controls the budget.
 
 Run three 30-minute sessions. Use the first five minutes to choose one recent case, fifteen to reconstruct events, five on costs and five to summarize what would change the participant's decision. Across the whole course aim for roughly eight conversations, including three users of the same workflow, a budget owner, an assurance reviewer and adjacent operators. A conversation may cover two roles. An unfilled role remains an open question.
 
@@ -47,7 +47,7 @@ Run three 30-minute sessions. Use the first five minutes to choose one recent ca
 
 ## Choose one decision and expose the assumptions
 
-Compare four opportunities from the course: checking evidence completeness, preparing supplier follow-ups, routing changes to an interpretation owner and verifying remediation. Define a unit of work for each. “One changed specification assessed by the privacy reviewer” gives a denominator. “Continuous compliance” leaves almost everything open.
+Compare four opportunities from the course: checking evidence completeness, preparing supplier follow-ups, routing changes to an interpretation owner and verifying remediation. Define a unit of work for each. “One changed specification assessed by the AI compliance reviewer” gives a denominator. “Continuous compliance” leaves almost everything open.
 
 Score from 1 to 5 with higher always more favorable. For frequency, time spent today, budget access, permitted data access, reviewer acceptance, measurable benefit and differentiation, 5 means stronger. For integration, 5 means easier. Keep the supporting observation next to each score. Below are hypothetical ratings solely to demonstrate the calculation.
 
@@ -60,21 +60,21 @@ Score from 1 to 5 with higher always more favorable. For frequency, time spent t
 
 The 31-point candidate leads by one point. Lower its data-access score from 4 to 2 because approved historical versions are hard to obtain and the ranking reverses. In 30 minutes, spend ten defining criteria, ten assigning scores with evidence labels, and ten challenging the top assumptions. Some conditions make a pilot infeasible regardless of rank. If no one can authorize the necessary documents, test with synthetic pairs and leave real-world acceptance unknown.
 
-**Decision for this exercise.** Use a document-change assistant because it permits a small, reviewable test. An alternative customer might have better access to audit-request evidence. Compare the best existing workaround, including the document editor's version comparison and an email to the privacy team, against the proposed feature.
+**Decision for this exercise.** Use a document-change assistant because it permits a small, reviewable test. An alternative customer might have better access to audit-request evidence. Compare the best existing workaround, including the document editor's version comparison and an email to the AI compliance team, against the proposed feature.
 
 ## Build a prototype a reviewer can reject
 
-Take one approved folder of product specifications and one reviewed internal policy. A new document version triggers comparison with the last reviewed version. The **bounded decision** is whether an identified change should be routed to the privacy reviewer under that policy. The reviewer decides what the change means and whether a formal assessment needs reopening.
+Take one approved folder of product specifications and one reviewed internal policy. A new document version triggers comparison with the last reviewed version. The **bounded decision** is whether an identified change should be routed to the AI compliance reviewer under that policy. The reviewer decides what the change means and whether a formal assessment needs reopening.
 
-**Fictional policy P-7.** Route changes to personal-data categories, retention periods, processing purposes or recipients. An authorized, unexpired exception covers only its named change and scope. A missing previous version or inaccessible referenced annex produces “insufficient evidence.” A spelling-only change can close as routine once both versions are available. These are operational states for this prototype.
+**Fictional policy P-7.** Route changes to candidate visibility, scoring inputs, human approval or ranking purpose. An authorized, unexpired exception covers only its named change and scope. A missing previous version or inaccessible referenced annex produces “insufficient evidence.” A spelling-only change can close as routine once both versions are available. These are operational states for this prototype.
 
 | Input pair | Expected output | Explanation the reviewer can check |
 | --- | --- | --- |
-| A. “30 days” becomes “until account closure” | Route | Cite both retention passages and their version IDs. |
+| A. “Show unscored applicants” becomes “hide unscored applicants” | Route | Cite both queue rules and their version IDs. |
 | B. “Reciept” becomes “Receipt” | Routine | Cite the changed word. No policy category changed. |
 | C. New version says “see Annex B”; annex unavailable | Insufficient evidence | Ask for the exact annex and version. |
-| D. Analytics receives named emails; existing exception allows only pseudonymous IDs | Route | Cite recipient and identifiers. Exception scope differs. |
-| E. Trial retention changes to 45 days; signed exception names this trial, period and revision | Approved exception | Attach authorization, match fields and expiry. Keep it visible to reviewer. |
+| D. Live ranking uses interview transcripts. An exception covers use in an offline evaluation | Route | Cite scoring input and environment. Exception scope differs. |
+| E. A synthetic demo hides unscored records. A signed exception names this demo, period and revision | Approved exception | Attach authorization, match fields and expiry. Keep it visible to reviewer. |
 | F. Document deleted; event contains only a title | Insufficient evidence | Mark unavailable source and request prior authorized snapshot; avoid inventing its content. |
 
 **Two-hour build.** Use 20 minutes to assemble pairs and policy, 25 to label them with a reviewer or provisional answer key, 35 to build a manual or scripted version comparison, 25 to run it blind and 15 to inspect errors. A spreadsheet can hold source versions, quoted spans, applicable rule, proposed disposition, reviewer decision and reason. Label any unreviewed ground truth provisional. You can validate the decision without a live connector.
@@ -85,7 +85,7 @@ For a future Drive, Notion or GitHub integration, ask which tenant, folders or r
 
 A **baseline** is the current process measured on comparable work. Time the analyst using the existing version viewer and policy, including follow-ups. Then time assisted review with the same decision rules. Avoid letting a reviewer memorize the answer first. For a small pilot, split matched cases between conditions, counterbalance order across reviewers and reserve unseen cases. Record case difficulty and access failures. Count setup, review and rework separately.
 
-Suppose an independent reviewer labels 20 synthetic pairs: 8 should route, 7 are routine, 3 have insufficient evidence and 2 have authorized exceptions. The prototype routes 9, of which 7 truly need routing and 2 are routine. It misses one material retention change. It correctly handles the three insufficient-evidence cases and the two exceptions. The other five routine pairs close correctly.
+Suppose an independent reviewer labels 20 synthetic pairs: 8 should route, 7 are routine, 3 have insufficient evidence and 2 have authorized exceptions. The prototype routes 9, of which 7 truly need routing and 2 are routine. It misses one material visibility change. It correctly handles the three insufficient-evidence cases and the two exceptions. The other five routine pairs close correctly.
 
 | Question | Calculation | Meaning |
 | --- | --- | --- |
@@ -104,7 +104,7 @@ Use one sentence each for customer, buyer, trigger, current process, pain, curre
 
 | Memo field | Worked example for DunaWorks, entirely hypothetical |
 | --- | --- |
-| Customer, user, reviewer, buyer | B2B software teams with a privacy review queue. Product engineers edit specs; privacy operations triages; privacy lead decides materiality; general counsel sponsors a trial. |
+| Customer, user, reviewer, buyer | B2B software teams with a AI product release review queue. Product engineers edit specs; AI compliance operations triages; AI compliance lead decides materiality; general counsel sponsors a trial. |
 | Current workflow and pain | Editors send voluntary messages. Analysts compare versions manually and chase missing annexes. Frequency, waiting time and missed changes need customer evidence. |
 | Output and authority | Draft review card with old and new citations, policy trigger, missing input or applicable exception. Human reviewer accepts, dismisses or requests evidence. |
 | Pilot access | One approved folder, version history, internal policy and redacted past dispositions. Tenant administrator grants bounded access; security reviews retention and deletion. |
@@ -112,7 +112,7 @@ Use one sentence each for customer, buyer, trigger, current process, pain, curre
 | Commercial terms | Illustrative offer: EUR 2,000 fixed for four weeks, one team and up to 40 changes. Sponsor names reviewer and spending authority. Price and purchasing route are untested. |
 | Decision after trial | Continue only if data access works, reviewers accept provenance, and targets hold on agreed cases. Otherwise revise the scope or stop. |
 
-**Worked judgment.** The 20-case synthetic evaluation demonstrates that the prototype can surface a retention change and preserve some unknowns. It also missed a material change. If the buyer rates that miss critical, the proposed quality threshold fails even though median time improved. Ask the reviewer to classify severity before seeing the prototype's result. No interview or purchase occurred in this example.
+**Worked judgment.** The 20-case synthetic evaluation demonstrates that the prototype can surface a visibility change and preserve some unknowns. It also missed a material change. If the buyer rates that miss critical, the proposed quality threshold fails even though median time improved. Ask the reviewer to classify severity before seeing the prototype's result. No interview or purchase occurred in this example.
 
 **Your finish line.** Replace at least three hypothetical fields with evidence from your conversations. If a buyer is still unknown, write “unknown” and name the question that would identify one. A defensible decision to abandon an opportunity is a valid course outcome.
 
