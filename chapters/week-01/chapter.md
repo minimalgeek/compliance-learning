@@ -1,7 +1,5 @@
 # Week 1: How corporate compliance works inside a company
 
-[Read the companion PDF](Week_1_Compliance_Foundations_EN_HU.pdf). Printed-page references below refer to that PDF.
-
 <a id="start"></a>
 
 *A founder's first chapter*
@@ -14,7 +12,7 @@ Governance. Compliance. Assurance. These words become useful when you can connec
 
 By the end, you should be able to follow a conversation between a business manager, a compliance officer, and an auditor. You should also recognize where software could help them and which decisions still need a named owner.
 
-Read the main chapter first. Use the two-page English-Hungarian glossary when a term is unfamiliar. Finish with the company-mapping exercise and the short-answer scenarios. Answers and worked examples are included.
+Read the main chapter first. Use the [English-Hungarian glossary](#glossary-a) when a term is unfamiliar. Finish with the company-mapping exercise and the short-answer scenarios. Answers and worked examples are included.
 
 Allow about 60-75 minutes for the chapter and reflection, then use the five-hour study schedule later in the chapter. The material is mainly English so you learn the vocabulary buyers use. Hungarian phrases explain the meaning rather than prescribe official translations.
 
@@ -22,14 +20,14 @@ Prepared for Balázs Faragó | 22 October 2026. Original teaching text and ficti
 
 ### Chapter map
 
-- [Core vocabulary | pp. 3-8](#governance)
-- [Business scope | p. 9](#scope)
-- [People and roles | pp. 10-12](#people)
-- [The program | pp. 13-16](#program)
-- [Worked cases | pp. 17-18](#worked-payment)
-- [Practice | pp. 21-24](#study-plan)
-- [EN-HU glossary | pp. 25-26](#glossary-a)
-- [Original readings | pp. 27-28](#core-sources)
+- [Core vocabulary](#governance)
+- [Business scope](#scope)
+- [People and roles](#people)
+- [The program](#program)
+- [Worked cases](#worked-payment)
+- [Practice](#study-plan)
+- [EN-HU glossary](#glossary-a)
+- [Original readings](#core-sources)
 
 <a id="story"></a>
 
@@ -495,7 +493,7 @@ Begin discovery in Week 1. A practitioner can correct your model of the workflow
 | --- | --- |
 | 75 minutes | Read the chapter, pause on the examples, and answer the scenarios before checking the key. |
 | 45 minutes | Read selected original sections using the source guide at the end. |
-| 120 minutes | Complete the company-mapping exercise on the next page and revise it. |
+| 120 minutes | Complete the company-mapping exercise described below and revise it. |
 | 60 minutes | Have one practitioner conversation and write your notes. Preparation and synthesis are included. |
 
 Your exercise deliverable is a one-page operating map of DunaWorks, or a real company you know well. Add a second page only for assumptions and open questions. Start with activities and decisions; a list of regulations can come later.
@@ -626,19 +624,19 @@ Roles: CCO = chief compliance officer; CRO = chief risk officer; CAE = chief aud
 
 ## The three recommended sources
 
-The DOJ and IIA PDFs and the ISO public overview were fetched and reviewed for this chapter. Source editions are named below. Links open the original materials. Page references mean the printed page number, which can differ from the PDF viewer's page index.
+The links below open the original materials reviewed for this chapter. Page references use the numbering printed in each source.
 
 <a id="source-s1"></a>
 
 **S1: [US Department of Justice - Evaluation of Corporate Compliance Programs](https://www.justice.gov/criminal/criminal-fraud/page/file/937501/dl)**
 
-September 2024 edition; 25 PDF pages. Read printed pages 1-2 for the opening questions. Skim pages 11-13 on leadership, authority, and resources, then 17-21 on effectiveness, investigations, and remediation. Allow about 20 minutes. Purpose: understand a prosecutor's evaluation perspective, rather than memorize a universal checklist.
+September 2024 edition. Read printed pages 1-2 for the opening questions. Skim pages 11-13 on leadership, authority, and resources, then 17-21 on effectiveness, investigations, and remediation. Allow about 20 minutes. Purpose: understand a prosecutor's evaluation perspective, rather than memorize a universal checklist.
 
 <a id="source-s2"></a>
 
 **S2: [The Institute of Internal Auditors - The IIA's Three Lines Model](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf)**
 
-2020 paper, updated September 2024; 14 PDF pages. Read printed pages 4-5 and 7-11 for roles, independence, and relationships. Allow about 20 minutes. Purpose: understand who does, supports, challenges, and independently assesses the work.
+2020 paper, updated September 2024. Read printed pages 4-5 and 7-11 for roles, independence, and relationships. Allow about 20 minutes. Purpose: understand who does, supports, challenges, and independently assesses the work.
 
 <a id="source-s3"></a>
 

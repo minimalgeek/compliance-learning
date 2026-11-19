@@ -1,7 +1,5 @@
 # Week 3 · Who should approve the distributor payment?
 
-[Read the companion PDF](Week_3_Conduct_and_Third_Parties_EN_HU.pdf)
-
 An accounts-payable clerk at DunaWorks has an invoice for EUR 40,000. The description says “market support.” A sales director insists it must be paid before a public tender closes. The intermediary exists in the vendor system. It even has a green review badge. The clerk cannot find a contract or tell what service anyone delivered.
 
 DunaWorks is a fictional Hungarian-headquartered group selling software and equipment in Europe and the US. Follow this invoice in two directions. Procurement asks whether the firm can engage the intermediary. An investigator later asks what actually happened. These teams need some of the same records, but their decisions and access rights differ.
@@ -112,8 +110,8 @@ The following packet is synthetic. All dates refer to October. Spend 40 minutes 
 | Retaliation | Reprisal for speaking up | megtorlás |
 | Substantiated allegation | An allegation the evidence supports under the procedure | a vizsgálatban megalapozottnak talált állítás |
 
-- **US DOJ Criminal Division**, Evaluation of Corporate Compliance Programs, September 2024 update. Spend 25 minutes on parts I.D, I.E and III.C on reporting, third parties and investigation of misconduct. US prosecutorial evaluation guidance. [Original PDF](https://www.justice.gov/criminal/criminal-fraud/page/file/937501/dl)
-- **US Treasury, Office of Foreign Assets Control (OFAC)**, A Framework for OFAC Compliance Commitments, May 2019. Spend 15 minutes on program components and the appendix on root causes. [Original PDF](https://ofac.treasury.gov/media/16331/download)
+- **US DOJ Criminal Division**, Evaluation of Corporate Compliance Programs, September 2024 update. Spend 25 minutes on parts I.D, I.E and III.C on reporting, third parties and investigation of misconduct. US prosecutorial evaluation guidance. [Original guidance](https://www.justice.gov/criminal/criminal-fraud/page/file/937501/dl)
+- **US Treasury, Office of Foreign Assets Control (OFAC)**, A Framework for OFAC Compliance Commitments, May 2019. Spend 15 minutes on program components and the appendix on root causes. [Original guidance](https://ofac.treasury.gov/media/16331/download)
 - **FATF**, Guidance for a Risk-Based Approach: The Banking Sector, October 2014. Spend 15 minutes on section III, especially paragraph 59 onward, for customer identification and risk-based measures. Use local rules for a real institution. [Banking guidance](https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Risk-Based-Approach-Banking-Sector.pdf.coredownload.pdf)
 - **US DOJ Office of Public Affairs**, SAP foreign bribery resolution, 10 January 2024. Spend 15 minutes tracing the agents, public contracts and records. [Case summary](https://www.justice.gov/archives/opa/pr/sap-pay-over-220m-resolve-foreign-bribery-investigations)
 

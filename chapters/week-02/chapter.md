@@ -1,7 +1,5 @@
 # Week 2 · How do you know a control worked?
 
-[Read the companion PDF](Week_2_Controls_and_Evidence_EN_HU.pdf)
-
 At DunaWorks, the head of IT opens an audit meeting with a green dashboard. “Every departure ticket closed in October.” The auditor asks to see who left. IT hands over its list of closed tickets. What would happen to someone who never got a ticket?
 
 DunaWorks is the fictional equipment and software group from Week 1, headquartered in Hungary with operations in Germany and the US. This week you will build a test whose starting point is independent of the process being tested. You will leave with a five-row risk-and-control matrix, a set of reproducible results and a finding someone can actually close.

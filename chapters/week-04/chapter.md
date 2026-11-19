@@ -1,7 +1,5 @@
 # Week 4 · Can this supplier run our support desk?
 
-[Read the companion PDF](Week_4_Privacy_Security_and_Resilience_EN_HU.pdf)
-
 The support director wants to move DunaWorks' service desk to a cloud supplier called HídDesk. An engineer asks where the database runs. Privacy counsel asks whether HídDesk will reuse ticket text to train a model. The factory service manager asks how technicians will find open repair orders if the supplier disappears on Monday morning. All three are reviewing the same purchase. Each needs different evidence.
 
 DunaWorks and HídDesk are fictional. DunaWorks is a Hungarian equipment and software group with German and US operations. Start with its German after-sales team and EU customer contacts. The exercise supplies its own deadlines and recovery targets. The source notes identify the EU rules and guidance used for the legal concepts.

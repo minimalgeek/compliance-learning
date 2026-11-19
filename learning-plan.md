@@ -191,7 +191,7 @@ Pass condition: write a one-page opportunity memo with target customer, buyer, c
 
 ## Week 7 · Inside an AI compliance team
 
-DunaWorks develops and sells an AI recruitment tool. Its customer’s recruiter can reach only 20 of 300 applicants. Use your Week 2 control test, Week 5 applicability assessment and Week 6 opportunity memo to work through the release from the software provider’s side. [Read the chapter](chapters/week-07/chapter.md) · [Download the PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf)
+DunaWorks develops and sells an AI recruitment tool. Its customer’s recruiter can reach only 20 of 300 applicants. Use your Week 2 control test, Week 5 applicability assessment and Week 6 opportunity memo to work through the release from the software provider’s side. [Read the chapter](chapters/week-07/chapter.md)
 
 | Time | Task | What to produce |
 | --- | --- | --- |

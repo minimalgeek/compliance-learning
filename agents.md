@@ -70,7 +70,7 @@ Identify fictional internal policies, thresholds, deadlines, assignments, and da
 Fetch and read the suggested authoritative documents before drawing on them. Prefer official regulators, government bodies, standard setters, and the relevant professional organizations. Search snippets alone are insufficient for developing a chapter.
 
 - Record the source title, issuing body, edition or publication date, and a direct URL.
-- Use clear source references in the chapter. Cite printed page numbers accurately and distinguish them from PDF viewer indexes when necessary.
+- Use clear source references in the chapter. Use section names or printed page numbers from the original source.
 - Verify current law, implementation status, and applicability when those facts matter. Distinguish proposals, adopted requirements, guidance, standards, contracts, and internal policies.
 - Explain a source's jurisdiction and purpose instead of presenting one regime's guidance as universal.
 - Use public overviews and clearly describe that limitation when a full standard is paid or unavailable. Do not claim to have reviewed inaccessible material.
@@ -93,20 +93,9 @@ Do not equate automation with a guarantee of compliance. Make a proposed product
 
 Use lowercase `readme.md` and `agents.md` as requested. Preserve the uppercase instruction entry point for automatic discovery.
 
-Keep the plan at `learning-plan.md`. Store chapters under `chapters/week-NN/`, with `chapter.md` as the editable reading text and a descriptively named companion PDF. Continue the existing naming convention unless there is a concrete reason to change it.
+Keep the plan at `learning-plan.md`. Write each chapter in Markdown at `chapters/week-NN/chapter.md`. Check chapter navigation, source links, tables, and consistency between exercises and answer keys before marking a chapter ready.
 
-PDF is the preferred finished reading format established in this project. Maintain useful navigation and clear typography. Keep the Markdown and PDF editions semantically aligned; layout and printed page references may differ.
-
-When creating or updating a PDF:
-
-- Use the applicable document or PDF creation workflow.
-- Embed fonts that support Hungarian characters, especially ő and ű.
-- Render and inspect every page for clipping, overlap, broken tables, unreadable text, and missing glyphs.
-- Check source links, internal navigation, bookmarks, page counts, and page references.
-- Ensure examples, questions, and answer keys remain consistent.
-- Mark a chapter ready only after its output has been checked.
-
-When adding a week or changing its scope, update its schedule, exercise and pass condition in the learning plan and its Markdown and PDF links in the README roadmap. Keep the course duration consistent across both documents and these instructions. Distinguish material readiness from the learner's progress. Preserve existing chapters and create only the requested next material.
+When adding a week or changing its scope, update its schedule, exercise and pass condition in the learning plan and its chapter link in the README roadmap. Keep the course duration consistent across both documents and these instructions. Distinguish material readiness from the learner's progress. Preserve existing chapters and create only the requested next material.
 
 ## Uncertainty and collaboration
 

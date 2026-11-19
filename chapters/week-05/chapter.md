@@ -1,7 +1,5 @@
 # Week 5 · Which business activity does this rule change?
 
-[Read the companion PDF](Week_5_Applicability_and_Regulatory_Change_EN_HU.pdf)
-
 DunaWorks' legal inbox receives a customer message asking whether its online store displays the manufacturer's contact details. The customer attaches an EU regulation. Product engineering owns the website. A German subsidiary sells the item. The catalog team in Hungary manages the product description. Which team has to change something? What exactly should appear on the German product page?
 
 An **applicability assessment** connects a particular provision to a legal entity, role, activity, territory and date. In this chapter you will reconstruct a change using a real published EU regulation and fictional business records. Then you will apply the same method to five proposed uses of artificial intelligence (AI).

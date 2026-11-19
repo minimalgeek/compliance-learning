@@ -1,7 +1,5 @@
 # Week 7 · Inside an AI compliance team
 
-[Read the companion PDF](Week_7_AI_Compliance_Operations_EN_HU.pdf)
-
 “Can we ship on Friday?” Éva asks the engineer to open applicant number 21. The dashboard says *All applicants*. The vacancy contains 300 fictional applications. Whichever tab he opens, he can reach only the first 20. The test suite passed that morning. Its largest vacancy had twelve applicants.
 
 DunaWorks is a Hungarian-headquartered software developer with 2,000 employees and German and US operations. It builds and markets an AI recruitment platform under its own name. The employers who buy it employ the recruiters. Éva is the provider’s AI compliance officer. Her immediate task is to get the right decision made about this build. Her longer-term task is to make the company better at catching the next problem.

@@ -1,7 +1,5 @@
 # Week 6 · Which compliance workflow is worth building?
 
-[Read the companion PDF](Week_6_Discovery_and_Pilot_Design_EN_HU.pdf)
-
 A privacy reviewer at DunaWorks reads the same product specification twice. The first version promises that support tickets are deleted after 30 days. The revision says “until the account closes.” Engineering sees a small wording change. The reviewer sees a decision that may need reopening. Who notices today, how much work follows, and who would pay to improve it?
 
 DunaWorks is a fictional software and equipment group. This chapter turns a plausible incident into a testable product hypothesis. All customer statements, volumes, scores, prices and evaluation results in the examples are invented. Replace them with evidence from interviews and an authorized pilot.

@@ -7,10 +7,8 @@ The approach follows the Pareto principle: prioritize the concepts and workflows
 ## Start here
 
 1. Read the [seven-week learning plan](learning-plan.md).
-2. Open the [Week 1 chapter as a PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf), or [read it on GitHub](chapters/week-01/chapter.md).
+2. Read the [Week 1 chapter](chapters/week-01/chapter.md).
 3. Complete the company-mapping exercise and discuss a recent workflow with a practitioner. Use Weeks 2–5 to practice controls and applicability, Week 6 to select a workflow, and Week 7 to test your automation idea on an AI product release.
-
-The Week 1 PDF has 28 pages, a clickable chapter map, bookmarks, an English-Hungarian glossary, worked examples, exercises, explained answers, and linked original readings.
 
 ## Learning approach
 
@@ -28,15 +26,15 @@ The organizing question is: **Which requirement applies, who must act, and how w
 
 Plan for five hours per week, for approximately 35 hours total. Material availability does not imply that the learner has completed the week.
 
-| Week | Focus | Material status |
+| Week | Focus | Chapter |
 | --- | --- | --- |
-| 1 | The organization, core terminology, roles, and compliance programs | [Markdown](chapters/week-01/chapter.md) · [PDF](chapters/week-01/Week_1_Compliance_Foundations_EN_HU.pdf) |
-| 2 | Controls, evidence, testing, and assurance | [Markdown](chapters/week-02/chapter.md) · [PDF](chapters/week-02/Week_2_Controls_and_Evidence_EN_HU.pdf) |
-| 3 | Ethics, conduct, third parties, and financial crime | [Markdown](chapters/week-03/chapter.md) · [PDF](chapters/week-03/Week_3_Conduct_and_Third_Parties_EN_HU.pdf) |
-| 4 | Privacy, cybersecurity, and operational resilience | [Markdown](chapters/week-04/chapter.md) · [PDF](chapters/week-04/Week_4_Privacy_Security_and_Resilience_EN_HU.pdf) |
-| 5 | Applicability, regulatory change, AI, and sector specialties | [Markdown](chapters/week-05/chapter.md) · [PDF](chapters/week-05/Week_5_Applicability_and_Regulatory_Change_EN_HU.pdf) |
-| 6 | Customer discovery, workflow selection, and a product hypothesis | [Markdown](chapters/week-06/chapter.md) · [PDF](chapters/week-06/Week_6_Discovery_and_Pilot_Design_EN_HU.pdf) |
-| 7 | Inside an AI compliance team · roles, case handling, release decisions and agent-assisted evidence review | [Markdown](chapters/week-07/chapter.md) · [PDF](chapters/week-07/Week_7_AI_Compliance_Operations_EN_HU.pdf) |
+| 1 | The organization, core terminology, roles, and compliance programs | [Read chapter](chapters/week-01/chapter.md) |
+| 2 | Controls, evidence, testing, and assurance | [Read chapter](chapters/week-02/chapter.md) |
+| 3 | Ethics, conduct, third parties, and financial crime | [Read chapter](chapters/week-03/chapter.md) |
+| 4 | Privacy, cybersecurity, and operational resilience | [Read chapter](chapters/week-04/chapter.md) |
+| 5 | Applicability, regulatory change, AI, and sector specialties | [Read chapter](chapters/week-05/chapter.md) |
+| 6 | Customer discovery, workflow selection, and a product hypothesis | [Read chapter](chapters/week-06/chapter.md) |
+| 7 | Inside an AI compliance team · roles, case handling, release decisions and agent-assisted evidence review | [Read chapter](chapters/week-07/chapter.md) |
 
 The [learning plan](learning-plan.md) gives the readings, exercises and completion criteria for each week. For the automation capstone, follow DunaWorks as the developer of an AI hiring tool. Use the case packet to decide what the compliance officer can conclude, which evidence an agent can collect and who may approve a release. [Week 7 workshop](chapters/week-07/chapter.md#workshop-take-the-officers-chair)
 
@@ -45,11 +43,9 @@ The [learning plan](learning-plan.md) gives the readings, exercises and completi
 | Path | Purpose |
 | --- | --- |
 | [learning-plan.md](learning-plan.md) | Seven-week schedule, exercises and completion criteria |
-| [Chapter directory](chapters/) | All seven chapters in editable Markdown and companion PDF editions |
+| [Chapter directory](chapters/) | All seven chapters in Markdown |
 | [agents.md](agents.md) | Full instructions for creating and updating this learning material |
 | [AGENTS.md](AGENTS.md) | Entry point for tools that automatically discover agent instructions |
-
-The Markdown chapter and PDF are companion editions. Printed-page references in the Markdown text refer to the PDF.
 
 ## Maintaining the chapters
 
@@ -57,7 +53,7 @@ Read [agents.md](agents.md) before editing or creating material. Keep the plain-
 
 Use primary sources and distinguish applicable legal requirements, source interpretations, internal policies, fictional scenarios, and product hypotheses. DunaWorks Group is the fictional company used in Week 1; its thresholds and time limits are teaching examples.
 
-Maintain both the chapter text and its PDF when updating a chapter. Check links and inspect the rendered pages before marking an edition ready.
+Check links, chapter navigation, and Markdown rendering before marking a chapter ready.
 
 Created 22 October 2026.
 
