@@ -6,7 +6,10 @@ A recruiter clicks **Reject** after reading a model recommendation. To assess th
 | --- | --- | --- |
 | Source / obligation | forrás / kötelezettség | Which passage creates an expectation for this entity and use? Identify its authority, version and applicable dates. An internal pilot rule can also create an obligation. |
 | Compliance Micro Theme (CMT) | megfelelőségi résztéma | What operational topic connects this obligation to the product? Meaningful human oversight covers how recruiters understand, challenge and change a recommendation. |
-| Risk domain / sub-risk | kockázati terület / alkockázat | Under human oversight, record the concrete event and harm. A recruiter follows an erroneous rejection and an eligible applicant loses an interview opportunity. |
+| Risk domain | kockázati terület | Which family groups related risks? An illustrative domain is failures of human oversight. |
+| Sub-risk | alkockázat | Which failure type could recur across products? A required human intervention is unavailable. |
+| Compliance risk scenario | megfelelőségi kockázati forgatókönyv | How could a particular duty bearer miss a specific obligation? DunaWorks promises recruiters an override in its pilot agreement. A permissions change could restrict the override to administrators. |
+| Possible impact | lehetséges következmény | Who could be affected, and how? An applicant could lose an interview if an erroneous rejection takes effect. |
 | Inherent risk | eredendő kockázat | How likely and how serious is that outcome before controls? Record population, assumptions, rationale, uncertainty and approved scoring rubric. |
 | Control | kontroll, kockázatkezelő intézkedés | What action changes exposure? Requiring review before rejection is preventive. Sampling decisions to detect rubber-stamping is detective. Reopening affected applications is corrective. |
 | Assessment evidence | az alkalmazandóságot vagy a kockázatot alátámasztó bizonyíték | What establishes the relevance of the theme or risk? A versioned specification shows that a score influences rejection. |
@@ -32,7 +35,7 @@ Suppose the recruiter catches the error and phones the applicant. The applicant 
 
 ## From assessment to decision
 
-Suppose a separate, completed assessment of discriminatory recommendations finds high inherent risk under DunaWorks’ approved rubric. A reviewer verifies subgroup tests, human-review records and the handling of candidate challenges. The risk owner rates the remaining exposure Medium and explains the limits of the evidence. The approved tolerance for this use is Low. There is enough evidence to assign a rating, yet the rating exceeds the limit.
+As a wider AI risk example, suppose a separate, completed assessment of discriminatory recommendations finds high inherent risk under DunaWorks’ approved rubric. A reviewer verifies subgroup tests, human-review records and the handling of candidate challenges. The risk owner rates the remaining exposure Medium and explains the limits of the evidence. The approved tolerance for this use is Low. There is enough evidence to assign a rating, yet the rating exceeds the limit.
 
 | Outcome | Hungarian | When to use it |
 | --- | --- | --- |

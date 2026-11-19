@@ -78,7 +78,8 @@ When a customer writes “the law requires all candidates to be visible,” Éva
 | Policy · szabályzat | What rule has management adopted? | Changes affecting applicant visibility need a documented release review. |
 | Procedure · eljárásrend | How does a named operator perform the work? | QA opens the candidate build with recruiter permissions and traverses each page. |
 | Intended purpose · rendeltetés | What use, users and conditions does the provider describe? | Help employers prioritize applications for recruiter review. Compare sales claims, instructions and product design. |
-| Risk scenario · kockázati forgatókönyv | Through what mechanism might someone suffer harm? | A qualified applicant is ranked low and becomes unreachable to the recruiter. |
+| Compliance risk scenario · megfelelőségi kockázati forgatókönyv | Who owes which obligation, and how could they miss it? | DunaWorks promises access to every eligible application. A score filter could hide unscored applications from the recruiter. |
+| Possible impact · lehetséges következmény | What could follow if that happened? | An eligible applicant could miss consideration for an interview. |
 | Inherent / residual risk · eredendő / fennmaradó kockázat | What is the exposure before safeguards, and what remains afterward? | Making everyone reachable addresses visibility. Recruiters might still review only the first twenty. |
 | Risk appetite / tolerance · kockázatvállalási hajlandóság / kockázattűrés | What exposure will management take, and what boundary triggers action? | Management permits a synthetic pilot. Its release rule requires full eligible-ID coverage before live rollout. |
 
